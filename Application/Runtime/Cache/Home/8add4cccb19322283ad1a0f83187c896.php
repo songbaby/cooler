@@ -1,38 +1,53 @@
-<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
+<?php if (!defined('THINK_PATH')) exit();?>
 <html>
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
-    <style type="text/css">
-        body, html,#allmap {width: 100%;height: 100%;overflow: hidden;margin:0;font-family:"微软雅黑";}
-        #l-map{height:100%;width:78%;float:left;border-right:2px solid #bcbcbc;}
-        #r-result{height:100%;width:20%;float:left;}
+    <link rel="stylesheet" href="/cooler/Public/Home/css/style.css"/>
+    <style>
     </style>
-    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=3nbIhiC4xvRt2ofWcRPAo4uj"></script>
-    <title>添加多个标注点</title>
 </head>
+
 <body>
-<div id="allmap"></div>
-</body>
-</html>
+
+<div id="top">
+    dsgg仿
+</div>
+
+<div id="content">
+    <div id="left">
+    <ul>
+        <li><a href="#">金乡镇</a></li>
+        <li><a href="#">马庙</a></li>
+        <li><a href="#">鱼山</a></li>
+    </ul>
+</div>
+
+    <div id="right"></div>
+
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=3nbIhiC4xvRt2ofWcRPAo4uj"></script>
 <script type="text/javascript">
     // 百度地图API功能
-    var map = new BMap.Map("allmap");
-    var point = new BMap.Point(116.404, 39.915);
+    var map = new BMap.Map("right");
+    var point = new BMap.Point(116.417854,39.921988);
     map.centerAndZoom(point, 15);
-    // 编写自定义函数,创建标注
-    function addMarker(point){
-        var marker = new BMap.Marker(point);
-        map.addOverlay(marker);
+    var opts = {
+        position : point,    // 指定文本标注所在的地理位置
+        offset   : new BMap.Size(30, -30)    //设置文本偏移量
     }
-    // 随机向地图添加25个标注
-    var bounds = map.getBounds();
-    var sw = bounds.getSouthWest();
-    var ne = bounds.getNorthEast();
-    var lngSpan = Math.abs(sw.lng - ne.lng);
-    var latSpan = Math.abs(ne.lat - sw.lat);
-    for (var i = 0; i < 25; i ++) {
-        var point = new BMap.Point(sw.lng + lngSpan * (Math.random() * 0.7), ne.lat - latSpan * (Math.random() * 0.7));
-        addMarker(point);
-    }
+    var label = new BMap.Label("欢迎使用百度地图，这是一个简单的文本标注哦~", opts);  // 创建文本标注对象
+    label.setStyle({
+        color : "red",
+        fontSize : "12px",
+        height : "20px",
+        lineHeight : "20px",
+        fontFamily:"微软雅黑"
+    });
+    map.addOverlay(label);
 </script>
+
+
+
+</div>
+
+<div id="bottum">
+    dsgg仿f
+</div>
