@@ -1,27 +1,30 @@
+
 <div id="top">
 
-    <form id="form1" name="form1" method="post" action="">
 
       <div align="center">
-        <p>
-          <input type="text" name="search" id="search" />
-          <input type="submit" name="search2" id="search2" value="search" />
-            <div>
-          <ul>
-              <li style="float:right;">
-                   列表
-              </li>
-              <li style="float:right;">
-                  -
-              </li>
-              <li style="float:right;">
-                  地图
-              </li>
-          </ul>
 
-            </div>
-        </p>
-      </div>
-    </form>
+          <div style="text-align: right">
+              登录 注册
+              </div>
+          <div style="text-align: left">
+
+          <a href="__MODULE__/Index/select/county/1" >金乡县</a>
+              <a href="__MODULE__/Index/select/county/2" >成武县</a>
+              <a href="__MODULE__/Index/select/county/3" >寿光市</a>
+          </div>
+
+          <div style="text-align: left">
+              <foreach name="loc_town" item="vo" key="k" >
+
+                  <a href="__MODULE__/Index/select/county/1/town/{$vo[id]}"> {$vo[name]},</a>
+              </foreach>
+        </div>
+        
+        </div>
+
+
+
+
 
 </div>

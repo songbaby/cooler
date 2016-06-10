@@ -15542,3 +15542,14 @@ INFO: [ app_init ] --START--
 INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
 INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
 
+[ 2016-06-05T22:02:36+08:00 ] 127.0.0.1 /cooler/index.php/Home/Index/map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+ERR: 模板不存在:./Application/Home/View/Index/map.html
+
+[ 2016-06-05T22:02:43+08:00 ] 127.0.0.1 /cooler/index.php/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
