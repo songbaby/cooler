@@ -1,0 +1,32 @@
+[ 2016-06-13T22:45:39+08:00 ] 127.0.0.1 /cooler/index.php/Admin/Index/
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1
+ [ SQL语句 ] : select role_auth_ac from c_manager a join c_role b on a.mg_role_id=b.role_id where a.mg_id=
+
+[ 2016-06-13T22:47:54+08:00 ] 127.0.0.1 /cooler/index.php/Admin/Index/left
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1
+ [ SQL语句 ] : select * from c_manager where mg_id=
+
+[ 2016-06-13T22:47:54+08:00 ] 127.0.0.1 /cooler/index.php/Admin/Index/ADMIN_CSS_URLadmin.css
+ERR: 模板不存在:./Application/Admin/View/./Admin/View/dispatch_jump.tpl.html
+
+[ 2016-06-13T22:47:55+08:00 ] 127.0.0.1 /cooler/index.php/Admin/Index/left
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1
+ [ SQL语句 ] : select * from c_manager where mg_id=
+
+[ 2016-06-13T22:47:55+08:00 ] 127.0.0.1 /cooler/index.php/Admin/Index/ADMIN_CSS_URLadmin.css
+ERR: 模板不存在:./Application/Admin/View/./Admin/View/dispatch_jump.tpl.html
+
+[ 2016-06-13T22:47:56+08:00 ] 127.0.0.1 /cooler/index.php/Admin/Index/left
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1
+ [ SQL语句 ] : select * from c_manager where mg_id=
+
+[ 2016-06-13T22:47:56+08:00 ] 127.0.0.1 /cooler/index.php/Admin/Index/ADMIN_CSS_URLadmin.css
+ERR: 模板不存在:./Application/Admin/View/./Admin/View/dispatch_jump.tpl.html
+
+[ 2016-06-13T22:51:36+08:00 ] 127.0.0.1 /cooler/index.php/Admin/Index/left
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1
+ [ SQL语句 ] : select * from c_manager where mg_id=
+
+[ 2016-06-13T22:51:36+08:00 ] 127.0.0.1 /cooler/index.php/Admin/Index/ADMIN_CSS_URLadmin.css
+ERR: 模板不存在:./Application/Admin/View/./Admin/View/dispatch_jump.tpl.html
+

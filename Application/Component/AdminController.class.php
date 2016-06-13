@@ -19,7 +19,7 @@ class AdminController extends Controller{
         
         //过滤控制器和方法，避免用户非法请求
         //通过角色获得用户可以访问的控制器和方法信息
-        $sql ="select role_auth_ac from c_manager a join c_role b on a.mg_role_id=b.role_id where a.mg_id=".$_SESSION['mg_id'];
+        $sql ="select role_auth_ac from c_manager a join c_role b on a.mg_role_id=b.role_id where a.mg_id=1".$_SESSION['mg_id'];
         $auth_ac = D()->query($sql);
         $auth_ac = $auth_ac[0]['role_auth_ac'];
         

@@ -51,6 +51,7 @@
 </html>
 
 
+<?php echo $cooler ?>;
 
 <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=3nbIhiC4xvRt2ofWcRPAo4uj"></script>
 
@@ -69,8 +70,7 @@
     map.enableScrollWheelZoom();
     //map.centerAndZoom(point, 12);
    // addMarker(point);
-
-
+    
     function getBoundary(){
         var bdary = new BMap.Boundary();
         bdary.get("金乡县", function(rs){       //获取行政区域
@@ -94,20 +94,15 @@
 
     function AddCooler()
     {
-
-
             // var   user ={"name":"Eric","age":23};
             var   coolerArray = <?php echo $cooler ?>;
-
             console.log(coolerArray);
             for(var i = 0; i<coolerArray.length;i++)
             {
                 console.log(coolerArray[i].name,coolerArray[i].lat,coolerArray[i].lng);
                 var point = new BMap.Point(coolerArray[i].lng, coolerArray[i].lat);
                 addMarker(point);
-
             }
-
     }
 
     getBoundary();

@@ -109,7 +109,7 @@ return  array(
     'TMPL_TEMPLATE_SUFFIX'  =>  '.html',     // 默认模板文件后缀
     'TMPL_FILE_DEPR'        =>  '/', //模板文件CONTROLLER_NAME与ACTION_NAME之间的分割符
     // 布局设置
-    'TMPL_ENGINE_TYPE'      =>  'smarty',     // 默认模板引擎 以下设置仅对使用Think模板引擎有效
+    'TMPL_ENGINE_TYPE'      =>  'Think',     // 默认模板引擎 以下设置仅对使用Think模板引擎有效
     'TMPL_CACHFILE_SUFFIX'  =>  '.php',      // 默认模板缓存后缀
     'TMPL_DENY_FUNC_LIST'   =>  'echo,exit',    // 模板引擎禁用函数
     'TMPL_DENY_PHP'         =>  false, // 默认模板引擎是否禁用PHP原生代码
