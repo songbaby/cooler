@@ -22,4 +22,5 @@ return array(
     //② false  也是不起作用
     'DB_FIELDS_CACHE'       =>  true,        // 启用字段缓存
     'DB_CHARSET'            =>  'utf8',      // 数据库编码默认采用utf8
+    'TMPL_ENGINE_TYPE'      =>  'Think',     // 默认模板引擎 以下设置仅对使用Think模板引擎有效
 );

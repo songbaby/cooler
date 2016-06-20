@@ -5,6 +5,7 @@ namespace Admin\Controller;
 
 class AuthController extends \Component\AdminController{
     function showlist(){
+
         $info = $this -> getInfo();
         $this -> assign('info', $info);
         $this -> display();

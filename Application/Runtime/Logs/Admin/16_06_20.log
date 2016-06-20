@@ -1,0 +1,6 @@
+[ 2016-06-20T08:10:54+08:00 ] 127.0.0.1 /cooler/index.php/Admin/Manager/showlist
+ERR: XML标签语法错误 : name="info" as item ="v"
+
+[ 2016-06-20T08:14:48+08:00 ] 127.0.0.1 /cooler/index.php/Admin/Order/view
+ERR: 非法操作:view
+

@@ -28,7 +28,7 @@ class ManagerController extends Controller{
                 }
             }
         } 
-        $this -> assign('lang',L());
+      //  $this -> assign('lang',L());
         $this -> display();
     }
     //退出系统

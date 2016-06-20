@@ -23,6 +23,8 @@ class IndexController extends AdminController{
     //左边页面
     function left(){
         //根据session用户id信息查询角色id信息
+
+       // session('mg_id','1');//ljsong
         $sql = "select * from c_manager where mg_id=".$_SESSION['mg_id'];
         $minfo = D()->query($sql);
         $role_id = $minfo[0]['mg_role_id'];

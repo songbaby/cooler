@@ -58,7 +58,6 @@ class GoodsController extends AdminController {
     }
     
     function showlist(){
-        
         $goods = D("Goods");
         
         //1. 获得当前记录总条数

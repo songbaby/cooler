@@ -4,12 +4,18 @@ use Think\Controller;
 class IndexController extends Controller {
 
     public function index(){
+
+       // $this->display('test2');die;
+
       //  $info_cooler = M('info_cooler')->order('id DESC')->select();
        // dump($info_cooler);die;
 
        // $this->info_cooler = $info_cooler;
-        $this->display('index');
 
+        
+
+        $this->display('index');
+die;
 
         //$loc_county = M('loc_county')->order('id DESC')->select();
         //dump($loc_county);
@@ -56,5 +62,19 @@ class IndexController extends Controller {
 
     public  function map(){
         $this->display();
+    }
+
+
+    public function test(){
+
+     $this->display("test");
+
+    }
+
+
+    public function handle_test(){
+
+        dump($_POST);
+
     }
 }

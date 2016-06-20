@@ -1,1 +1,0 @@
-a:9:{i:0;s:2:"id";i:1;s:4:"name";i:2;s:12:"lianxiren_id";i:3;s:3:"lat";i:4;s:3:"lng";i:5;s:4:"note";i:6;s:5:"price";s:3:"_pk";s:2:"id";s:5:"_type";a:7:{s:2:"id";s:15:"int(4) unsigned";s:4:"name";s:12:"varchar(128)";s:12:"lianxiren_id";s:6:"int(4)";s:3:"lat";s:6:"double";s:3:"lng";s:6:"double";s:4:"note";s:4:"text";s:5:"price";s:5:"float";}}

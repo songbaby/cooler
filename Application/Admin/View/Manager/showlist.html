@@ -5,19 +5,19 @@
 
         <title>会员列表</title>
 
-        <link href="{$smarty.const.ADMIN_CSS_URL}mine.css" type="text/css" rel="stylesheet" />
+        <link href="{$Think.const.ADMIN_CSS_URL}mine.css" type="text/css" rel="stylesheet" />
     </head>
     <body>
         <style>
-            {literal}
+
             .tr_color{background-color: #9F88FF}
-            {/literal}
+
         </style>
         <div class="div_head">
             <span>
                 <span style="float: left;">当前位置是：管理员管理-》管理员列表</span>
                 <span style="float: right; margin-right: 8px; font-weight: bold;">
-                    <a style="text-decoration: none;" href="{$smarty.const.__MODULE__}/Goods/add">【添加管理员】</a>
+                    <a style="text-decoration: none;" href="__MODULE__/Goods/add">【添加管理员】</a>
                 </span>
             </span>
         </div>
@@ -43,15 +43,15 @@
                         <td>角色</td>
                         <td align="center">操作</td>
                     </tr>
-                    {foreach $info as $k => $v}
+                    <foreach name="info"  item="v">
                     <tr id="product1">
-                        <td>{$v@iteration}</td>
+                        <td>{$v.mg_id}</td>
                         <td><a href="#">{$v.mg_name}</a></td>
-                        <td>{$rinfo[$v.mg_role_id]}</td>
+
                         
-                        <td><a href='{$smarty.const.__CONTROLLER__}/upd/mg_id/{$v.mg_id}'>修改</a></td>
+                        <td><a href='__CONTROLLER__/upd/mg_id/{$v.mg_id}'>修改</a></td>
                     </tr>
-                    {/foreach}
+                    </foreach>
                     <tr>
                         <td colspan="20" style="text-align: center;">
                         </td>

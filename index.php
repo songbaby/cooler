@@ -18,6 +18,15 @@ if(version_compare(PHP_VERSION,'5.3.0','<'))  die('require PHP > 5.3.0 !');
 define('APP_DEBUG',True);
 
 
+//定义css、img、js常量
+define("SITE_URL","http://127.0.0.1/cooler/");
+define("CSS_URL",SITE_URL."public/Home/css/"); //css
+define("IMG_URL",SITE_URL."public/Home/img/"); //img
+define("JS_URL",SITE_URL."public/Home/js/"); //js
+
+define("ADMIN_CSS_URL",SITE_URL."public/Admin/css/"); //css
+define("ADMIN_IMG_URL",SITE_URL."public/Admin/img/"); //css
+define("ADMIN_JS_URL",SITE_URL."public/Admin/js/"); //css
 // 定义应用目录
 define('APP_PATH','./Application/');
 
