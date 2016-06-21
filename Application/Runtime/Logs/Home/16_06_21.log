@@ -10,3 +10,6 @@ ERR: 非法操作:list
 [ 2016-06-21T22:06:39+08:00 ] 127.0.0.1 /cooler/index.php/Home/Index/list
 ERR: 非法操作:list
 
+[ 2016-06-21T22:24:42+08:00 ] 127.0.0.1 /cooler/index.php/Home/Cooler/list
+ERR: 非法操作:list
+

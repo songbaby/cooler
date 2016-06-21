@@ -84,8 +84,8 @@
     var map = new BMap.Map("content");
     var point = new BMap.Point(116.235237, 35.079983);
     map.enableScrollWheelZoom();
-    //map.centerAndZoom(point, 12);
-   // addMarker(point);
+      //map.centerAndZoom(point, 12);
+    // addMarker(point);
 
     function getBoundary(){
         var bdary = new BMap.Boundary();

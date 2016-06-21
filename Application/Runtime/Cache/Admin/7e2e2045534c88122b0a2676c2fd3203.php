@@ -26,7 +26,7 @@
                         <tr>
                             <td style="font-weight: bold; font-size: 16px">admin</td></tr>
                         <tr>
-                            <td>欢迎进入网站管理中心！</td></tr></table></td></tr>
+                            <td>欢迎进冷库信息管理中心！</td></tr></table></td></tr>
             <tr>
                 <td colspan=3 height=10></td></tr></table>
         <table cellspacing=0 cellpadding=0 width="95%" align=center border=0>
@@ -61,13 +61,7 @@
             <tr>
                 <td align=right>身份过期：</td>
                 <td style="color: #880000">30 分钟</td></tr>
-            <tr>
-                <td align=right>网站开发qq：</td>
-                <td style="color: #880000">215288671</td></tr>
-            <tr>
-                <td align=right>免费模板网：</td>
-                <td style="color: #880000"><a href="http://www.sshok.cn">www.sshok.cn</a></td>
-            </tr>
+
         </table>
     </body>
 </html>
