@@ -17,8 +17,22 @@
       <div align="center">
 
           <div style="text-align: right">
-              登录 注册
-              </div>
+              <a href="/cooler/index.php/Home/Index/map" > 地图</a>
+              <a href="/cooler/index.php/Home/Index/list" > 列表 </a>
+              &nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;&nbsp;
+              <a href="/cooler/index.php/Admin/Manager/login" > 登录</a>
+              <a href="#" > 注册</a>
+          </div>
+
           <div style="text-align: left">
 
           <a href="/cooler/index.php/Home/Index/select/county/1" >金乡县</a>
@@ -57,7 +71,6 @@
 
 
 
-{literal}
 
 <script type="text/javascript">
     // 百度地图API功能
@@ -113,5 +126,3 @@
     AddCooler();
 
 </script>
-
-{/literal}
