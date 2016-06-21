@@ -77,7 +77,6 @@ class ManagerController extends Controller{
             $info = D('Manager')->find($mg_id);
             $rinfo = $this -> getRoleInfo();
             $this -> assign('rinfo',$rinfo);
-
             $this -> assign('info', $info);
             $this -> assign('mg_id', $mg_id);
             $this -> assign('role_id', $info['mg_role_id']);

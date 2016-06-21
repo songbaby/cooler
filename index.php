@@ -17,6 +17,12 @@ if(version_compare(PHP_VERSION,'5.3.0','<'))  die('require PHP > 5.3.0 !');
 // 开启调试模式 建议开发阶段开启 部署阶段注释或者设为false
 define('APP_DEBUG',True);
 
+//制作一个输出调试函数
+function show_bug($msg){
+    echo "<pre style='color:red'>";
+    var_dump($msg);
+    echo "</pre>";
+}
 
 //定义css、img、js常量
 define("SITE_URL","http://127.0.0.1/cooler/");
@@ -26,6 +32,7 @@ define("JS_URL",SITE_URL."public/Home/js/"); //js
 
 define("ADMIN_CSS_URL",SITE_URL."public/Admin/css/"); //css
 define("ADMIN_IMG_URL",SITE_URL."public/Admin/img/"); //css
+define("ADMIN_UPLOAD_URL",SITE_URL."public/"); //css
 define("ADMIN_JS_URL",SITE_URL."public/Admin/js/"); //css
 // 定义应用目录
 define('APP_PATH','./Application/');

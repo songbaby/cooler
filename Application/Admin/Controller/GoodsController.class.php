@@ -170,9 +170,9 @@ class GoodsController extends AdminController {
             $goods -> create();
             $rst = $goods -> save();
             if($rst){
-                echo "success";
+                $this->success('修改成功!',U('showlist'));
             } else {
-                echo "failure";
+                $this->error('修改失败!',U('showlist'));
             }
         } else {
             $info = $goods->find($goods_id); //一维数组
@@ -182,14 +182,20 @@ class GoodsController extends AdminController {
     }
     
     //删除方法
-    function del(){
+    function del($goods_id){
+
         $goods = D("Goods");
-        //以下三种方式都可以删除数据
-        $rst = $goods -> delete(63);
-        $rst = $goods -> delete('61,62,59');
-        $rst = $goods -> where('goods_id>56')->delete();
-        
-        show_bug($rst);
+        if(!empty($_GET)){
+
+            $rst = $goods -> where("goods_id = $goods_id")->delete();
+            if($rst){
+                $this->success('删除成功!',U('showlist'));
+            }
+            else{
+                $this->error('删除失败!',U('showlist'));
+            }
+        }
+
     }
     
     function getMoney(){

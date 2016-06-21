@@ -4,3 +4,43 @@ ERR: XML标签语法错误 : name="info" as item ="v"
 [ 2016-06-20T08:14:48+08:00 ] 127.0.0.1 /cooler/index.php/Admin/Order/view
 ERR: 非法操作:view
 
+[ 2016-06-20T08:25:07+08:00 ] 127.0.0.1 /cooler/index.php/Admin/Goods/IMG_UPLOAD
+ERR: 非法操作:IMG_UPLOAD
+
+[ 2016-06-20T08:25:08+08:00 ] 127.0.0.1 /cooler/index.php/Admin/Goods/mine.css
+ERR: 非法操作:mine.css
+
+[ 2016-06-20T08:25:09+08:00 ] 127.0.0.1 /cooler/index.php/Admin/User/pinglun
+ERR: 无法加载控制器:User
+
+[ 2016-06-20T08:25:10+08:00 ] 127.0.0.1 /cooler/index.php/Admin/Order/view
+ERR: 非法操作:view
+
+[ 2016-06-20T08:25:13+08:00 ] 127.0.0.1 /cooler/index.php/Admin/Article/showlist
+ERR: 无法加载控制器:Article
+
+[ 2016-06-20T08:25:22+08:00 ] 127.0.0.1 /cooler/index.php/Admin/Goods/IMG_UPLOAD
+ERR: 非法操作:IMG_UPLOAD
+
+[ 2016-06-20T22:08:50+08:00 ] 127.0.0.1 /cooler/index.php/Admin/Index/left
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1
+ [ SQL语句 ] : select * from c_manager where mg_id=
+
+[ 2016-06-20T22:09:38+08:00 ] 127.0.0.1 /cooler/index.php/Admin/Goods/IMG_UPLOAD
+ERR: 非法操作:IMG_UPLOAD
+
+[ 2016-06-20T22:09:39+08:00 ] 127.0.0.1 /cooler/index.php/Admin/Goods/mine.css
+ERR: 非法操作:mine.css
+
+[ 2016-06-20T22:09:41+08:00 ] 127.0.0.1 /cooler/index.php/Admin/Goods/mine.css
+ERR: 非法操作:mine.css
+
+[ 2016-06-20T22:09:41+08:00 ] 127.0.0.1 /cooler/index.php/Admin/Goods/IMG_UPLOAD
+ERR: 非法操作:IMG_UPLOAD
+
+[ 2016-06-20T22:09:43+08:00 ] 127.0.0.1 /cooler/index.php/Admin/Goods/mine.css
+ERR: 非法操作:mine.css
+
+[ 2016-06-20T22:09:47+08:00 ] 127.0.0.1 /cooler/index.php/Admin/Goods/IMG_UPLOAD
+ERR: 非法操作:IMG_UPLOAD
+

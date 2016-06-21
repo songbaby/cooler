@@ -16,20 +16,24 @@ class AdminController extends Controller{
         //ACTION_NAME  ----showlist
         //当前请求操作
         $now_ac = CONTROLLER_NAME."-".ACTION_NAME;
-        
+       // show_bug($now_ac);
         //过滤控制器和方法，避免用户非法请求
         //通过角色获得用户可以访问的控制器和方法信息
-        $sql ="select role_auth_ac from c_manager a join c_role b on a.mg_role_id=b.role_id where a.mg_id=1".$_SESSION['mg_id'];
+        $sql ="select role_auth_ac from c_manager a join c_role b on a.mg_role_id=b.role_id where a.mg_id=".$_SESSION['mg_id'];
         $auth_ac = D()->query($sql);
+
+        //show_bug($sql);
+       // show_bug($_SESSION['mg_id']);
         $auth_ac = $auth_ac[0]['role_auth_ac'];
-        
+       // show_bug($auth_ac);
+       // show_bug(strpos($auth_ac,$now_ac));
         //判断$now_ac是否在$auth_ac字符串里边有出现过
         //strpos函数如果返回false是没有出现，返回0 1 2 3表示有出现
         //管理员不限制
         //默认以下权限没有限制
         //Index/left  Index/right  Index/head  Index/index  Manager/login
         $allow_ac = array('Index-left','Index-right','Index-head','Index-index','Manager-login');
-        if(!in_array($now_ac,$allow_ac) && $_SESSION['mg_id'] !=1 && strpos($auth_ac,$now_ac) === false){
+        if(!in_array($now_ac,$allow_ac) && $_SESSION['mg_id'] != 1 && strpos($auth_ac,$now_ac) === false){
             $this -> error('没有权限访问',U("Index/right"));
         }
     }

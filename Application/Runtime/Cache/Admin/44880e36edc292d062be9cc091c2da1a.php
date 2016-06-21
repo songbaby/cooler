@@ -1,11 +1,11 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html>
     <head>
         <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
 
         <title>会员列表</title>
 
-        <link href="{$Think.const.ADMIN_CSS_URL}mine.css" type="text/css" rel="stylesheet" />
+        <link href="<?php echo (ADMIN_CSS_URL); ?>mine.css" type="text/css" rel="stylesheet" />
     </head>
     <body>
         <style>
@@ -17,7 +17,7 @@
             <span>
                 <span style="float: left;">当前位置是：商品管理-》商品列表</span>
                 <span style="float: right; margin-right: 8px; font-weight: bold;">
-                    <a style="text-decoration: none;" href="__MODULE__/Goods/add">【添加商品】</a>
+                    <a style="text-decoration: none;" href="/cooler/index.php/Admin/Goods/add">【添加商品】</a>
                 </span>
             </span>
         </div>
@@ -48,24 +48,22 @@
                         <td>创建时间</td>
                         <td align="center">操作</td>
                     </tr>
-                    <foreach name="info"  item="v" >
-                    <tr id="product1">
-                        <td>{$v.goods_id}</td>
-                        <td><a href="#">{$v.goods_name}</a></td>
-                        <td>{$v.goods_number}</td>
-                        <td>{$v.goods_price} </td>
+                    <?php if(is_array($info)): foreach($info as $key=>$v): ?><tr id="product1">
+                        <td><?php echo ($v["goods_id"]); ?></td>
+                        <td><a href="#"><?php echo ($v["goods_name"]); ?></a></td>
+                        <td><?php echo ($v["goods_number"]); ?></td>
+                        <td><?php echo ($v["goods_price"]); ?> </td>
 
-                        <td><img src="{$Think.const.ADMIN_UPLOAD_URL}{$v.goods_big_img}" height="60" width="60"></td>
-                        <td><img src="{$Think.const.ADMIN_UPLOAD_URL}{$v.goods_small_img}" height="40" width="40"></td>
+                        <td><img src="<?php echo (ADMIN_UPLOAD_URL); echo ($v["goods_big_img"]); ?>" height="60" width="60"></td>
+                        <td><img src="<?php echo (ADMIN_UPLOAD_URL); echo ($v["goods_small_img"]); ?>" height="40" width="40"></td>
                         <td>苹果apple</td>
-                        <td>{$v.goods_create_time}</td>
-                        <td><a href="__MODULE__/Goods/upd/goods_id/{$v.goods_id}">修改</a></td>
-                        <td><a href="__MODULE__/Goods/del/goods_id/{$v.goods_id}">删除</a></td>
-                    </tr>
-                    </foreach>
+                        <td><?php echo ($v["goods_create_time"]); ?></td>
+                        <td><a href="/cooler/index.php/Admin/Goods/upd/goods_id/<?php echo ($v["goods_id"]); ?>">修改</a></td>
+                        <td><a href="/cooler/index.php/Admin/Goods/del/goods_id/<?php echo ($v["goods_id"]); ?>">删除</a></td>
+                    </tr><?php endforeach; endif; ?>
                     <tr>
                         <td colspan="20" style="text-align: center;">
-                            {$pagelist}
+                            <?php echo ($pagelist); ?>
                         </td>
                     </tr>
                 </tbody>
