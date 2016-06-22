@@ -1,0 +1,42 @@
+
+
+<div class='top-list-wrap'>
+    <div class='top-list'>
+        <ul class='l-list'>
+            <li><a href="__MODULE__/Index/index" >首页</a></li>
+            <li><a href="#" >地图</a></li>
+            <li><a href="#">列表</a></li>
+
+        </ul>
+        <ul class='r-list'>
+            <li><a href="/cooler/index.php/Admin/Manager/login">登录</a></li>
+            <li><a href="#">注册</a></li>
+        </ul>
+    </div>
+</div>
+
+
+<div id="nav">
+    <div align="center">
+
+          <div style="text-align: left">
+
+          <a href="__MODULE__/Index/select/county/1" >金乡县</a>
+              <a href="__MODULE__/Index/select/county/2" >成武县</a>
+              <a href="__MODULE__/Index/select/county/3" >寿光市</a>
+          </div>
+
+          <div style="text-align: left">
+              <foreach name="loc_town" item="vo" key="k" >
+
+                  <a href="__MODULE__/Index/select/county/1/town/{$vo[id]}"> {$vo[name]},</a>
+              </foreach>
+        </div>
+        
+        </div>
+
+
+
+
+
+</div>

@@ -195,52 +195,13 @@ class GoodsController extends AdminController {
                 $this->error('删除失败!',U('showlist'));
             }
         }
+    }
+
+
+    function detail(){
+
 
     }
-    
-    function getMoney(){
-        return "1000元钱";
-    }
-    
-    //设置缓存
-    function s1(){
-        S('name','tom',10);
-        S('age',25);
-        S('addr','北京');
-        S('hobby',array('篮球','排球','棒球'));
-        echo "success";
-    }
-    
-    //读取缓存数据
-    function s2(){
-        echo S('name'),"<br />";
-        echo S('age'),"<br />";
-        echo S('addr'),"<br />";
-        print_r(S('hobby'));echo "<br />";
-    }
-    
-    function s3(){
-        //S('age',null);
-        echo "delete";
-    }
-    
-    function y1(){
-        //外部用户访问的方法
-        show_bug($this -> y2());
-    }
-    function y2(){
-        //被其他方法调用的方法，获得指定信息
-        //第一次从数据库获得，后续在有效期从缓存里边获得
-        $info = S('goods_info');
-        if($info){
-            return $info;
-        } else {
-            //没有缓存信息，就从数据库获得数据，再把数据缓存起来
-            //连接数据库
-            $dt = "apple5s".time();
-            S('goods_info',$dt,10);
-            return $dt;
-        }
-    }
+
 }
 

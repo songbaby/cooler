@@ -11,27 +11,25 @@
 <body>
 
 
-<div id="top">
+
+<div class='top-list-wrap'>
+    <div class='top-list'>
+        <ul class='l-list'>
+            <li><a href="/cooler/index.php/Home/Index/index" >首页</a></li>
+            <li><a href="#" >地图</a></li>
+            <li><a href="#">列表</a></li>
+
+        </ul>
+        <ul class='r-list'>
+            <li><a href="/cooler/index.php/Admin/Manager/login">登录</a></li>
+            <li><a href="#">注册</a></li>
+        </ul>
+    </div>
+</div>
 
 
-      <div align="center">
-
-          <div style="text-align: right">
-              <a href="/cooler/index.php/Home/Index/map" > 地图</a>
-              <a href="/cooler/index.php/Home/Index/list" > 列表 </a>
-              &nbsp;&nbsp;&nbsp;&nbsp;
-              &nbsp;&nbsp;&nbsp;&nbsp;
-              &nbsp;&nbsp;&nbsp;&nbsp;
-              &nbsp;&nbsp;&nbsp;&nbsp;
-              &nbsp;&nbsp;&nbsp;&nbsp;
-              &nbsp;&nbsp;&nbsp;&nbsp;
-              &nbsp;&nbsp;&nbsp;&nbsp;
-              &nbsp;&nbsp;&nbsp;&nbsp;
-              &nbsp;&nbsp;&nbsp;&nbsp;
-              &nbsp;&nbsp;&nbsp;&nbsp;
-              <a href="/cooler/index.php/Admin/Manager/login" > 登录</a>
-              <a href="#" > 注册</a>
-          </div>
+<div id="nav">
+    <div align="center">
 
           <div style="text-align: left">
 
