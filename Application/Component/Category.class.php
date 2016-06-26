@@ -64,6 +64,21 @@ class Category{
 
     }
 
+    static public function getChildsId_WithSelf($cate,$pid){
+
+        $arr=array();
+        $arr[] = $pid;
+        foreach($cate as $v){
+            if($v['pid'] == $pid){
+                $arr[] =  $v['id'];//$v;
+                $arr = array_merge($arr , self::getChildsId($cate,$v['id']));
+            }
+        }
+
+        return $arr;
+
+    }
+
 
 //����һ����������id �������е��Ӽ�����
     static public function getChilds($cate,$pid){

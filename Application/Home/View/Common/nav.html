@@ -2,114 +2,92 @@
 
 <php>
     import('Class.Category',APP_PATH);
-    $cate = M('cate')->order('sort')->select();
+    $cate = M('cate')->order('id')->select();
     $cate = Category::unLimitedForLevel($cate);
+    $cids = Category::getChildsId($cate,4);
 
     $allstr = json_encode($cate);
 
-    $province = Category::getChilds2($cate,1);
-    $jsonstr = json_encode($province);
-
-    /*
-    $city = Category::getChilds2($cate,2);
-    $county = Category::getChilds2($cate,4);
-    $town = Category::getChilds2($cate,6);
-    */
-
 </php>
-
-
-<?php
-
-$array = array("name" => "Eric","age" => 23);
-$result = json_encode($array);
-
-?>
-
-
-
 
 {/* 这是模板注释内容*/ }
 
 
 
-
-
-
-
 <script language=javascript>
 
-    var   allstr = '<?php echo $allstr ?>';
-    var allarray=eval("("+allstr+")");
 
     $(function(){
+        var   allstr = '<?php echo $allstr ?>';
+        var allarray=eval("("+allstr+")");
 
         var txtHtml ="";
         $.each(allarray,function(key,val){
-            if(val.pid == 1) {
-                console.log('_mozi数组中 ,索引 : '+key+' 对应的值为: '+val.name);
-                txtHtml += '<a href="#" id='+val.id+'>'+ val.name +'</a>';
+            if(val.pid == 4 || val.pid == 5 || val.pid == 5 || val.pid == 38) {
+                txtHtml += '<a href="#" id='+val.id+'>'+ " " +val.name +'</a>';
             }
         });
-        $("#provincediv").html(txtHtml); // 把返回的数据添加到页面上
-
-
-
-        $('#provincediv > a').live("click",function() {
-            var iid =$(this).attr('id');
-
-            var txtHtml ="";
-            $.each(allarray,function(key,val){
-
-                if(val.pid == iid) {
-                    console.log('_mozi数组中 ,索引 : '+key+' 对应的值为: '+val.name);
-                    txtHtml += '<a href="#" id='+val.id+'>'+ val.name +'</a>';
-                }
-            });
-            $("#citydiv ").html(txtHtml);
-
-
-            $("#countydiv").html("");
-            $("#towndiv").html("");
-        })
-
-
-        $('#citydiv > a').live('click',function() {
-
-            console.log("ffff");
-            var iid =$(this).attr('id');
-
-            var txtHtml ="";
-            $.each(allarray,function(key,val){
-
-                if(val.pid == iid) {
-                    console.log('_mozi数组中 ,索引 : '+key+' 对应的值为: '+val.name);
-                    txtHtml += '<a href="#" id='+val.id+'>'+ val.name +'</a>';
-                }
-            });
-            $("#countydiv ").html(txtHtml);
-
-            $("#towndiv").html("");
-        })
-
+        $("#countydiv").html(txtHtml); // 把返回的数据添加到页面上
 
 
         $('#countydiv > a').live('click',function() {
 
-            console.log("ffff");
-            var iid =$(this).attr('id');
+            var id =$(this).attr('id');
+            currentcounty=$(this).html();
 
             var txtHtml ="";
             $.each(allarray,function(key,val){
-
-                if(val.pid == iid) {
-                    console.log('_mozi数组中 ,索引 : '+key+' 对应的值为: '+val.name);
-                    txtHtml += '<a href="#" id='+val.id+'>'+ val.name +'</a>';
+                if(val.pid == id) {
+                    txtHtml += '<a href="#" id='+val.id+'>'+ " " +val.name +'</a>';
                 }
             });
             $("#towndiv ").html(txtHtml);
+            getBoundary();
+
+            $.post("__MODULE__/Cooler/getcooler", {
+                cid :  id ,
+            }, function (data, textStatus){
+
+                var allOverlay = map.getOverlays();
+                var len = allOverlay.length;
+
+                for (var i = 0; i < len; i++){
+                    if(allOverlay[i] instanceof BMap.Marker){
+                        map.removeOverlay(allOverlay[i]);
+                    }
+                }
+
+                $.each(data,function(key,val){
+                    AddCooler(val.lng, val.lat);
+                });
+            },"json");
+
+
         })
 
+        $('#towndiv > a').live('click',function() {
+
+            var id =$(this).attr('id');
+
+            $.post("__MODULE__/Cooler/getcooler", {
+                cid :  id ,
+            }, function (data, textStatus){
+
+                var allOverlay = map.getOverlays();
+                var len = allOverlay.length;
+                for (var i = 0; i < len; i++){
+                    if(allOverlay[i] instanceof BMap.Marker){
+                        map.removeOverlay(allOverlay[i]);
+                    }
+                }
+
+                $.each(data,function(key,val){
+                    AddCooler(val.lng, val.lat);
+                });
+            },"json");
+
+
+        })
 
     })
 
@@ -135,23 +113,11 @@ $result = json_encode($array);
 
 <div id="nav">
     <div align="left">
-
-
-        <div id='provincediv' style="text-align: left">
-        </div>
-
-        <div id='citydiv' style="text-align: left">
-
-        </div>
-
         <div id='countydiv' style="text-align: left">
         </div>
 
         <div id='towndiv' style="text-align: left">
-
         </div>
-
-
 
         </div>
 
