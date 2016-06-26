@@ -292,3 +292,125 @@ INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
 SQL: SHOW COLUMNS FROM `c_cate` [ RunTime:0.0050s ]
 SQL: SELECT * FROM `c_cate` ORDER BY sort  [ RunTime:0.0000s ]
 
+[ 2016-06-26T08:17:59+08:00 ] 127.0.0.1 /cooler/index.php/Home/Index/getcate
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `c_cate` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `c_cate` ORDER BY sort  [ RunTime:0.0000s ]
+
+[ 2016-06-26T08:17:59+08:00 ] 127.0.0.1 /cooler/index.php/Home/Index/getcate
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `c_cate` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `c_cate` ORDER BY sort  [ RunTime:0.0010s ]
+
+[ 2016-06-26T08:18:00+08:00 ] 127.0.0.1 /cooler/index.php/Home/Index/getcate
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `c_cate` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `c_cate` ORDER BY sort  [ RunTime:0.0000s ]
+
+[ 2016-06-26T08:18:01+08:00 ] 127.0.0.1 /cooler/index.php/Home/Index/getcate
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `c_cate` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `c_cate` ORDER BY sort  [ RunTime:0.0000s ]
+
+[ 2016-06-26T08:18:01+08:00 ] 127.0.0.1 /cooler/index.php/Home/Index/getcate
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `c_cate` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `c_cate` ORDER BY sort  [ RunTime:0.0000s ]
+
+[ 2016-06-26T08:18:02+08:00 ] 127.0.0.1 /cooler/index.php/Home/Index/getcate
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `c_cate` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `c_cate` ORDER BY sort  [ RunTime:0.0000s ]
+
+[ 2016-06-26T08:18:03+08:00 ] 127.0.0.1 /cooler/index.php/Home/Index/getcate
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `c_cate` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `c_cate` ORDER BY sort  [ RunTime:0.0010s ]
+
+[ 2016-06-26T08:18:03+08:00 ] 127.0.0.1 /cooler/index.php/Home/Index/getcate
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `c_cate` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `c_cate` ORDER BY sort  [ RunTime:0.0000s ]
+
+[ 2016-06-26T08:18:04+08:00 ] 127.0.0.1 /cooler/index.php/Home/Index/getcate
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `c_cate` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `c_cate` ORDER BY sort  [ RunTime:0.0010s ]
+
+[ 2016-06-26T08:18:07+08:00 ] 127.0.0.1 /cooler/index.php/Home/Index/getcate
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `c_cate` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `c_cate` ORDER BY sort  [ RunTime:0.0000s ]
+
+[ 2016-06-26T08:20:16+08:00 ] 127.0.0.1 /cooler/index.php/Home/Index/getcate
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `c_cate` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `c_cate` ORDER BY sort  [ RunTime:0.0010s ]
+
+[ 2016-06-26T08:20:24+08:00 ] 127.0.0.1 /cooler/index.php/Home/Index/getcate
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `c_cate` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `c_cate` ORDER BY sort  [ RunTime:0.0000s ]
+
+[ 2016-06-26T08:20:28+08:00 ] 127.0.0.1 /cooler/index.php/Home/Index/getcate
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `c_cate` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `c_cate` ORDER BY sort  [ RunTime:0.0000s ]
+
+[ 2016-06-26T08:20:30+08:00 ] 127.0.0.1 /cooler/index.php/Home/Index/getcate
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `c_cate` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `c_cate` ORDER BY sort  [ RunTime:0.0010s ]
+
+[ 2016-06-26T08:20:31+08:00 ] 127.0.0.1 /cooler/index.php/Home/Index/getcate
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `c_cate` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `c_cate` ORDER BY sort  [ RunTime:0.0000s ]
+
+[ 2016-06-26T08:21:40+08:00 ] 127.0.0.1 /cooler/index.php/Home/Index/getcate
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `c_cate` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `c_cate` ORDER BY sort  [ RunTime:0.0010s ]
+
+[ 2016-06-26T08:21:44+08:00 ] 127.0.0.1 /cooler/index.php/Home/Index/getcate
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `c_cate` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `c_cate` ORDER BY sort  [ RunTime:0.0010s ]
+
+[ 2016-06-26T08:41:26+08:00 ] 127.0.0.1 /cooler/index.php/Home/index/nav
+ERR: 非法操作:nav
+

@@ -6,7 +6,6 @@ class IndexController extends Controller {
 
 
 
-
     public function index(){
 
        // $this->display('test2');die;
@@ -119,4 +118,7 @@ p($_POST);
         dump($_POST);
 
     }
+
+
+
 }

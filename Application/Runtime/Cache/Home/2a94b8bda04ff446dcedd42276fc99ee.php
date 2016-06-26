@@ -10,45 +10,101 @@
 
 <body>
 
-<?php import('Class.Category',APP_PATH); $cate = M('cate')->order('sort')->select(); $cate = Category::unLimitedForLevel($cate); $province = Category::getChilds2($cate,1); ?>
+<script type="text/JavaScript" src='<?php echo (JS_URL); ?>jquery_1.6.1.js'></script>
+
+<?php import('Class.Category',APP_PATH); $cate = M('cate')->order('sort')->select(); $cate = Category::unLimitedForLevel($cate); $allstr = json_encode($cate); $province = Category::getChilds2($cate,1); $jsonstr = json_encode($province); ?>
+
+
+<?php
+ $array = array("name" => "Eric","age" => 23); $result = json_encode($array); ?>
 
 
 
 
 
 
-<script type="text/JavaScript" src='<?php echo (JS_URL); ?>jquery_1.9.js'></script>
+
 
 
 
 
 
 <script language=javascript>
-    var   catjson;
+
+    var   allstr = '<?php echo $allstr ?>';
+    var allarray=eval("("+allstr+")");
+
     $(function(){
 
-        $('#provincediv > a').click(function() {
+        var txtHtml ="";
+        $.each(allarray,function(key,val){
+            if(val.pid == 1) {
+                console.log('_mozi数组中 ,索引 : '+key+' 对应的值为: '+val.name);
+                txtHtml += '<a href="#" id='+val.id+'>'+ val.name +'</a>';
+            }
+        });
+        $("#provincediv").html(txtHtml); // 把返回的数据添加到页面上
 
-            var pid = $(this).attr('id');
-            var txtHtml="";
-            $.post("/cooler/index.php/Home/Index/getcate", {
-                pid :  pid ,
-            }, function (data, textStatus){
-                $.each(data,function(key,val){
-                    txtHtml += '<a href="#" id='+val.id+'>'+ val.name +'</a>';
+
+
+        $('#provincediv > a').live("click",function() {
+            var iid =$(this).attr('id');
+
+            var txtHtml ="";
+            $.each(allarray,function(key,val){
+
+                if(val.pid == iid) {
                     console.log('_mozi数组中 ,索引 : '+key+' 对应的值为: '+val.name);
-                });
-                console.log(txtHtml);
-                $('#citydiv').html(txtHtml);
-            },"json");
-            })
+                    txtHtml += '<a href="#" id='+val.id+'>'+ val.name +'</a>';
+                }
+            });
+            $("#citydiv ").html(txtHtml);
+
+
+            $("#countydiv").html("");
+            $("#towndiv").html("");
+        })
+
+
+        $('#citydiv > a').live('click',function() {
+
+            console.log("ffff");
+            var iid =$(this).attr('id');
+
+            var txtHtml ="";
+            $.each(allarray,function(key,val){
+
+                if(val.pid == iid) {
+                    console.log('_mozi数组中 ,索引 : '+key+' 对应的值为: '+val.name);
+                    txtHtml += '<a href="#" id='+val.id+'>'+ val.name +'</a>';
+                }
+            });
+            $("#countydiv ").html(txtHtml);
+
+            $("#towndiv").html("");
+        })
+
+
+
+        $('#countydiv > a').live('click',function() {
+
+            console.log("ffff");
+            var iid =$(this).attr('id');
+
+            var txtHtml ="";
+            $.each(allarray,function(key,val){
+
+                if(val.pid == iid) {
+                    console.log('_mozi数组中 ,索引 : '+key+' 对应的值为: '+val.name);
+                    txtHtml += '<a href="#" id='+val.id+'>'+ val.name +'</a>';
+                }
+            });
+            $("#towndiv ").html(txtHtml);
+        })
+
+
     })
 
-    var coutryid =1;
-    var provinceid =0;
-    var cityid =0;
-    var countyid =0;
-    var townid =0;
 
 </script>
 
@@ -74,25 +130,18 @@
 
 
         <div id='provincediv' style="text-align: left">
-                <?php if(is_array($province)): foreach($province as $key=>$value): ?><a id="<?php echo ($value['id']); ?>" href="#" >--<?php echo ($value['name']); ?></a><?php endforeach; endif; ?>
-
         </div>
 
         <div id='citydiv' style="text-align: left">
 
-            <?php if(is_array($city)): foreach($city as $key=>$value): ?><a id="<?php echo ($value['id']); ?>" href="#" >--<?php echo ($value['name']); ?></a><?php endforeach; endif; ?>
-
         </div>
 
         <div id='countydiv' style="text-align: left">
-            <?php if(is_array($county)): foreach($county as $key=>$value): ?><a id="<?php echo ($value['id']); ?>" href="#" >--<?php echo ($value['name']); ?></a><?php endforeach; endif; ?>
         </div>
 
         <div id='towndiv' style="text-align: left">
-            <?php if(is_array($town)): foreach($town as $key=>$value): ?><a id="<?php echo ($value['id']); ?>" href="#" >--<?php echo ($value['name']); ?></a><?php endforeach; endif; ?>
+
         </div>
-
-
 
 
 

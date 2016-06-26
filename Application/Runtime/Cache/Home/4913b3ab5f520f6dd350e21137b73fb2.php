@@ -1,6 +1,6 @@
-<html>
+<?php if (!defined('THINK_PATH')) exit();?><html>
 <head>
-    <script type="text/JavaScript" src='{$Think.const.JS_URL}jquery_1.6.1.js'></script>
+    <script type="text/JavaScript" src='<?php echo (JS_URL); ?>jquery_1.6.1.js'></script>
 
     <script type="text/javascript">
         $(document).ready(function(){
