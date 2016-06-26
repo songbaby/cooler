@@ -41,17 +41,8 @@
                 console.log(txtHtml);
                 $('#citydiv').html(txtHtml);
             },"json");
-
-
-
-
-
-
             })
     })
-
-
-
 
     var coutryid =1;
     var provinceid =0;

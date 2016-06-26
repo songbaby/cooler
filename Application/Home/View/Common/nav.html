@@ -1,3 +1,55 @@
+<php>
+
+    import('Class.Category',APP_PATH);
+    $cate = M('cate')->order('sort')->select();
+    $cate = Category::unLimitedForLevel($cate);
+    $province = Category::getChilds2($cate,1);
+    /*
+   $city = Category::getChilds2($cate,2);
+    $county = Category::getChilds2($cate,4);
+    $town = Category::getChilds2($cate,6);
+*/
+</php>
+
+{/* 这是模板注释内容*/ }
+
+
+
+
+<script type="text/JavaScript" src='{$Think.const.JS_URL}jquery_1.9.js'></script>
+
+
+
+
+
+<script language=javascript>
+    var   catjson;
+    $(function(){
+
+        $('#provincediv > a').click(function() {
+
+            var pid = $(this).attr('id');
+            var txtHtml="";
+            $.post("__MODULE__/Index/getcate", {
+                pid :  pid ,
+            }, function (data, textStatus){
+                $.each(data,function(key,val){
+                    txtHtml += '<a href="#" id='+val.id+'>'+ val.name +'</a>';
+                    console.log('_mozi数组中 ,索引 : '+key+' 对应的值为: '+val.name);
+                });
+                console.log(txtHtml);
+                $('#citydiv').html(txtHtml);
+            },"json");
+            })
+    })
+
+    var coutryid =1;
+    var provinceid =0;
+    var cityid =0;
+    var countyid =0;
+    var townid =0;
+
+</script>
 
 
 <div class='top-list-wrap'>
@@ -17,22 +69,40 @@
 
 
 <div id="nav">
-    <div align="center">
+    <div align="left">
 
-          <div style="text-align: left">
 
-          <a href="__MODULE__/Index/select/county/1" >金乡县</a>
-              <a href="__MODULE__/Index/select/county/2" >成武县</a>
-              <a href="__MODULE__/Index/select/county/3" >寿光市</a>
-          </div>
+        <div id='provincediv' style="text-align: left">
+                <foreach name="province" item="value">
+                        <a id="{$value['id']}" href="#" >--{$value['name']}</a>
+                </foreach>
 
-          <div style="text-align: left">
-              <foreach name="loc_town" item="vo" key="k" >
-
-                  <a href="__MODULE__/Index/select/county/1/town/{$vo[id]}"> {$vo[name]},</a>
-              </foreach>
         </div>
-        
+
+        <div id='citydiv' style="text-align: left">
+
+            <foreach name="city" item="value">
+                <a id="{$value['id']}" href="#" >--{$value['name']}</a>
+            </foreach>
+
+        </div>
+
+        <div id='countydiv' style="text-align: left">
+            <foreach name="county" item="value">
+                <a id="{$value['id']}" href="#" >--{$value['name']}</a>
+            </foreach>
+        </div>
+
+        <div id='towndiv' style="text-align: left">
+            <foreach name="town" item="value">
+                <a id="{$value['id']}" href="#" >--{$value['name']}</a>
+            </foreach>
+        </div>
+
+
+
+
+
         </div>
 
 
