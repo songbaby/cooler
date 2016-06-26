@@ -10,6 +10,56 @@
 
 <body>
 
+<?php import('Class.Category',APP_PATH); $cate = M('cate')->order('sort')->select(); $cate = Category::unLimitedForLevel($cate); $province = Category::getChilds2($cate,1); ?>
+
+
+
+
+
+
+<script type="text/JavaScript" src='<?php echo (JS_URL); ?>jquery_1.9.js'></script>
+
+
+
+
+
+<script language=javascript>
+    var   catjson;
+    $(function(){
+
+        $('#provincediv > a').click(function() {
+
+            var pid = $(this).attr('id');
+            var txtHtml="";
+            $.post("/cooler/index.php/Home/Index/getcate", {
+                pid :  pid ,
+            }, function (data, textStatus){
+                $.each(data,function(key,val){
+                    txtHtml += '<a href="#" id='+val.id+'>'+ val.name +'</a>';
+                    console.log('_mozi数组中 ,索引 : '+key+' 对应的值为: '+val.name);
+                });
+                console.log(txtHtml);
+                $('#citydiv').html(txtHtml);
+            },"json");
+
+
+
+
+
+
+            })
+    })
+
+
+
+
+    var coutryid =1;
+    var provinceid =0;
+    var cityid =0;
+    var countyid =0;
+    var townid =0;
+
+</script>
 
 
 <div class='top-list-wrap'>
@@ -29,19 +79,32 @@
 
 
 <div id="nav">
-    <div align="center">
+    <div align="left">
 
-          <div style="text-align: left">
 
-          <a href="/cooler/index.php/Home/Index/select/county/1" >金乡县</a>
-              <a href="/cooler/index.php/Home/Index/select/county/2" >成武县</a>
-              <a href="/cooler/index.php/Home/Index/select/county/3" >寿光市</a>
-          </div>
+        <div id='provincediv' style="text-align: left">
+                <?php if(is_array($province)): foreach($province as $key=>$value): ?><a id="<?php echo ($value['id']); ?>" href="#" >--<?php echo ($value['name']); ?></a><?php endforeach; endif; ?>
 
-          <div style="text-align: left">
-              <?php if(is_array($loc_town)): foreach($loc_town as $k=>$vo): ?><a href="/cooler/index.php/Home/Index/select/county/1/town/<?php echo ($vo[id]); ?>"> <?php echo ($vo[name]); ?>,</a><?php endforeach; endif; ?>
         </div>
-        
+
+        <div id='citydiv' style="text-align: left">
+
+            <?php if(is_array($city)): foreach($city as $key=>$value): ?><a id="<?php echo ($value['id']); ?>" href="#" >--<?php echo ($value['name']); ?></a><?php endforeach; endif; ?>
+
+        </div>
+
+        <div id='countydiv' style="text-align: left">
+            <?php if(is_array($county)): foreach($county as $key=>$value): ?><a id="<?php echo ($value['id']); ?>" href="#" >--<?php echo ($value['name']); ?></a><?php endforeach; endif; ?>
+        </div>
+
+        <div id='towndiv' style="text-align: left">
+            <?php if(is_array($town)): foreach($town as $key=>$value): ?><a id="<?php echo ($value['id']); ?>" href="#" >--<?php echo ($value['name']); ?></a><?php endforeach; endif; ?>
+        </div>
+
+
+
+
+
         </div>
 
 

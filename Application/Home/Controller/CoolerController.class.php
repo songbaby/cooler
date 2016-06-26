@@ -3,6 +3,7 @@ namespace Home\Controller;
 use Think\Controller;
 class CoolerController extends Controller {
 
+
     public function index(){
 
        // $this->display('test2');die;
@@ -12,7 +13,8 @@ class CoolerController extends Controller {
 
        // $this->info_cooler = $info_cooler;
 
-        
+        $GLOBALS['map_list']=0;
+
 
         $this->display('index');
 die;
