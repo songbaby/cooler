@@ -136,8 +136,84 @@
 </div>
 
 <div id="bottum">
-    网络文化经营许可证：沪[2013]0268-027号|增值电信业务经营许可证：沪A2-20080224|信息网络传播视听节目许可证：1109364号|互联网违法和不良信息举报电话:021-81683755 blxx@list.alibaba-inc.com
+    网络文化经营许可证：沪[2016]0268-027号|增值电信业务经营许可证：沪A2-20080224|信息网络传播视听节目许可证：1109364号|互联网违法和不良信息举报电话:021-81683755 blxx@list.alibaba-inc.com
 </div>
 
 </body>
 </html>
+
+
+
+
+
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=3nbIhiC4xvRt2ofWcRPAo4uj"></script>
+
+
+
+<script type="text/javascript">
+    // 百度地图API功能
+
+
+    // 百度地图API功能
+    var map = new BMap.Map("content");
+    var point = new BMap.Point(116.235237, 35.079983);
+    map.enableScrollWheelZoom();
+
+    var currentcounty="金乡县";
+
+    function addMarker(point){
+        var marker = new BMap.Marker(point);
+        map.addOverlay(marker);
+    }
+
+    function getBoundary(){
+        var bdary = new BMap.Boundary();
+        bdary.get(currentcounty, function(rs){       //获取行政区域
+            // map.clearOverlays();        //清除地图覆盖物
+            var count = rs.boundaries.length; //行政区域的点有多少个
+            if (count === 0) {
+                alert('未能获取当前输入行政区域');
+                return ;
+            }
+            var pointArray = [];
+            for (var i = 0; i < count; i++) {
+                var ply = new BMap.Polygon(rs.boundaries[i], {strokeWeight: 2, strokeColor: "blue"}); //建立多边形覆盖物
+                ply.setStrokeStyle("dashed");
+                ply.setFillColor("none");
+                map.addOverlay(ply);  //添加覆盖物
+                pointArray = pointArray.concat(ply.getPath());
+            }
+            map.setViewport(pointArray);    //调整视野
+        });
+    }
+
+    function AddCooler(lng,lat)
+    {
+
+        var point = new BMap.Point(lng, lat);
+        addMarker(point);
+
+    }
+
+    function displaymap(data){
+
+        getBoundary();
+        var allOverlay = map.getOverlays();
+        var len = allOverlay.length;
+
+        for (var i = 0; i < len; i++){
+            if(allOverlay[i] instanceof BMap.Marker){
+                map.removeOverlay(allOverlay[i]);
+            }
+        }
+
+        $.each(data,function(key,val){
+            AddCooler(val.lng, val.lat);
+        });
+    }
+
+
+    getBoundary();
+
+
+</script>

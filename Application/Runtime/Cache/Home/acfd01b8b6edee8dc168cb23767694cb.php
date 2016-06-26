@@ -131,13 +131,65 @@
         </div>
 </div>
 
-<div id="content">
+
+
+<style>
+
+    .table{width:100%;}
+    .table,.table td{border:solid 1px #ccc;}
+    .table th{border:solid 1px #ccc;width:10px;}
+    .table thead tr td{background: #eee;color:#333;}
+    .table,th,td{ border-collapse: collapse;background:#fff;}
+    #listdiv{width: 90%; height:100px;MARGIN-RIGHT: auto; MARGIN-LEFT: auto;}
+</style>
+
+
+
+<div id="listdiv" >
+
 
 </div>
 
-<div id="bottum">
-    网络文化经营许可证：沪[2013]0268-027号|增值电信业务经营许可证：沪A2-20080224|信息网络传播视听节目许可证：1109364号|互联网违法和不良信息举报电话:021-81683755 blxx@list.alibaba-inc.com
-</div>
+
+
 
 </body>
 </html>
+
+
+
+<script type="text/javascript">
+    // 百度地图API功能
+
+
+
+    function displaylist(data){
+
+        var txthtml="";
+
+        txthtml +="<table id=\"table\" class=\"table\">";
+        txthtml+=" <tr>";
+        txthtml+=" <th>名称<\/th>";
+        txthtml+="<th>价格<\/th>";
+        txthtml+="<th>区域<\/th>";
+        txthtml+=" <\/tr>";
+
+
+        $.each(data,function(key,val){
+            txthtml +="<tr>";
+            txthtml += "<td width=\"8%\"> <a href=\"/cooler/index.php/Home/Cooler/detail/id/"+val.id +"\">"+val.name+"</a><\/td>"
+            txthtml += "<td width=\"8%\">"+val.price+"<\/td>"
+            txthtml += "<td width=\"8%\">"+val.loc+"<\/td>"
+            txthtml +="<\/tr>"
+
+        });
+
+        txthtml+=" <\/table>";
+
+
+        $('#listdiv').html(txthtml);
+
+    }
+
+
+</script>

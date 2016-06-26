@@ -1,75 +1,91 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html>
-    <head>
-        <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
 
-        <title>会员列表</title>
+<include file="Common/head"/>
 
-        <link href="{$Think.const.ADMIN_CSS_URL}mine.css" type="text/css" rel="stylesheet" />
-    </head>
-    <body>
-        <style>
+<body>
 
-            .tr_color{background-color: #9F88FF}
+<include file="Common/nav"/>
+<div id="content">
 
-        </style>
-        <div class="div_head">
-            <span>
-                <span style="float: left;">当前位置是：商品管理-》商品列表</span>
-                <span style="float: right; margin-right: 8px; font-weight: bold;">
-                    <a style="text-decoration: none;" href="__MODULE__/Goods/add">【添加商品】</a>
-                </span>
-            </span>
-        </div>
-        <div></div>
-        
-        <div class="div_search">
-            <span>
-                <form action="#" method="get">
-                    品牌<select name="s_product_mark" style="width: 100px;">
-                        <option selected="selected" value="0">请选择</option>
-                        <option value="1">苹果apple</option>
-                    </select>
-                    <input value="查询" type="submit" />
-                </form>
-            </span>
-        </div>
+</div>
 
-        <div style="font-size: 13px; margin: 10px 5px;">
-            <table class="table_a" border="1" width="100%">
-                <tbody><tr style="font-weight: bold;">
-                        <td>序号</td>
-                        <td>商品名称</td>
-                        <td>库存</td>
-                        <td>价格</td>
-                        <td>图片</td>
-                        <td>缩略图</td>
-                        <td>品牌</td>
-                        <td>创建时间</td>
-                        <td align="center">操作</td>
-                    </tr>
-                    <foreach name="info"  item="v" >
-                    <tr id="product1">
-                        <td>{$v.goods_id}</td>
-                        <td><a href="#">{$v.goods_name}</a></td>
-                        <td>{$v.goods_number}</td>
-                        <td>{$v.goods_price} </td>
+<include file="Common::bottum"/>
 
-                        <td><img src="{$Think.const.ADMIN_UPLOAD_URL}{$v.goods_big_img}" height="60" width="60"></td>
-                        <td><img src="{$Think.const.ADMIN_UPLOAD_URL}{$v.goods_small_img}" height="40" width="40"></td>
-                        <td>苹果apple</td>
-                        <td>{$v.goods_create_time}</td>
-                        <td><a href="__MODULE__/Goods/upd/goods_id/{$v.goods_id}">修改</a></td>
-                        <td><a href="__MODULE__/Goods/del/goods_id/{$v.goods_id}">删除</a></td>
-                    </tr>
-                    </foreach>
-                    <tr>
-                        <td colspan="20" style="text-align: center;">
-                            {$pagelist}
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    </body>
+</body>
 </html>
+
+
+
+
+
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=3nbIhiC4xvRt2ofWcRPAo4uj"></script>
+
+
+
+<script type="text/javascript">
+    // 百度地图API功能
+
+
+    // 百度地图API功能
+    var map = new BMap.Map("content");
+    var point = new BMap.Point(116.235237, 35.079983);
+    map.enableScrollWheelZoom();
+
+    var currentcounty="金乡县";
+
+    function addMarker(point){
+        var marker = new BMap.Marker(point);
+        map.addOverlay(marker);
+    }
+
+    function getBoundary(){
+        var bdary = new BMap.Boundary();
+        bdary.get(currentcounty, function(rs){       //获取行政区域
+            // map.clearOverlays();        //清除地图覆盖物
+            var count = rs.boundaries.length; //行政区域的点有多少个
+            if (count === 0) {
+                alert('未能获取当前输入行政区域');
+                return ;
+            }
+            var pointArray = [];
+            for (var i = 0; i < count; i++) {
+                var ply = new BMap.Polygon(rs.boundaries[i], {strokeWeight: 2, strokeColor: "blue"}); //建立多边形覆盖物
+                ply.setStrokeStyle("dashed");
+                ply.setFillColor("none");
+                map.addOverlay(ply);  //添加覆盖物
+                pointArray = pointArray.concat(ply.getPath());
+            }
+            map.setViewport(pointArray);    //调整视野
+        });
+    }
+
+    function AddCooler(lng,lat)
+    {
+
+        var point = new BMap.Point(lng, lat);
+        addMarker(point);
+
+    }
+
+    function displaymap(data){
+
+        getBoundary();
+        var allOverlay = map.getOverlays();
+        var len = allOverlay.length;
+
+        for (var i = 0; i < len; i++){
+            if(allOverlay[i] instanceof BMap.Marker){
+                map.removeOverlay(allOverlay[i]);
+            }
+        }
+
+        $.each(data,function(key,val){
+            AddCooler(val.lng, val.lat);
+        });
+    }
+
+
+    getBoundary();
+
+
+</script>

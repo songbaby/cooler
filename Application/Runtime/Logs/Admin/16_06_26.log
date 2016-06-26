@@ -1,0 +1,27 @@
+[ 2016-06-26T18:40:16+08:00 ] 127.0.0.1 /cooler/index.php/Admin/Cooler/showlist
+ERR: 无法加载控制器:Cooler
+
+[ 2016-06-26T18:40:17+08:00 ] 127.0.0.1 /cooler/index.php/Admin/Cooler/add
+ERR: 无法加载控制器:Cooler
+
+[ 2016-06-26T18:40:18+08:00 ] 127.0.0.1 /cooler/index.php/Admin/Cooler/showlist
+ERR: 无法加载控制器:Cooler
+
+[ 2016-06-26T18:40:19+08:00 ] 127.0.0.1 /cooler/index.php/Admin/Cooler/add
+ERR: 无法加载控制器:Cooler
+
+[ 2016-06-26T18:40:19+08:00 ] 127.0.0.1 /cooler/index.php/Admin/Cooler/showlist
+ERR: 无法加载控制器:Cooler
+
+[ 2016-06-26T18:40:24+08:00 ] 127.0.0.1 /cooler/index.php/Admin/Cooler/showlist
+ERR: 无法加载控制器:Cooler
+
+[ 2016-06-26T18:40:24+08:00 ] 127.0.0.1 /cooler/index.php/Admin/Cooler/add
+ERR: 无法加载控制器:Cooler
+
+[ 2016-06-26T18:40:31+08:00 ] 127.0.0.1 /cooler/index.php/Admin/Cooler/showlist
+ERR: 无法加载控制器:Cooler
+
+[ 2016-06-26T18:40:31+08:00 ] 127.0.0.1 /cooler/index.php/Admin/Cooler/add
+ERR: 无法加载控制器:Cooler
+
