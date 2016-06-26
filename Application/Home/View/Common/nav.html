@@ -1,53 +1,118 @@
-<php>
+<script type="text/JavaScript" src='{$Think.const.JS_URL}jquery_1.6.1.js'></script>
 
+<php>
     import('Class.Category',APP_PATH);
     $cate = M('cate')->order('sort')->select();
     $cate = Category::unLimitedForLevel($cate);
+
+    $allstr = json_encode($cate);
+
     $province = Category::getChilds2($cate,1);
+    $jsonstr = json_encode($province);
+
     /*
-   $city = Category::getChilds2($cate,2);
+    $city = Category::getChilds2($cate,2);
     $county = Category::getChilds2($cate,4);
     $town = Category::getChilds2($cate,6);
-*/
+    */
+
 </php>
+
+
+<?php
+
+$array = array("name" => "Eric","age" => 23);
+$result = json_encode($array);
+
+?>
+
+
+
 
 {/* 这是模板注释内容*/ }
 
 
 
 
-<script type="text/JavaScript" src='{$Think.const.JS_URL}jquery_1.9.js'></script>
-
-
 
 
 
 <script language=javascript>
-    var   catjson;
+
+    var   allstr = '<?php echo $allstr ?>';
+    var allarray=eval("("+allstr+")");
+
     $(function(){
 
-        $('#provincediv > a').click(function() {
+        var txtHtml ="";
+        $.each(allarray,function(key,val){
+            if(val.pid == 1) {
+                console.log('_mozi数组中 ,索引 : '+key+' 对应的值为: '+val.name);
+                txtHtml += '<a href="#" id='+val.id+'>'+ val.name +'</a>';
+            }
+        });
+        $("#provincediv").html(txtHtml); // 把返回的数据添加到页面上
 
-            var pid = $(this).attr('id');
-            var txtHtml="";
-            $.post("__MODULE__/Index/getcate", {
-                pid :  pid ,
-            }, function (data, textStatus){
-                $.each(data,function(key,val){
-                    txtHtml += '<a href="#" id='+val.id+'>'+ val.name +'</a>';
+
+
+        $('#provincediv > a').live("click",function() {
+            var iid =$(this).attr('id');
+
+            var txtHtml ="";
+            $.each(allarray,function(key,val){
+
+                if(val.pid == iid) {
                     console.log('_mozi数组中 ,索引 : '+key+' 对应的值为: '+val.name);
-                });
-                console.log(txtHtml);
-                $('#citydiv').html(txtHtml);
-            },"json");
-            })
+                    txtHtml += '<a href="#" id='+val.id+'>'+ val.name +'</a>';
+                }
+            });
+            $("#citydiv ").html(txtHtml);
+
+
+            $("#countydiv").html("");
+            $("#towndiv").html("");
+        })
+
+
+        $('#citydiv > a').live('click',function() {
+
+            console.log("ffff");
+            var iid =$(this).attr('id');
+
+            var txtHtml ="";
+            $.each(allarray,function(key,val){
+
+                if(val.pid == iid) {
+                    console.log('_mozi数组中 ,索引 : '+key+' 对应的值为: '+val.name);
+                    txtHtml += '<a href="#" id='+val.id+'>'+ val.name +'</a>';
+                }
+            });
+            $("#countydiv ").html(txtHtml);
+
+            $("#towndiv").html("");
+        })
+
+
+
+        $('#countydiv > a').live('click',function() {
+
+            console.log("ffff");
+            var iid =$(this).attr('id');
+
+            var txtHtml ="";
+            $.each(allarray,function(key,val){
+
+                if(val.pid == iid) {
+                    console.log('_mozi数组中 ,索引 : '+key+' 对应的值为: '+val.name);
+                    txtHtml += '<a href="#" id='+val.id+'>'+ val.name +'</a>';
+                }
+            });
+            $("#towndiv ").html(txtHtml);
+        })
+
+
     })
 
-    var coutryid =1;
-    var provinceid =0;
-    var cityid =0;
-    var countyid =0;
-    var townid =0;
 
 </script>
 
@@ -73,33 +138,18 @@
 
 
         <div id='provincediv' style="text-align: left">
-                <foreach name="province" item="value">
-                        <a id="{$value['id']}" href="#" >--{$value['name']}</a>
-                </foreach>
-
         </div>
 
         <div id='citydiv' style="text-align: left">
 
-            <foreach name="city" item="value">
-                <a id="{$value['id']}" href="#" >--{$value['name']}</a>
-            </foreach>
-
         </div>
 
         <div id='countydiv' style="text-align: left">
-            <foreach name="county" item="value">
-                <a id="{$value['id']}" href="#" >--{$value['name']}</a>
-            </foreach>
         </div>
 
         <div id='towndiv' style="text-align: left">
-            <foreach name="town" item="value">
-                <a id="{$value['id']}" href="#" >--{$value['name']}</a>
-            </foreach>
+
         </div>
-
-
 
 
 
