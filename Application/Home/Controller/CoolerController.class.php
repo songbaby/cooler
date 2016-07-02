@@ -5,6 +5,8 @@ use Component\Category;
 class CoolerController extends Controller {
 
     public function  _initialize(){
+
+
         $this->cate = M('cate')->order('id')->select();
         $this->cate = Category::unLimitedForLevel($this->cate);
         $this->allstr = json_encode($this->cate);
@@ -45,9 +47,12 @@ class CoolerController extends Controller {
     }
 
 
-    public function detail(){
+    public function detail($id){
+
+        $info = D('Cooler')->find($id);
 
 
+        $this->info = $info;
         $this->display();
 
     }

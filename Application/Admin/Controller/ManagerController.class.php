@@ -8,7 +8,7 @@ use Think\Controller;
 class ManagerController extends Controller{
     function login(){
         if(!empty($_POST)){
-            //验证码校验
+
             $verify = new \Think\Verify();
             if(!$verify->check($_POST['captcha'])){
                 echo "验证码错误";
@@ -29,7 +29,7 @@ class ManagerController extends Controller{
             }
         } 
       //  $this -> assign('lang',L());
-        $this -> display();
+        $this -> display("login");
     }
     //退出系统
     function logout(){
@@ -43,7 +43,7 @@ class ManagerController extends Controller{
         $config = array(
             'imageH'    => 24,               // 验证码图片高度
             'imageW'    => 105, 
-            'fontSize'  => 14,
+            'fontSize'  => 13,
             'fontttf'   => '4.ttf',              // 验证码字体，不设置随机获取
             'length'    => 4,               // 验证码位数
         );

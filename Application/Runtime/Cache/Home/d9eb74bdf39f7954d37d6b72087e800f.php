@@ -20,7 +20,8 @@
 #towndiv{text-align: left}
 </style>
 
-<script language=javascript>
+<script >
+
 
 
     $(function(){
@@ -146,11 +147,11 @@
 
 
 
-<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=3nbIhiC4xvRt2ofWcRPAo4uj"></script>
+<script  src="http://api.map.baidu.com/api?v=2.0&ak=3nbIhiC4xvRt2ofWcRPAo4uj"></script>
 
 
 
-<script type="text/javascript">
+<script >
     // 百度地图API功能
 
 
@@ -161,9 +162,25 @@
 
     var currentcounty="金乡县";
 
-    function addMarker(point){
+
+    function addMarker(point,imgid){
         var marker = new BMap.Marker(point);
         map.addOverlay(marker);
+        addinfoWindow(marker,txthtml,imgid);
+
+    }
+
+
+    function addinfoWindow(marker,sContent,imgid){
+
+        var infoWindow = new BMap.InfoWindow(sContent);
+        marker.addEventListener("mouseover", function(){
+            this.openInfoWindow(infoWindow);
+            //图片加载完毕重绘infowindow
+            document.getElementById(imgid).onload = function (){
+                infoWindow.redraw();   //防止在网速较慢，图片未加载时，生成的信息框高度比图片的总高度小，导致图片部分被隐藏
+            }
+        });
     }
 
     function getBoundary(){
@@ -187,11 +204,11 @@
         });
     }
 
-    function AddCooler(lng,lat)
+    function AddCooler(lng,lat,txthtml,imgid)
     {
 
         var point = new BMap.Point(lng, lat);
-        addMarker(point);
+        addMarker(point,txthtml,imgid);
 
     }
 
@@ -208,7 +225,25 @@
         }
 
         $.each(data,function(key,val){
-            AddCooler(val.lng, val.lat);
+
+      /*      var sContent =
+                    "<h4 style='margin:0 0 5px 0;padding:0.2em 0'>天安门</h4>" +
+                    "<img style='float:right;margin:4px' id='imgDemo' src='http://app.baidu.com/map/images/tiananmen.jpg' width='139' height='104' title='天安门'/>" +
+                    "<p style='margin:0;line-height:1.5;font-size:13px;text-indent:2em'>天安门坐落在中国北京市中心,故宫的南侧,与天安门广场隔长安街相望,是清朝皇城的大门...</p>" +
+                    "</div>";
+*/
+            var imgid= "img"+val.id;
+            txthtml = "<h4 > <a href=\"/cooler/index.php/Home/Cooler/detail/id/"+val.id +"\">"+val.name+"</a><\/h4>";
+            txthtml += "价格："+val.price;
+            txthtml += "<br/>联系人："+val.lianxiren;
+            txthtml += "<br/>电话："+val.phone;
+            txthtml += "<br/>"+val.note;
+            txthtml += "<br/><img style='float:right;margin:4px' id="+imgid +" src=<?php echo (ADMIN_UPLOAD_URL); ?>"+val.big_img+" height='200px width='200px'>";
+
+
+            AddCooler(val.lng, val.lat ,txthtml,imgid);
+
+
         });
     }
 

@@ -20,7 +20,8 @@
 #towndiv{text-align: left}
 </style>
 
-<script language=javascript>
+<script >
+
 
 
     $(function(){
@@ -138,7 +139,7 @@
     .table{width:100%;}
     .table,.table td{border:solid 1px #ccc;}
     .table th{border:solid 1px #ccc;width:10px;}
-    .table thead tr td{background: #eee;color:#333;}
+    .table thead tr td{background: #f1f1f1;color:#F1F1F1;}
     .table,th,td{ border-collapse: collapse;background:#fff;}
     #listdiv{width: 90%; height:100px;MARGIN-RIGHT: auto; MARGIN-LEFT: auto;}
 </style>
@@ -167,11 +168,17 @@
 
         var txthtml="";
 
-        txthtml +="<table id=\"table\" class=\"table\">";
+        txthtml +="<table id=\"table\" class=\"table\" >";
         txthtml+=" <tr>";
-        txthtml+=" <th>名称<\/th>";
-        txthtml+="<th>价格<\/th>";
-        txthtml+="<th>区域<\/th>";
+        txthtml+=" <th>冷库名称<\/th>";
+        txthtml+=" <th>价格((元/吨/年)<\/th>";
+        txthtml+=" <th>联系人<\/th>";
+        txthtml+=" <th>电话<\/th>";
+        txthtml+=" <th>总吨位<\/th>";
+        txthtml+=" <th>剩余吨位<\/th>";
+        txthtml+=" <th>满仓率<\/th>";
+        txthtml+="<th>地址<\/th>";
+        txthtml+="<th>缩略图<\/th>";
         txthtml+=" <\/tr>";
 
 
@@ -179,7 +186,13 @@
             txthtml +="<tr>";
             txthtml += "<td width=\"8%\"> <a href=\"/cooler/index.php/Home/Cooler/detail/id/"+val.id +"\">"+val.name+"</a><\/td>"
             txthtml += "<td width=\"8%\">"+val.price+"<\/td>"
+            txthtml += "<td width=\"8%\">"+val.lianxiren+"<\/td>"
+            txthtml += "<td width=\"8%\">"+val.phone+"<\/td>"
+            txthtml += "<td width=\"8%\">"+val.total+"<\/td>"
+            txthtml += "<td width=\"8%\">"+val.free+"<\/td>"
+            txthtml += "<td width=\"8%\">"+(val.total - val.free)/val.total+"<\/td>"
             txthtml += "<td width=\"8%\">"+val.loc+"<\/td>"
+            txthtml += "<td width=\"8%\"> <img src=<?php echo (ADMIN_UPLOAD_URL); ?>"+val.small_img+" height=\"40\" width=\"40\"><\/td>"
             txthtml +="<\/tr>"
 
         });

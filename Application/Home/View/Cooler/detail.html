@@ -1,10 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>detail</title>
-</head>
+
+<include file="Common/head"/>
+
+
+
 <body>
+<include file="Common/nav"/>
+
+<style>
+    #content{width: 80%;align-content: center;margin-left: auto;  margin-right: auto;}
+    img{margin: 0 auto;height: auto}
+</style>
+
+
+<div id="content" >
+    <div id="note">
+        {$info.note}
+
+    </div>
+    <img src="{$Think.const.ADMIN_UPLOAD_URL}{$info.big_img}">
+</div>
+
+
+<include file="Common::bottum"/>
+
 
 </body>
 </html>

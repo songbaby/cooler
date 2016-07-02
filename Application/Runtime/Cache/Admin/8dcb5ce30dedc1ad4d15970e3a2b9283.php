@@ -3,23 +3,23 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
     <script type="text/JavaScript" src='<?php echo (JS_URL); ?>jquery_1.6.1.js'></script>
-    <style>
-        body{background:#fff;}
-        table,th,td{border:solid 0px #dcdcdc;background:#F1F1F1;}
-        th{width:80px; font-size: 12px;}
-        #top{background:url("<?php echo (ADMIN_IMG_URL); ?>qq.jpg") #F1F1F1 10px 10px no-repeat;height:80px;border-bottom: solid 1px #ccc;}
-        div.login{background: #F1F1F1;width:600px;border:solid 1px #ccc;padding:20px;margin:0px auto;margin-top:30px;}
-        .title{font-size:16px;height: 35px;}
-        .left{width:280px;}
-    </style>
+<style>
+    body{background:#fff;}
+    table,th,td{border:solid 0px #dcdcdc;background:#F1F1F1;}
+    th{width:80px; font-size: 12px;}
+    #top{background:url("<?php echo (ADMIN_IMG_URL); ?>header_right.jpg") #F1F1F1 10px 10px no-repeat;height:80px;border-bottom: solid 1px #ccc;}
+    div.login{background: #F1F1F1;width:600px;border:solid 1px #ccc;padding:20px;margin:0px auto;margin-top:30px;}
+    .title{font-size:16px;height: 35px;}
+    .left{width:280px;}
+</style>
 
-    <script >
-        function change_code(obj){
+<script >
+    function change_code(obj){
 
-            $("#code").attr("src","/cooler/index.php/Admin/Manager/verifyImg" + '/'+Math.random());
-            console.log($("#code").attr("src"));
-        }
-    </script>
+        $("#code").attr("src","/cooler/index.php/Admin/Manager/verifyImg" + '/'+Math.random());
+        console.log($("#code").attr("src"));
+    }
+</script>
 
 </head>
 <body>
@@ -27,9 +27,9 @@
 
 </div>
 <div class="login">
-    <form action="/cooler/index.php/Admin/Manager/login" method="post" id="login">
+    <form action="/cooler/index.php/Admin/Manager/login.html" method="post" id="login">
         <div class="title">
-            冷库信息平台 | 登录后台
+            后盾网 | 登录后台
         </div>
         <table border="1" width="100%">
             <tr>

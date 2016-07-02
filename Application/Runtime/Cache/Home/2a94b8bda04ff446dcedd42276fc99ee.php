@@ -20,7 +20,8 @@
 #towndiv{text-align: left}
 </style>
 
-<script language=javascript>
+<script >
+
 
 
     $(function(){
@@ -136,7 +137,7 @@
 </div>
 
 <div id="bottum">
-    网络文化经营许可证：沪[2013]0268-027号|增值电信业务经营许可证：沪A2-20080224|信息网络传播视听节目许可证：1109364号|互联网违法和不良信息举报电话:021-81683755 blxx@list.alibaba-inc.com
+    网络文化经营许可证：沪[2016]0268-027号|增值电信业务经营许可证：沪A2-20080224|信息网络传播视听节目许可证：1109364号|互联网违法和不良信息举报电话:021-81683755 blxx@list.alibaba-inc.com
 </div>
 
 </body>

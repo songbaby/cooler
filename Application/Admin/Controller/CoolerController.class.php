@@ -6,68 +6,19 @@ use Component\AdminController;
 
 class CoolerController extends AdminController {
     //商品列表展示
-    function showlist1(){
-        //使用数据model模型
-        //实例化model对象
-        //$goods = new \Model\GoodsModel();  //object(Model\GoodsModel)
-        
-        //$goods = D("Goods");  //object(Think\Model)
-        //$goods = D();  //object(Think\Model)
-        
-        $goods = M('User');//实例化Model对象，实际操作Goods数据表
-        //$goods = M();  //object(Think\Model)
-        
-        show_bug($goods);
-        
-        
-        $this -> display();
-    }
-    
-    function showlist2(){
-        $goods = D('Goods');
-        
-        //$info = $goods ->table("c_user")-> select();
-        //show_bug($info);
-        
-        $info = $goods -> select();//获得数据信息
-        //把数据assign到模板
-        //价格大于1000元的商品
-        //where(内部$this,return $this)
-        //$('div').css('color','red').css('font-size','30px')
-        $info = $goods -> where("goods_price > 1000 and goods_name like '索%'")->select();
-        //查询指定的字段
-        $info = $goods->field("goods_id,goods_name")->select();
-        //限制条数
-        $info = $goods->limit(10,5)->select();
-        //分组查询group by
-        //查询当前商品一共的分组信息
-        //通过分组设置可以查询每个分组的商品信息
-        //例如：每个分组下边有多少商品信息  
-        //      select category_id,count(*) from table group by category_id
-        //      每个分组下边商品的价格算术和是多少
-        //      select category_id,sum(price) from table group by category_id
-        //$info = $goods->field('goods_category_id')->select(); //有重复的
-        $info = $goods ->field('goods_category_id')-> group('goods_category_id')->select();
-        //show_bug($info);
-        //排序显示结果order by goods_price desc
-        $info = $goods ->order('goods_price asc')-> select();
-        
-        $this -> assign('info', $info);
-        
-        $this -> display();
-    }
+
     
     function showlist(){
-        $goods = D("Cooler");
+        $cooler = D("Cooler");
         
         //1. 获得当前记录总条数
-        $total = $goods -> count();
-        $per = 7;
+        $total = $cooler -> count();
+        $per = 20;
         //2. 实例化分页类对象
         $page = new \Component\Page($total, $per); //autoload
         //3. 拼装sql语句获得每页信息
         $sql = "select * from c_cooler ".$page->limit;
-        $info = $goods -> query($sql);
+        $info = $cooler -> query($sql);
         //4. 获得页码列表
         $pagelist = $page -> fpage();
         
@@ -75,40 +26,17 @@ class CoolerController extends AdminController {
         $this -> assign('pagelist', $pagelist);
         $this -> display();
     }
-    
-    //添加商品
-    function add1(){
-        //利用数组方式实现数据添加
-        $goods = D("Goods");
-        $ar = array(
-            'goods_name'=>'iphone5s',
-            'goods_price'=>4999,
-            'goods_number'=>53,
-        );
-        $rst = $goods -> add($ar);
-        
-        //利用AR实现数据添加
-        $goods = D("Goods");
-        $goods -> goods_name = "htc_one";
-        $goods -> goods_price = 3000;
-        $rst = $goods -> add();
-        
-        if($rst > 0){
-            echo "success";
-        } else {
-            echo "failure";
-        }
-        
-        $this -> display();
-    }
-    
+
     function add(){
-        $goods = D("Goods");
+        $cooler = D("Cooler");
+
         if(!empty($_POST)){
             //判断附件是否有上传
             //如果有则实例化Upload，把附件上传到服务器指定位置
             //然后把附件的路径名获得到，存入$_POST
+
             if(!empty($_FILES)){
+
                 $config = array(
                     'rootPath'      =>     './public/',  //根目录
                     'savePath'      =>     'upload/', //保存路径
@@ -116,13 +44,13 @@ class CoolerController extends AdminController {
                 //附件被上传到路径：根目录/保存目录路径/创建日期目录
                 $upload = new \Think\Upload($config);
                 //uploadOne会返回已经上传的附件信息
-                $z = $upload -> uploadOne($_FILES['goods_img']);
+                $z = $upload -> uploadOne($_FILES['img']);
                 if(!$z){
                     show_bug($upload->getError()); //获得上传附件产生的错误信息
                 }else {
                     //拼装图片的路径名
                     $bigimg = $z['savepath'].$z['savename'];
-                    $_POST['goods_big_img'] = $bigimg;
+                    $_POST['big_img'] = $bigimg;
                     
                     //把已经上传好的图片制作缩略图Image.class.php
                     $image = new \Think\Image();
@@ -132,62 +60,49 @@ class CoolerController extends AdminController {
                     $image -> thumb(150,150);  //按照比例缩小
                     $smallimg = $z['savepath']."small_".$z['savename'];
                     $image -> save($upload->rootPath.$smallimg);
-                    $_POST['goods_small_img'] = $smallimg;
+                    $_POST['small_img'] = $smallimg;
                 }
             }
-            
-            $goods -> create(); //收集post表单数据
-            $z = $goods -> add();
+
+            $cooler -> create(); //收集post表单数据
+            $z = $cooler -> add();
             if($z){
-                //$this ->success('添加商品成功', U('Goods/showlist'));
-                echo "success";
+                $this ->success('添加商品成功', U('Cooler/showlist'));
             } else {
-                //$this ->error('添加商品失败', U('Goods/showlist'));
-                echo "error";
+                $this ->error('添加商品失败', U('Cooler/showlist'));
             }
         }else {
         }
         $this -> display();
     }
-    //修改商品
-    function upd1(){
-        
-        $goods = D("Goods");
-        $ar = array(
-            'goods_name'=>'黑莓手机',
-            'goods_price'=>2300
-        );
-        $rst = $goods ->where('goods_id>60')-> save($ar);
-        
-        $this -> display();
-    }
-    
-    function upd($goods_id){
+
+    function upd($cooler_id){
         //查询被修改商品的信息并传递给模板展示
-        $goods = D("Goods");
+        $cooler = D("Cooler");
+
         //两个逻辑：展示表单、收集表单
         if(!empty($_POST)){
-            $goods -> create();
-            $rst = $goods -> save();
+            $cooler -> create();
+            $rst = $cooler -> save();
             if($rst){
-                $this->success('修改成功!',U('showlist'));
+               $this->success('修改成功!',U('showlist'));
             } else {
                 $this->error('修改失败!',U('showlist'));
             }
         } else {
-            $info = $goods->find($goods_id); //一维数组
+            $info = $cooler->find($cooler_id); //一维数组
             $this -> assign('info', $info);
             $this -> display();
         }
     }
     
     //删除方法
-    function del($goods_id){
+    function del($cooler_id){
 
-        $goods = D("Goods");
+        $cooler = D("Cooler");
         if(!empty($_GET)){
 
-            $rst = $goods -> where("goods_id = $goods_id")->delete();
+            $rst = $cooler -> where("id = $cooler_id")->delete();
             if($rst){
                 $this->success('删除成功!',U('showlist'));
             }

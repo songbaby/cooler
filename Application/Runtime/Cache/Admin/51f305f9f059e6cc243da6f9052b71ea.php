@@ -23,43 +23,36 @@
         </div>
         <div></div>
         
-        <div class="div_search">
-            <span>
-                <form action="#" method="get">
-                    品牌<select name="s_product_mark" style="width: 100px;">
-                        <option selected="selected" value="0">请选择</option>
-                        <option value="1">苹果apple</option>
-                    </select>
-                    <input value="查询" type="submit" />
-                </form>
-            </span>
-        </div>
+
 
         <div style="font-size: 13px; margin: 10px 5px;">
             <table class="table_a" border="1" width="100%">
                 <tbody><tr style="font-weight: bold;">
                         <td>序号</td>
                         <td>冷库名称</td>
-                        <td>库存</td>
-                        <td>价格</td>
-                        <td>图片</td>
+                        <td>价格(元/吨/年)</td>
+                        <td>联系人</td>
+                        <td>电话</td>
+                        <td>总吨位</td>
+                        <td>剩余吨位</td>
+                        <td>经纬度，位置</td>
                         <td>缩略图</td>
-                        <td>品牌</td>
                         <td>创建时间</td>
                         <td align="center">操作</td>
                     </tr>
                     <?php if(is_array($info)): foreach($info as $key=>$v): ?><tr id="product1">
                         <td><?php echo ($v["id"]); ?></td>
                         <td><a href="#"><?php echo ($v["name"]); ?></a></td>
-                        <td><?php echo ($v["number"]); ?></td>
-                        <td><?php echo ($v["price"]); ?> </td>
-
-                        <td><img src="<?php echo (ADMIN_UPLOAD_URL); echo ($v["goods_big_img"]); ?>" height="60" width="60"></td>
-                        <td><img src="<?php echo (ADMIN_UPLOAD_URL); echo ($v["goods_small_img"]); ?>" height="40" width="40"></td>
-                        <td>苹果apple</td>
+                        <td><?php echo ($v["price"]); ?></td>
+                        <td><?php echo ($v["lianxiren"]); ?> </td>
+                        <td><?php echo ($v["phone"]); ?> </td>
+                        <td><?php echo ($v["total"]); ?> </td>
+                        <td><?php echo ($v["free"]); ?> </td>
+                        <td><?php echo ($v["lng"]); ?>,<?php echo ($v["lat"]); ?>,<?php echo ($v["loc"]); ?> </td>
+                        <td><img src="<?php echo (ADMIN_UPLOAD_URL); echo ($v["small_img"]); ?>" height="40" width="40"></td>
                         <td><?php echo ($v["create_time"]); ?></td>
-                        <td><a href="/cooler/index.php/Admin/Goods/upd/goods_id/<?php echo ($v["goods_id"]); ?>">修改</a></td>
-                        <td><a href="/cooler/index.php/Admin/Goods/del/goods_id/<?php echo ($v["goods_id"]); ?>">删除</a></td>
+                        <td><a href="/cooler/index.php/Admin/Cooler/upd/cooler_id/<?php echo ($v["id"]); ?>">修改</a>
+                        <a href="/cooler/index.php/Admin/Cooler/del/cooler_id/<?php echo ($v["id"]); ?>">删除</a></td>
                     </tr><?php endforeach; endif; ?>
                     <tr>
                         <td colspan="20" style="text-align: center;">
