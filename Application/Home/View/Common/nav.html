@@ -6,62 +6,140 @@
 <style>
 #countydiv{text-align: left}
 #towndiv{text-align: left}
-#MapNav{
+
+#CountyList {text-align: center;color: gray}
+#MapNav_Area_Menu {color: #9B410E;    width: 500px;  height:400px;background-color: #1c94c4;margin-left: 100px}
+
+
+#ProvinceList{
     background-color: white;
+    width: 300px;
+    height:auto;
+    position: absolute;
+    top: 25px;
+    left: 30px;
+    z-index: 999;
+    opacity: 0.9;
+}
+#CityList {
+    background-color: rebeccapurple;
     width: 200px;
     height:400px;
     position: absolute;
-    left: 0px;
-    z-index: 9999;
-    top: 50px;
+    top: 30px;
+    left: 10px;
+    z-index: 99;
     opacity: 0.9;
 }
-#MapNav_Area{text-align: center;color: gray}
-#MapNav_Area_Menu {color: #9B410E;    width: 500px;  height:400px;background-color: #1c94c4;margin-left: 100px}
+#CountyList {
+    background-color: gray;
+    width: 200px;
+    height:400px;
+    position: absolute;
+    top: 30px;
+    left: 210px;
+    z-index: 99;
+    opacity: 0.9;
+}
+
+
 </style>
 
 <script >
 
+    var   m_ProviceCurrent ="上海市"
+
+</script>
+
+<div class='top-list-wrap' style="background-color: #0e924c">
+    <div class='top-list'>
+        <ul  class='l-list'>
+           <li> <div id="ProviceCurrent" >  </div> </li>
+        </ul>
+
+    </div>
+</div>
+
+
+
+<div id="nav" style="background-color: #9B410E">
+    <div align="left">
+        <div id='countydiv'>
+        </div>
+
+        <div id='towndiv'>
+        </div>
+
+    </div>
+</div>
+
+
+
+<script >
+
+
+    function GetProvinceCurrent(obj) {
+        m_ProviceCurrent = obj.id;
+        $('#ProviceCurrent').html(m_ProviceCurrent);
+
+
+    }
 
 
     $(function(){
 
+        $('#ProviceCurrent').html(m_ProviceCurrent);
         var   allstr = '{$allstr}';
         var allarray=eval("("+allstr+")");
 
         var txtHtml ="";
         $.each(allarray,function(key,val){
-            if(val.pid == 4 || val.pid == 5 || val.pid == 38) {
-                txtHtml += '<a href="#" id='+val.id+'>'+ " " +val.name +'</a>';
+           if(val.pid == 1 ) {
+               txtHtml += '<a href="#" onclick="GetProvinceCurrent(this)" id='+val.province+'>'+ " " +val.province +'</a>';
             }
         });
 
+
+
+        $("#nav").append(" <div id='ProvinceList'> </id>");
+        $('#ProviceCurrent').live('mouseover',function() {
+            $('#ProvinceList').show();
+        })
+
+        $('#ProvinceList').live('mouseleave',function() {
+            $('#ProvinceList').hide();
+        })
         var actionmane = "{$Think.const.ACTION_NAME}";
         if(actionmane == "showmap" || actionmane == "showlist"){
-            $("#countydiv").html(txtHtml); // 把返回的数据添加到页面上
+            $("#ProvinceList").html(txtHtml);
         }
 
-        $("#content").append(" <div id='MapNav'> </id>");
-        //$("#MapNav").attr("class","MapNav");
-
-        $("#MapNav").append(" <div id='MapNav_Area'> </id>");
-        $("#MapNav_Area").html("区域");
-
-        $("#MapNav_Area").append(" <div id='MapNav_Area_Menu'> gg</id>");
-        $('#MapNav_Area_Menu').hide();
 
 
-        $('#MapNav_Area').live('mouseover',function() {
-            $('#MapNav_Area_Menu').show();
-        })
-        $('#MapNav_Area_Menu').live('mouseout',function() {
-            $('#MapNav_Area_Menu').hide();
-        })
-        $('#MapNav_Area').live('mouseout',function() {
-            $('#MapNav_Area_Menu').hide();
+
+        $("#nav").append(" <div id='CityList'> </id>");
+        $("#CityList").show();
+
+        $("#CityList").append(" <div id='CityListTopBar'> </id>");
+        $("#CityListTopBar").html("区域");
+
+        $("#nav").append(" <div id='CountyList'> gg</id>");
+        $('#CountyList').hide();
+
+
+        $('#CityListTopBar').live('mouseover',function() {
+            $('#CountyList').show();
         })
 
-            $('#countydiv > a').live('click',function() {
+        $('#CountyList').live('mouseleave',function() {
+            $('#CountyList').hide();
+        })
+
+
+
+
+
+        $('#countydiv > a').live('click',function() {
 
             var id =$(this).attr('id');
             currentcounty=$(this).html();
@@ -69,7 +147,7 @@
             var txtHtml ="";
             $.each(allarray,function(key,val){
                 if(val.pid == id) {
-                    txtHtml += '<a href="#" id='+val.id+'>'+ " " +val.name +'</a>';
+                    txtHtml += '<a href="#" id='+val.id+'>'+ " " +val.city +'</a>';
                 }
             });
             $("#towndiv ").html(txtHtml);
@@ -120,31 +198,3 @@
 
 </script>
 
-
-<div class='top-list-wrap'>
-    <div class='top-list'>
-        <ul class='l-list'>
-            <li><a href="__MODULE__/Index/index" >首页</a></li>
-            <li><a href="__MODULE__/Cooler/showmap" id="showmap" >地图</a></li>
-            <li><a href="__MODULE__/Cooler/showlist" id="showlist" >列表</a></li>
-
-
-        </ul>
-        <ul class='r-list'>
-            <li><a href="/cooler/index.php/Admin/Manager/login">登录</a></li>
-            <li><a href="#">注册</a></li>
-        </ul>
-    </div>
-</div>
-
-
-<div id="nav">
-    <div align="left">
-        <div id='countydiv'>
-        </div>
-
-        <div id='towndiv'>
-        </div>
-
-        </div>
-</div>

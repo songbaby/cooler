@@ -20,7 +20,7 @@
 <style>
 #countydiv{text-align: left}
 #towndiv{text-align: left}
-#MapNav{
+#CityList {
     background-color: white;
     width: 200px;
     height:400px;
@@ -30,8 +30,22 @@
     top: 50px;
     opacity: 0.9;
 }
-#MapNav_Area{text-align: center;color: gray}
+#CountyList {text-align: center;color: gray}
 #MapNav_Area_Menu {color: #9B410E;    width: 500px;  height:400px;background-color: #1c94c4;margin-left: 100px}
+
+
+#ProvinceList{
+    background-color: white;
+    width: 400px;
+    height:auto;
+    position: absolute;
+    top: 25px;
+    left: 30px;
+    z-index: 9999;
+    opacity: 0.9;
+}
+
+
 </style>
 
 <script >
@@ -40,15 +54,13 @@
 
     $(function(){
 
-
-
         var   allstr = '<?php echo ($allstr); ?>';
         var allarray=eval("("+allstr+")");
 
         var txtHtml ="";
         $.each(allarray,function(key,val){
-            if(val.pid == 4 || val.pid == 5 || val.pid == 38) {
-                txtHtml += '<a href="#" id='+val.id+'>'+ " " +val.name +'</a>';
+           if(val.pid == 1 ) {
+                txtHtml += '<a href="#" id='+val.id+'>'+ " " +val.province +'</a>';
             }
         });
 
@@ -57,37 +69,47 @@
             $("#countydiv").html(txtHtml); // 把返回的数据添加到页面上
         }
 
-
-        $("#content").append(" <div id='MapNav'> </id>");
+        $("#content").append(" <div id='CityList'> </id>");
         //$("#MapNav").attr("class","MapNav");
 
+        $("#CityList").append(" <div id='CountyList'> </id>");
+        $("#CountyList").html("区域");
 
-        $("#MapNav").append(" <div id='MapNav_Area'> </id>");
-        $("#MapNav_Area").html("区域");
-
-        $("#MapNav_Area").append(" <div id='MapNav_Area_Menu'> gg</id>");
+        $("#CountyList").append(" <div id='MapNav_Area_Menu'> gg</id>");
         $('#MapNav_Area_Menu').hide();
 
 
-
-        $('#MapNav_Area').live('mouseover',function() {
+        $('#CountyList').live('mouseover',function() {
             $('#MapNav_Area_Menu').show();
         })
         $('#MapNav_Area_Menu').live('mouseout',function() {
             $('#MapNav_Area_Menu').hide();
         })
-        $('#MapNav_Area').live('mouseout',function() {
+        $('#CountyList').live('mouseout',function() {
             $('#MapNav_Area_Menu').hide();
         })
 
 
 
+        $("#nav").append(" <div id='ProvinceList'> </id>");
+        $("#ProvinceList").hide();
 
-            $('#countydiv > a').live('click',function() {
+        $('#ProviceCurrent').live('mouseover',function() {
+            $('#ProvinceList').show();
+        })
+        $('#ProvinceList').live('mouseout',function() {
+            $('#ProvinceList').hide();
+        })
+        $('#ProviceCurrent').live('mouseout',function() {
+            $('#ProvinceList').hide();
+        })
 
 
 
 
+
+
+        $('#countydiv > a').live('click',function() {
 
             var id =$(this).attr('id');
             currentcounty=$(this).html();
@@ -95,15 +117,17 @@
             var txtHtml ="";
             $.each(allarray,function(key,val){
                 if(val.pid == id) {
-                    txtHtml += '<a href="#" id='+val.id+'>'+ " " +val.name +'</a>';
+                    txtHtml += '<a href="#" id='+val.id+'>'+ " " +val.city +'</a>';
                 }
             });
             $("#towndiv ").html(txtHtml);
-
+            $("#ProvinceList").html(txtHtml); // 把返回的数据添加到页面上
             $("#MapNav_Area_Menu ").html(txtHtml);
+
             $.post("/cooler/index.php/Home/Cooler/getcooler", {
                 cid :  id ,
             }, function (data, textStatus){
+
 
 
                 var actionmane = "<?php echo (ACTION_NAME); ?>";
@@ -112,6 +136,7 @@
                 }else{
                     displaylist(data);
                 }
+
 
 
             },"json");
@@ -144,13 +169,10 @@
 </script>
 
 
-<div class='top-list-wrap'>
+<div class='top-list-wrap' style="background-color: #0e924c">
     <div class='top-list'>
-        <ul class='l-list'>
-            <li><a href="/cooler/index.php/Home/Index/index" >首页</a></li>
-            <li><a href="/cooler/index.php/Home/Cooler/showmap" id="showmap" >地图</a></li>
-            <li><a href="/cooler/index.php/Home/Cooler/showlist" id="showlist" >列表</a></li>
-
+        <ul  class='l-list'>
+            <li id="ProviceCurrent"><a href="/cooler/index.php/Home/Index/index" >上海▽</a></li>
 
         </ul>
         <ul class='r-list'>
@@ -161,7 +183,7 @@
 </div>
 
 
-<div id="nav">
+<div id="nav" style="background-color: #9B410E">
     <div align="left">
         <div id='countydiv'>
         </div>

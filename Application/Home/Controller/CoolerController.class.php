@@ -7,9 +7,11 @@ class CoolerController extends Controller {
     public function  _initialize(){
 
 
-        $this->cate = M('cate')->order('id')->select();
+        $this->cate = M('nation')->order('id')->select();
         $this->cate = Category::unLimitedForLevel($this->cate);
         $this->allstr = json_encode($this->cate);
+
+
     }
 
 
