@@ -5,7 +5,9 @@
 <body>
 
 <include file="Common/nav"/>
-<div id="content">
+<div id="content"></div>
+
+
 
 </div>
 
@@ -55,6 +57,9 @@
     }
 
     function getBoundary(){
+
+
+
         var bdary = new BMap.Boundary();
         bdary.get(currentcounty, function(rs){       //获取行政区域
             // map.clearOverlays();        //清除地图覆盖物
@@ -84,6 +89,7 @@
     }
 
     function displaymap(data){
+
 
         getBoundary();
         var allOverlay = map.getOverlays();
@@ -116,8 +122,9 @@
 
 
         });
-    }
 
+
+    }
 
     getBoundary();
 

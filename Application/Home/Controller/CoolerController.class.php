@@ -38,6 +38,7 @@ class CoolerController extends Controller {
 
         $this->display();
 
+
     }
 
     public function showmap(){

@@ -3,6 +3,8 @@
 
 <head>
     <link rel="stylesheet" href="/cooler/Public/Home/css/style.css"/>
+    <link href="/cooler/Public/Home/css/navigation20141112.css" rel="stylesheet" type="text/css" />
+    <link href="/cooler/Public/Home/css/soufang-style.css" rel="stylesheet" type="text/css">
     <style>
     </style>
 </head>
@@ -18,6 +20,18 @@
 <style>
 #countydiv{text-align: left}
 #towndiv{text-align: left}
+#MapNav{
+    background-color: white;
+    width: 200px;
+    height:400px;
+    position: absolute;
+    left: 0px;
+    z-index: 9999;
+    top: 50px;
+    opacity: 0.9;
+}
+#MapNav_Area{text-align: center;color: gray}
+#MapNav_Area_Menu {color: #9B410E;    width: 500px;  height:400px;background-color: #1c94c4;margin-left: 100px}
 </style>
 
 <script >
@@ -44,10 +58,36 @@
         }
 
 
+        $("#content").append(" <div id='MapNav'> </id>");
+        //$("#MapNav").attr("class","MapNav");
+
+
+        $("#MapNav").append(" <div id='MapNav_Area'> </id>");
+        $("#MapNav_Area").html("区域");
+
+        $("#MapNav_Area").append(" <div id='MapNav_Area_Menu'> gg</id>");
+        $('#MapNav_Area_Menu').hide();
 
 
 
-        $('#countydiv > a').live('click',function() {
+        $('#MapNav_Area').live('mouseover',function() {
+            $('#MapNav_Area_Menu').show();
+        })
+        $('#MapNav_Area_Menu').live('mouseout',function() {
+            $('#MapNav_Area_Menu').hide();
+        })
+        $('#MapNav_Area').live('mouseout',function() {
+            $('#MapNav_Area_Menu').hide();
+        })
+
+
+
+
+            $('#countydiv > a').live('click',function() {
+
+
+
+
 
             var id =$(this).attr('id');
             currentcounty=$(this).html();
@@ -60,7 +100,7 @@
             });
             $("#towndiv ").html(txtHtml);
 
-
+            $("#MapNav_Area_Menu ").html(txtHtml);
             $.post("/cooler/index.php/Home/Cooler/getcooler", {
                 cid :  id ,
             }, function (data, textStatus){
