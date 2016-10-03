@@ -3,6 +3,8 @@
 
 <head>
     <link rel="stylesheet" href="/cooler/Public/Home/css/style.css"/>
+    <link href="/cooler/Public/Home/css/navigation20141112.css" rel="stylesheet" type="text/css" />
+    <link href="/cooler/Public/Home/css/soufang-style.css" rel="stylesheet" type="text/css">
     <style>
     </style>
 </head>
@@ -18,110 +20,63 @@
 <style>
 #countydiv{text-align: left}
 #towndiv{text-align: left}
+
+#CountyList {text-align: center;color: gray}
+#MapNav_Area_Menu {color: #9B410E;    width: 500px;  height:400px;background-color: #1c94c4;margin-left: 100px}
+
+
+#ProvinceList{
+    background-color: white;
+    width: 300px;
+    height:auto;
+    position: absolute;
+    top: 25px;
+    left: 30px;
+    z-index: 999;
+    opacity: 0.9;
+}
+#CityList {
+    background-color: grey;
+    width: 200px;
+    height:400px;
+    position: absolute;
+    top: 30px;
+    left: 10px;
+    z-index: 99;
+    opacity: 0.9;
+}
+#CountyList {
+    background-color: gray;
+    width: 200px;
+    height:400px;
+    position: absolute;
+    top: 30px;
+    left: 210px;
+    z-index: 99;
+    opacity: 0.9;
+}
+
+
 </style>
 
 <script >
 
-
-
-    $(function(){
-
-
-
-        var   allstr = '<?php echo ($allstr); ?>';
-        var allarray=eval("("+allstr+")");
-
-        var txtHtml ="";
-        $.each(allarray,function(key,val){
-            if(val.pid == 4 || val.pid == 5 || val.pid == 38) {
-                txtHtml += '<a href="#" id='+val.id+'>'+ " " +val.name +'</a>';
-            }
-        });
-
-        var actionmane = "<?php echo (ACTION_NAME); ?>";
-        if(actionmane == "showmap" || actionmane == "showlist"){
-            $("#countydiv").html(txtHtml); // 把返回的数据添加到页面上
-        }
-
-
-
-
-
-        $('#countydiv > a').live('click',function() {
-
-            var id =$(this).attr('id');
-            currentcounty=$(this).html();
-
-            var txtHtml ="";
-            $.each(allarray,function(key,val){
-                if(val.pid == id) {
-                    txtHtml += '<a href="#" id='+val.id+'>'+ " " +val.name +'</a>';
-                }
-            });
-            $("#towndiv ").html(txtHtml);
-
-
-            $.post("/cooler/index.php/Home/Cooler/getcooler", {
-                cid :  id ,
-            }, function (data, textStatus){
-
-
-                var actionmane = "<?php echo (ACTION_NAME); ?>";
-                if(actionmane == "showmap"){
-                    displaymap(data);
-                }else{
-                    displaylist(data);
-                }
-
-
-            },"json");
-
-
-        })
-
-        $('#towndiv > a').live('click',function() {
-
-            var id =$(this).attr('id');
-
-            $.post("/cooler/index.php/Home/Cooler/getcooler", {
-                cid :  id ,
-            }, function (data, textStatus){
-
-                var actionmane = "<?php echo (ACTION_NAME); ?>";
-                if(actionmane == "showmap"){
-                    displaymap(data);
-                }else{
-                    displaylist(data);
-                }
-
-            },"json");
-
-        })
-
-        })
-
+    var   m_ProviceCurrent ="上海市";
 
 </script>
 
-
-<div class='top-list-wrap'>
+<div class='top-list-wrap' style="background-color: #0e924c">
     <div class='top-list'>
-        <ul class='l-list'>
-            <li><a href="/cooler/index.php/Home/Index/index" >首页</a></li>
-            <li><a href="/cooler/index.php/Home/Cooler/showmap" id="showmap" >地图</a></li>
-            <li><a href="/cooler/index.php/Home/Cooler/showlist" id="showlist" >列表</a></li>
-
-
+        <ul  class='l-list'>
+           <li> <div id="ProviceCurrent" >  </div> </li>
         </ul>
-        <ul class='r-list'>
-            <li><a href="/cooler/index.php/Admin/Manager/login">登录</a></li>
-            <li><a href="#">注册</a></li>
-        </ul>
+
     </div>
 </div>
 
 
-<div id="nav">
+
+<div id="nav" style="background-color: #9B410E">
     <div align="left">
         <div id='countydiv'>
         </div>
@@ -129,10 +84,167 @@
         <div id='towndiv'>
         </div>
 
-        </div>
+    </div>
 </div>
 
-<div id="content">
+
+
+<script >
+
+
+    $(function(){
+
+        $('#ProviceCurrent').html(m_ProviceCurrent);
+        var   allstr = '<?php echo ($allstr); ?>';
+        var allarray=eval("("+allstr+")");
+
+        var txtHtml ="";
+        var index = 0;
+        $.each(allarray,function(key,val){
+           if(val.pid == 1 ) {
+               //txtHtml += '<a href="#" id='+val.id+'>'+ " " +val.province +'</a>';
+               if(index%2 == 0){
+                   txtHtml += '<ul> ';
+               }
+               txtHtml += '<li style= display:inline>';
+
+               txtHtml += '<a href="#" id=';
+               txtHtml +=val.id+'>';
+               txtHtml += " ";
+               txtHtml +=val.province;
+               txtHtml +='</a>';
+
+               txtHtml += '</li> ';
+               index++;
+               if(index%2 == 0){
+                   txtHtml += '</ul> ';
+               }
+            }
+        });
+
+
+
+        $("#nav").append(" <div id='ProvinceList'> </id>");
+        $('#ProviceCurrent').live('mouseover',function() {
+            $('#ProvinceList').show();
+        })
+        $('#ProvinceList').live('mouseleave',function() {
+            $('#ProvinceList').hide();
+        })
+        var actionmane = "<?php echo (ACTION_NAME); ?>";
+        if(actionmane == "showmap" || actionmane == "showlist"){
+            $("#ProvinceList").html(txtHtml);
+        }
+
+
+        $("#nav").append(" <div id='CityList'> </id>");
+        $("#CityList").show();
+
+        $("#CityList").append(" <div id='CityListTopBar'> </id>");
+        $("#CityListTopBar").html("区域");
+
+        $("#CityList").append(" <div id='CityListBottum'> </id>");
+        $("#CityListBottum").html("city");
+
+
+        $("#nav").append(" <div id='CountyList'> gg</id>");
+        $('#CountyList').hide();
+
+
+        $('#CityListTopBar').live('mouseover',function() {
+            $('#CountyList').show();
+        })
+
+        $('#CountyList').live('mouseleave',function() {
+            $('#CountyList').hide();
+        })
+
+
+
+        $('#ProvinceList >ul>li> a').live('click',function() {
+            getBoundary($(this).html());
+            m_ProviceCurrent = $(this).html();
+            $('#ProviceCurrent').html(m_ProviceCurrent);
+            var id =$(this).attr('id');
+            var txtHtml ="";
+            var index=0;
+            $.each(allarray,function(key,val){
+
+                if(val.pid == id) {
+
+                    if(index%2 == 0){
+                        txtHtml += '<ul> ';
+                    }
+                    txtHtml += '<li style= display:inline>';
+
+                    txtHtml += '<a href="#" id=';
+                    txtHtml +=val.id;
+                    txtHtml +='>';
+                    txtHtml += " ";
+                    txtHtml +=val.city;
+                    txtHtml +='</a>';
+
+                    txtHtml += '</li> ';
+                    index++;
+                    if(index%2 == 0){
+                        txtHtml += '</ul> ';
+                    }
+
+
+                }
+            });
+
+            $("#CityListBottum ").html(txtHtml);
+        })
+
+
+
+
+        $('#CityListBottum >ul>li> a').live('click',function() {
+            getBoundary($(this).html());
+            var id =$(this).attr('id');
+            var txtHtml ="";
+            var index=0;
+            $.each(allarray,function(key,val){
+                if(val.pid == id) {
+                    if(index%2 == 0){
+                        txtHtml += '<ul> ';
+                    }
+                    txtHtml += '<li style= display:inline>';
+
+                    txtHtml += '<a href="#" id=';
+                    txtHtml +=val.id+'>';
+                    txtHtml += " ";
+                    txtHtml +=val.district;
+                    txtHtml +='</a>';
+
+                    txtHtml += '</li> ';
+                    index++;
+                    if(index%2 == 0){
+                        txtHtml += '</ul> ';
+                    }
+
+                }
+            });
+            $("#CountyList ").html(txtHtml);
+        })
+
+
+        $('#CountyList >ul>li> a').live('click',function() {
+            getBoundary($(this).html());
+
+        })
+
+
+    })
+
+
+</script>
+
+
+<div id="content"></div>
+
+
 
 </div>
 
@@ -183,9 +295,12 @@
         });
     }
 
-    function getBoundary(){
+    function getBoundary(thecity){
+
+
+
         var bdary = new BMap.Boundary();
-        bdary.get(currentcounty, function(rs){       //获取行政区域
+        bdary.get(thecity, function(rs){       //获取行政区域
             // map.clearOverlays();        //清除地图覆盖物
             var count = rs.boundaries.length; //行政区域的点有多少个
             if (count === 0) {
@@ -214,7 +329,8 @@
 
     function displaymap(data){
 
-        getBoundary();
+
+        getBoundary("上海市");
         var allOverlay = map.getOverlays();
         var len = allOverlay.length;
 
@@ -245,10 +361,11 @@
 
 
         });
+
+
     }
-
-
-    getBoundary();
+    getBoundary("上海市");
+   // getBoundary();
 
 
 </script>

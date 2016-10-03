@@ -22,7 +22,7 @@
     opacity: 0.9;
 }
 #CityList {
-    background-color: rebeccapurple;
+    background-color: grey;
     width: 200px;
     height:400px;
     position: absolute;
@@ -47,7 +47,7 @@
 
 <script >
 
-    var   m_ProviceCurrent ="上海市"
+    var   m_ProviceCurrent ="上海市";
 
 </script>
 
@@ -78,14 +78,6 @@
 <script >
 
 
-    function GetProvinceCurrent(obj) {
-        m_ProviceCurrent = obj.id;
-        $('#ProviceCurrent').html(m_ProviceCurrent);
-
-
-    }
-
-
     $(function(){
 
         $('#ProviceCurrent').html(m_ProviceCurrent);
@@ -93,9 +85,26 @@
         var allarray=eval("("+allstr+")");
 
         var txtHtml ="";
+        var index = 0;
         $.each(allarray,function(key,val){
            if(val.pid == 1 ) {
-               txtHtml += '<a href="#" onclick="GetProvinceCurrent(this)" id='+val.province+'>'+ " " +val.province +'</a>';
+               //txtHtml += '<a href="#" id='+val.id+'>'+ " " +val.province +'</a>';
+               if(index%2 == 0){
+                   txtHtml += '<ul> ';
+               }
+               txtHtml += '<li style= display:inline>';
+
+               txtHtml += '<a href="#" id=';
+               txtHtml +=val.id+'>';
+               txtHtml += " ";
+               txtHtml +=val.province;
+               txtHtml +='</a>';
+
+               txtHtml += '</li> ';
+               index++;
+               if(index%2 == 0){
+                   txtHtml += '</ul> ';
+               }
             }
         });
 
@@ -105,7 +114,6 @@
         $('#ProviceCurrent').live('mouseover',function() {
             $('#ProvinceList').show();
         })
-
         $('#ProvinceList').live('mouseleave',function() {
             $('#ProvinceList').hide();
         })
@@ -115,13 +123,15 @@
         }
 
 
-
-
         $("#nav").append(" <div id='CityList'> </id>");
         $("#CityList").show();
 
         $("#CityList").append(" <div id='CityListTopBar'> </id>");
         $("#CityListTopBar").html("区域");
+
+        $("#CityList").append(" <div id='CityListBottum'> </id>");
+        $("#CityListBottum").html("city");
+
 
         $("#nav").append(" <div id='CountyList'> gg</id>");
         $('#CountyList').hide();
@@ -137,63 +147,82 @@
 
 
 
-
-
-        $('#countydiv > a').live('click',function() {
-
+        $('#ProvinceList >ul>li> a').live('click',function() {
+            getBoundary($(this).html());
+            m_ProviceCurrent = $(this).html();
+            $('#ProviceCurrent').html(m_ProviceCurrent);
             var id =$(this).attr('id');
-            currentcounty=$(this).html();
-
             var txtHtml ="";
+            var index=0;
             $.each(allarray,function(key,val){
+
                 if(val.pid == id) {
-                    txtHtml += '<a href="#" id='+val.id+'>'+ " " +val.city +'</a>';
+
+                    if(index%2 == 0){
+                        txtHtml += '<ul> ';
+                    }
+                    txtHtml += '<li style= display:inline>';
+
+                    txtHtml += '<a href="#" id=';
+                    txtHtml +=val.id;
+                    txtHtml +='>';
+                    txtHtml += " ";
+                    txtHtml +=val.city;
+                    txtHtml +='</a>';
+
+                    txtHtml += '</li> ';
+                    index++;
+                    if(index%2 == 0){
+                        txtHtml += '</ul> ';
+                    }
+
+
                 }
             });
-            $("#towndiv ").html(txtHtml);
 
-            $("#MapNav_Area_Menu ").html(txtHtml);
-
-            $.post("__MODULE__/Cooler/getcooler", {
-                cid :  id ,
-            }, function (data, textStatus){
-
-
-
-                var actionmane = "{$Think.const.ACTION_NAME}";
-                if(actionmane == "showmap"){
-                    displaymap(data);
-                }else{
-                    displaylist(data);
-                }
-
-
-
-            },"json");
-
-
+            $("#CityListBottum ").html(txtHtml);
         })
 
-        $('#towndiv > a').live('click',function() {
 
+
+
+        $('#CityListBottum >ul>li> a').live('click',function() {
+            getBoundary($(this).html());
             var id =$(this).attr('id');
+            var txtHtml ="";
+            var index=0;
+            $.each(allarray,function(key,val){
+                if(val.pid == id) {
+                    if(index%2 == 0){
+                        txtHtml += '<ul> ';
+                    }
+                    txtHtml += '<li style= display:inline>';
 
-            $.post("__MODULE__/Cooler/getcooler", {
-                cid :  id ,
-            }, function (data, textStatus){
+                    txtHtml += '<a href="#" id=';
+                    txtHtml +=val.id+'>';
+                    txtHtml += " ";
+                    txtHtml +=val.district;
+                    txtHtml +='</a>';
 
-                var actionmane = "{$Think.const.ACTION_NAME}";
-                if(actionmane == "showmap"){
-                    displaymap(data);
-                }else{
-                    displaylist(data);
+                    txtHtml += '</li> ';
+                    index++;
+                    if(index%2 == 0){
+                        txtHtml += '</ul> ';
+                    }
+
                 }
+            });
+            $("#CountyList ").html(txtHtml);
+        })
 
-            },"json");
+
+        $('#CountyList >ul>li> a').live('click',function() {
+            getBoundary($(this).html());
 
         })
 
-        })
+
+    })
 
 
 </script>
