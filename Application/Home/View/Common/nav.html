@@ -1,86 +1,72 @@
 <script type="text/JavaScript" src='{$Think.const.JS_URL}jquery_1.6.1.js'></script>
 
-
-{/* 这是模板注释内容*/ }
-
 <style>
-#countydiv{text-align: left}
-#towndiv{text-align: left}
-
-#CountyList {text-align: center;color: gray}
-#MapNav_Area_Menu {color: #9B410E;    width: 500px;  height:400px;background-color: #1c94c4;margin-left: 100px}
-
 
 #ProvinceList{
     background-color: white;
-    width: 300px;
+    width: auto;
     height:auto;
     position: absolute;
     top: 25px;
     left: 30px;
     z-index: 999;
     opacity: 0.9;
+    border: solid 1px grey;
 }
+
 #CityList {
-    background-color: grey;
-    width: 200px;
-    height:400px;
+    background-color: white;
+    color: black;
+    width: 100px;
+    height:auto;
     position: absolute;
     top: 30px;
     left: 10px;
     z-index: 99;
     opacity: 0.9;
+    border: solid 1px grey;
 }
+#CityListTopBar{
+    color: red;
+    text-align:center;
+}
+
 #CountyList {
-    background-color: gray;
-    width: 200px;
-    height:400px;
+    background-color: white;
+    color: black;
+    width: auto;
+    height:auto;
     position: absolute;
     top: 30px;
-    left: 210px;
+    left: 110px;
     z-index: 99;
     opacity: 0.9;
+    text-align: left;
+    border: solid 1px grey;
 }
-
-
 </style>
+
+
+<div class='top-list-wrap'>
+    <div class='top-list'>
+        <ul  class='l-list'>
+           <li> <div id="ProviceCurrent" >  </div> </li>
+        </ul>
+    </div>
+</div>
+<div id="nav">
+</div>
+
 
 <script >
 
     var   m_ProviceCurrent ="上海市";
 
-</script>
-
-<div class='top-list-wrap' style="background-color: #0e924c">
-    <div class='top-list'>
-        <ul  class='l-list'>
-           <li> <div id="ProviceCurrent" >  </div> </li>
-        </ul>
-
-    </div>
-</div>
-
-
-
-<div id="nav" style="background-color: #9B410E">
-    <div align="left">
-        <div id='countydiv'>
-        </div>
-
-        <div id='towndiv'>
-        </div>
-
-    </div>
-</div>
-
-
-
-<script >
-
-
     $(function(){
 
         $('#ProviceCurrent').html(m_ProviceCurrent);
+        getBoundary(m_ProviceCurrent,"black","solid",2);
+
         var   allstr = '{$allstr}';
         var allarray=eval("("+allstr+")");
 
@@ -117,10 +103,15 @@
         $('#ProvinceList').live('mouseleave',function() {
             $('#ProvinceList').hide();
         })
+
+        $("#ProvinceList").html(txtHtml);
+        $("#ProvinceList").hide();
+/*
         var actionmane = "{$Think.const.ACTION_NAME}";
         if(actionmane == "showmap" || actionmane == "showlist"){
             $("#ProvinceList").html(txtHtml);
         }
+*/
 
 
         $("#nav").append(" <div id='CityList'> </id>");
@@ -130,38 +121,34 @@
         $("#CityListTopBar").html("区域");
 
         $("#CityList").append(" <div id='CityListBottum'> </id>");
-        $("#CityListBottum").html("city");
+
 
 
         $("#nav").append(" <div id='CountyList'> gg</id>");
         $('#CountyList').hide();
 
 
-        $('#CityListTopBar').live('mouseover',function() {
-            $('#CountyList').show();
-        })
-
         $('#CountyList').live('mouseleave',function() {
             $('#CountyList').hide();
         })
 
 
-
         $('#ProvinceList >ul>li> a').live('click',function() {
-            getBoundary($(this).html());
+            getBoundary($(this).html(),"black","solid",2);
             m_ProviceCurrent = $(this).html();
             $('#ProviceCurrent').html(m_ProviceCurrent);
             var id =$(this).attr('id');
             var txtHtml ="";
             var index=0;
+
+
             $.each(allarray,function(key,val){
 
                 if(val.pid == id) {
-
                     if(index%2 == 0){
                         txtHtml += '<ul> ';
                     }
-                    txtHtml += '<li style= display:inline>';
+                    txtHtml += '<li style= display:inline >';
 
                     txtHtml += '<a href="#" id=';
                     txtHtml +=val.id;
@@ -186,38 +173,53 @@
 
 
 
-        $('#CityListBottum >ul>li> a').live('click',function() {
-            getBoundary($(this).html());
-            var id =$(this).attr('id');
+        $('#CityListBottum li a').live('mouseover',function() {
+
+            $('#CountyList').show();
+            getBoundary($(this).html(),"blue","solid",1);
+
+
             var txtHtml ="";
-            var index=0;
-            $.each(allarray,function(key,val){
-                if(val.pid == id) {
-                    if(index%2 == 0){
-                        txtHtml += '<ul> ';
+
+            $(this).parent().parent().find('a').each(function(){
+                var index=0;
+                var id =$(this).attr('id');
+                txtHtml += '<ul><li style= "text-align:center;color: red" >';
+                txtHtml += $(this).html();
+                txtHtml += '</li></ul>';
+
+                $.each(allarray,function(key,val){
+                    if(val.pid == id) {
+                        if(index%2 == 0){
+                            txtHtml += '</ul> ';
+                            txtHtml += '<ul> ';
+                        }
+                        txtHtml += '<li style= display:inline>';
+
+                        txtHtml += '<a href="#" id=';
+                        txtHtml +=val.id+'>';
+                        txtHtml += " ";
+                        txtHtml +=val.district;
+                        txtHtml +='</a>';
+
+                        txtHtml += '</li> ';
+                        index++;
+                        if(index%2 == 0){
+                            txtHtml += '</ul> ';
+                        }
+
                     }
-                    txtHtml += '<li style= display:inline>';
+                });
 
-                    txtHtml += '<a href="#" id=';
-                    txtHtml +=val.id+'>';
-                    txtHtml += " ";
-                    txtHtml +=val.district;
-                    txtHtml +='</a>';
-
-                    txtHtml += '</li> ';
-                    index++;
-                    if(index%2 == 0){
-                        txtHtml += '</ul> ';
-                    }
-
-                }
             });
+        console.log(txtHtml);
             $("#CountyList ").html(txtHtml);
         })
 
 
         $('#CountyList >ul>li> a').live('click',function() {
-            getBoundary($(this).html());
+            console.log($(this).html());
+            getBoundary($(this).html(),"red","solid",1);
 
         })
 
