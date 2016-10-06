@@ -25,108 +25,101 @@
 
 
 <script >
-    // 百度地图API功能
 
 
-    // 百度地图API功能
-    var map = new BMap.Map("content");
-    var point = new BMap.Point(116.235237, 35.079983);
-    map.enableScrollWheelZoom();
-
-    var currentcounty="金乡县";
-
-
-    function addMarker(point,imgid){
-        var marker = new BMap.Marker(point);
-        map.addOverlay(marker);
-        addinfoWindow(marker,txthtml,imgid);
-
-    }
-
-
-    function addinfoWindow(marker,sContent,imgid){
-
-        var infoWindow = new BMap.InfoWindow(sContent);
-        marker.addEventListener("mouseover", function(){
-            this.openInfoWindow(infoWindow);
-            //图片加载完毕重绘infowindow
-            document.getElementById(imgid).onload = function (){
-                infoWindow.redraw();   //防止在网速较慢，图片未加载时，生成的信息框高度比图片的总高度小，导致图片部分被隐藏
-            }
-        });
-    }
-
-    function getBoundary(thecity){
+        // 百度地图API功能
+        var m_cities = new Object();
+        var m_map = new BMap.Map("content");
+        m_map.enableScrollWheelZoom();
 
 
 
-        var bdary = new BMap.Boundary();
-        bdary.get(thecity, function(rs){       //获取行政区域
-            // map.clearOverlays();        //清除地图覆盖物
-            var count = rs.boundaries.length; //行政区域的点有多少个
-            if (count === 0) {
-                alert('未能获取当前输入行政区域');
-                return ;
-            }
-            var pointArray = [];
-            for (var i = 0; i < count; i++) {
-                var ply = new BMap.Polygon(rs.boundaries[i], {strokeWeight: 2, strokeColor: "blue"}); //建立多边形覆盖物
-                ply.setStrokeStyle("dashed");
-                ply.setFillColor("none");
-                map.addOverlay(ply);  //添加覆盖物
-                pointArray = pointArray.concat(ply.getPath());
-            }
-            map.setViewport(pointArray);    //调整视野
-        });
-    }
+        function addMarker(point,imgid){
+            var marker = new BMap.Marker(point);
+            m_map.addOverlay(marker);
+            addinfoWindow(marker,txthtml,imgid);
 
-    function AddCooler(lng,lat,txthtml,imgid)
-    {
-
-        var point = new BMap.Point(lng, lat);
-        addMarker(point,txthtml,imgid);
-
-    }
-
-    function displaymap(data){
-
-
-        getBoundary("上海市");
-        var allOverlay = map.getOverlays();
-        var len = allOverlay.length;
-
-        for (var i = 0; i < len; i++){
-            if(allOverlay[i] instanceof BMap.Marker){
-                map.removeOverlay(allOverlay[i]);
-            }
         }
 
-        $.each(data,function(key,val){
 
-      /*      var sContent =
-                    "<h4 style='margin:0 0 5px 0;padding:0.2em 0'>天安门</h4>" +
-                    "<img style='float:right;margin:4px' id='imgDemo' src='http://app.baidu.com/map/images/tiananmen.jpg' width='139' height='104' title='天安门'/>" +
-                    "<p style='margin:0;line-height:1.5;font-size:13px;text-indent:2em'>天安门坐落在中国北京市中心,故宫的南侧,与天安门广场隔长安街相望,是清朝皇城的大门...</p>" +
-                    "</div>";
-*/
-            var imgid= "img"+val.id;
-            txthtml = "<h4 > <a href=\"__MODULE__/Cooler/detail/id/"+val.id +"\">"+val.name+"</a><\/h4>";
-            txthtml += "价格："+val.price;
-            txthtml += "<br/>联系人："+val.lianxiren;
-            txthtml += "<br/>电话："+val.phone;
-            txthtml += "<br/>"+val.note;
-            txthtml += "<br/><img style='float:right;margin:4px' id="+imgid +" src={$Think.const.ADMIN_UPLOAD_URL}"+val.big_img+" height='200px width='200px'>";
+        function addinfoWindow(marker,sContent,imgid){
+
+            var infoWindow = new BMap.InfoWindow(sContent);
+            marker.addEventListener("mouseover", function(){
+                this.openInfoWindow(infoWindow);
+                //图片加载完毕重绘infowindow
+                document.getElementById(imgid).onload = function (){
+                    infoWindow.redraw();   //防止在网速较慢，图片未加载时，生成的信息框高度比图片的总高度小，导致图片部分被隐藏
+                }
+            });
+        }
+
+        function getBoundary(thecity,clr,line,weight){
+
+            var bdary = new BMap.Boundary();
+            bdary.get(thecity, function(rs){       //获取行政区域
+                // map.clearOverlays();        //清除地图覆盖物
+                var count = rs.boundaries.length; //行政区域的点有多少个
+                if (count === 0) {
+                    alert('未能获取当前输入行政区域');
+                    return ;
+                }
+                var pointArray = [];
+                for (var i = 0; i < count; i++) {
+                    var ply = new BMap.Polygon(rs.boundaries[i], {strokeWeight: weight, strokeColor: clr}); //建立多边形覆盖物
+                    ply.setStrokeStyle(line);
+                    ply.setFillColor("none");
+
+                    if (m_cities[thecity] != 1) {
+                        m_cities[thecity] = 1;
+                        m_map.addOverlay(ply);  //添加覆盖物
+                    }
+
+                    pointArray = pointArray.concat(ply.getPath());
+                }
+                m_map.setViewport(pointArray);    //调整视野
+            });
+        }
+
+        function AddCooler(lng,lat,txthtml,imgid)
+        {
+
+            var point = new BMap.Point(lng, lat);
+            addMarker(point,txthtml,imgid);
+
+        }
+
+        function displaymap(data){
 
 
-            AddCooler(val.lng, val.lat ,txthtml,imgid);
+            getBoundary("上海市");
+            var allOverlay = m_map.getOverlays();
+            var len = allOverlay.length;
 
+            for (var i = 0; i < len; i++){
+                if(allOverlay[i] instanceof BMap.Marker){
+                    m_map.removeOverlay(allOverlay[i]);
+                }
+            }
 
-        });
+            $.each(data,function(key,val){
 
+          /*      var sContent =
+                        "<h4 style='margin:0 0 5px 0;padding:0.2em 0'>天安门</h4>" +
+                        "<img style='float:right;margin:4px' id='imgDemo' src='http://app.baidu.com/map/images/tiananmen.jpg' width='139' height='104' title='天安门'/>" +
+                        "<p style='margin:0;line-height:1.5;font-size:13px;text-indent:2em'>天安门坐落在中国北京市中心,故宫的南侧,与天安门广场隔长安街相望,是清朝皇城的大门...</p>" +
+                        "</div>";
+    */
+                var imgid= "img"+val.id;
+                txthtml = "<h4 > <a href=\"__MODULE__/Cooler/detail/id/"+val.id +"\">"+val.name+"</a><\/h4>";
+                txthtml += "价格："+val.price;
+                txthtml += "<br/>联系人："+val.lianxiren;
+                txthtml += "<br/>电话："+val.phone;
+                txthtml += "<br/>"+val.note;
+                txthtml += "<br/><img style='float:right;margin:4px' id="+imgid +" src={$Think.const.ADMIN_UPLOAD_URL}"+val.big_img+" height='200px width='200px'>";
 
-    }
-    getBoundary("上海市");
-   // getBoundary();
-
+                AddCooler(val.lng, val.lat ,txthtml,imgid);
+            });
+        }
 
 </script>
