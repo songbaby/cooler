@@ -21,7 +21,9 @@
 
 
 <script  src="http://api.map.baidu.com/api?v=2.0&ak=3nbIhiC4xvRt2ofWcRPAo4uj"></script>
+<script type="text/javascript" src="http://api.map.baidu.com/library/TextIconOverlay/1.2/src/TextIconOverlay_min.js"></script>
 
+<script type="text/JavaScript" src='{$Think.const.JS_URL}MarkClusterer.js'></script>
 
 
 <script >
@@ -32,13 +34,20 @@
         var m_map = new BMap.Map("content");
         m_map.enableScrollWheelZoom();
 
+        var m_markerClusterer = new BMapLib.MarkerClusterer(m_map, 0);
+        function AddCooler(lng,lat,txthtml)
+        {
+            var point = new BMap.Point(lng, lat);
+            addMarker(point,txthtml);
+        }
 
-
-        function addMarker(point,imgid){
+        function addMarker(point,txthtml){
             var marker = new BMap.Marker(point);
-            m_map.addOverlay(marker);
-            addinfoWindow(marker,txthtml,imgid);
+            var label = new BMap.Label(txthtml,{offset:new BMap.Size(20,-10)});
+            marker.setLabel(label);
 
+          //  m_map.addOverlay(marker);
+            m_markerClusterer.addMarker(marker);
         }
 
 
@@ -81,18 +90,9 @@
             });
         }
 
-        function AddCooler(lng,lat,txthtml,imgid)
-        {
-
-            var point = new BMap.Point(lng, lat);
-            addMarker(point,txthtml,imgid);
-
-        }
 
         function displaymap(data){
 
-
-            getBoundary("上海市");
             var allOverlay = m_map.getOverlays();
             var len = allOverlay.length;
 
@@ -104,21 +104,17 @@
 
             $.each(data,function(key,val){
 
-          /*      var sContent =
-                        "<h4 style='margin:0 0 5px 0;padding:0.2em 0'>天安门</h4>" +
-                        "<img style='float:right;margin:4px' id='imgDemo' src='http://app.baidu.com/map/images/tiananmen.jpg' width='139' height='104' title='天安门'/>" +
-                        "<p style='margin:0;line-height:1.5;font-size:13px;text-indent:2em'>天安门坐落在中国北京市中心,故宫的南侧,与天安门广场隔长安街相望,是清朝皇城的大门...</p>" +
-                        "</div>";
-    */
-                var imgid= "img"+val.id;
-                txthtml = "<h4 > <a href=\"__MODULE__/Cooler/detail/id/"+val.id +"\">"+val.name+"</a><\/h4>";
-                txthtml += "价格："+val.price;
-                txthtml += "<br/>联系人："+val.lianxiren;
-                txthtml += "<br/>电话："+val.phone;
-                txthtml += "<br/>"+val.note;
-                txthtml += "<br/><img style='float:right;margin:4px' id="+imgid +" src={$Think.const.ADMIN_UPLOAD_URL}"+val.big_img+" height='200px width='200px'>";
+                var myGeo = new BMap.Geocoder();
+                myGeo.getPoint(val.address, function(point){
+                   // console.log("point = " + point.lng ,point.lat);
 
-                AddCooler(val.lng, val.lat ,txthtml,imgid);
+                    if (point) {
+                        AddCooler(point.lng, point.lat ,val.name);
+                    }else{
+                        alert("get point failed:"+val.name);
+                    }
+                }, "青岛市");
+
             });
         }
 

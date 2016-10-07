@@ -16,7 +16,7 @@ class CoolerController extends Controller {
 
 
 
-    public function index(){
+        public function index(){
 
     }
 
@@ -25,8 +25,9 @@ class CoolerController extends Controller {
     public function getcooler($cid){
 
         $cids = Category::getChildsId_WithSelf($this->cate,$cid);
+
         $where = array( 'cid' => array('IN',$cids));
-        $cooler = M('cooler')->where($where)->select();
+        $cooler = M('stock')->where($where)->select();
 
         $this->ajaxReturn($cooler,'json');
 
