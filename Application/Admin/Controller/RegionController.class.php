@@ -263,7 +263,6 @@ class RegionController extends AdminController {
 
 
 
-        p($res);
     }
 
 }

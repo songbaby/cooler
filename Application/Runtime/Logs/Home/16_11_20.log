@@ -1525,3 +1525,131 @@ SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0030s ]
 SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0160s ]
 SQL: SELECT * FROM `c_nation` WHERE ( pid = 2285 )  [ RunTime:0.0030s ]
 
+[ 2016-11-20T20:36:06+08:00 ] 127.0.0.1 /cooler/index.php/Home/Cooler/getStockStatistic
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0310s ]
+SQL: SELECT * FROM `c_nation` WHERE ( pid = 2312 )  [ RunTime:0.0040s ]
+
+[ 2016-11-20T20:36:07+08:00 ] 127.0.0.1 /cooler/index.php/Home/Cooler/getStockStatistic
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0220s ]
+SQL: SELECT * FROM `c_nation` WHERE ( pid = 2321 )  [ RunTime:0.0030s ]
+
+[ 2016-11-20T20:36:15+08:00 ] 127.0.0.1 /cooler/index.php/Home/Cooler/getStockStatistic
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0210s ]
+SQL: SELECT * FROM `c_nation` WHERE ( pid = 1252 )  [ RunTime:0.0030s ]
+
+[ 2016-11-20T20:36:17+08:00 ] 127.0.0.1 /cooler/index.php/Home/Cooler/getStockStatistic
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0210s ]
+SQL: SELECT * FROM `c_nation` WHERE ( pid = 1253 )  [ RunTime:0.0040s ]
+
+[ 2016-11-20T20:36:31+08:00 ] 127.0.0.1 /cooler/index.php/Home/Cooler/getStockStatistic
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0230s ]
+SQL: SELECT * FROM `c_nation` WHERE ( pid = 1479 )  [ RunTime:0.0030s ]
+
+[ 2016-11-20T20:36:39+08:00 ] 127.0.0.1 /cooler/index.php/Home/Cooler/getStockStatistic
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0250s ]
+SQL: SELECT * FROM `c_nation` WHERE ( pid = 1557 )  [ RunTime:0.0030s ]
+
+[ 2016-11-20T20:37:11+08:00 ] 127.0.0.1 /cooler/index.php/Home/Cooler/getStockStatistic
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0220s ]
+SQL: SELECT * FROM `c_nation` WHERE ( pid = 1584 )  [ RunTime:0.0020s ]
+
+[ 2016-11-20T20:37:14+08:00 ] 127.0.0.1 /cooler/index.php/Home/Cooler/getStockStatistic
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0200s ]
+SQL: SELECT * FROM `c_nation` WHERE ( pid = 1587 )  [ RunTime:0.0030s ]
+
+[ 2016-11-20T20:37:16+08:00 ] 127.0.0.1 /cooler/index.php/Home/Cooler/getStockStatistic
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0220s ]
+SQL: SELECT * FROM `c_nation` WHERE ( pid = 1587 )  [ RunTime:0.0030s ]
+
+[ 2016-11-20T20:53:59+08:00 ] 127.0.0.1 /cooler/index.php/Home/Cooler/getStockStatistic
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0220s ]
+SQL: SELECT * FROM `c_nation` WHERE ( pid = 1 )  [ RunTime:0.0030s ]
+
+[ 2016-11-20T20:54:09+08:00 ] 127.0.0.1 /cooler/index.php/Home/Cooler/getStockStatistic
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0200s ]
+SQL: SELECT * FROM `c_nation` WHERE ( pid = 1479 )  [ RunTime:0.0030s ]
+
+[ 2016-11-20T20:55:15+08:00 ] 127.0.0.1 /cooler/index.php/Home/Cooler/getStockStatistic
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0180s ]
+SQL: SELECT * FROM `c_nation` WHERE ( pid = 496 )  [ RunTime:0.0030s ]
+
+[ 2016-11-20T20:55:50+08:00 ] 127.0.0.1 /cooler/index.php/Home/Cooler/getStockStatistic
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0190s ]
+SQL: SELECT * FROM `c_nation` WHERE ( pid = 875 )  [ RunTime:0.0030s ]
+
+[ 2016-11-20T20:57:52+08:00 ] 127.0.0.1 /cooler/index.php/Home/Cooler/getStockStatistic
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0210s ]
+SQL: SELECT * FROM `c_nation` WHERE ( pid = 1651 )  [ RunTime:0.0020s ]
+
+[ 2016-11-20T20:58:11+08:00 ] 127.0.0.1 /cooler/index.php/Home/Cooler/getStockStatistic
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0210s ]
+SQL: SELECT * FROM `c_nation` WHERE ( pid = 857 )  [ RunTime:0.0030s ]
+
+[ 2016-11-20T20:58:18+08:00 ] 127.0.0.1 /cooler/index.php/Home/Cooler/getStockStatistic
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0290s ]
+SQL: SELECT * FROM `c_nation` WHERE ( pid = 1001 )  [ RunTime:0.0020s ]
+

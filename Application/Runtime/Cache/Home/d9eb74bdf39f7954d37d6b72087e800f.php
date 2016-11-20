@@ -130,7 +130,6 @@
         $('#AllChina').live('click',function() {
 
 
-
             $.post("/cooler/index.php/Home/Cooler/getStockStatistic", {
                 cid :  1,
             }, function (data, textStatus){
