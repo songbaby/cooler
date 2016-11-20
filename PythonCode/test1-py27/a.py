@@ -1,5 +1,28 @@
 #-*—coding:utf8-*-
 import requests
+import MySQLdb
+
+conn= MySQLdb.connect(
+        host='localhost',
+        port = 3306,
+        user='root',
+        passwd='123456',
+        db ='cooler',
+        )
+print(conn);
+cur = conn.cursor()
+aa=cur.execute("select * from c_nation")
+print aa
+
+info = cur.fetchmany(aa)
+for ii in info:
+    print ii
+cur.close()
+conn.commit()
+conn.close()
+
+
+exit(0)
 
 payload = {'typed': '1',
            'preParams': '',
