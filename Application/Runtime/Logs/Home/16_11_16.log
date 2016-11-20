@@ -1,0 +1,62 @@
+[ 2016-11-16T16:21:59+08:00 ] 127.0.0.1 /cooler/index.php/Home/Cooler/showmap
+ERR: SQLSTATE[HY000] [2002] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+
+[ 2016-11-16T16:22:05+08:00 ] 127.0.0.1 /cooler/index.php/Home/Cooler/showmap
+ERR: SQLSTATE[HY000] [2002] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+
+[ 2016-11-16T16:23:40+08:00 ] 127.0.0.1 /cooler/index.php/Home/Cooler/getcooler
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0140s ]
+SQL: SHOW COLUMNS FROM `c_stock` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `c_stock` WHERE ( code < 000801 )  [ RunTime:0.0100s ]
+
+[ 2016-11-16T16:59:38+08:00 ] 127.0.0.1 /cooler/index.php/Home/Cooler/getcooler
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0150s ]
+SQL: SHOW COLUMNS FROM `c_stock` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `c_stock` WHERE ( code < 000801 )  [ RunTime:0.0030s ]
+
+[ 2016-11-16T19:50:49+08:00 ] 127.0.0.1 /cooler/index.php/Home/Cooler/getcooler
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0220s ]
+SQL: SHOW COLUMNS FROM `c_stock` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `c_stock` WHERE ( code != 0 )  [ RunTime:0.0180s ]
+
+[ 2016-11-16T23:18:23+08:00 ] 127.0.0.1 /cooler/index.php/Home/Cooler/getcooler
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0120s ]
+SQL: SHOW COLUMNS FROM `c_stock` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `c_stock` WHERE ( code != 0 )  [ RunTime:0.0100s ]
+
+[ 2016-11-16T23:27:58+08:00 ] 127.0.0.1 /cooler/index.php/Home/Cooler/getcooler
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0120s ]
+SQL: SHOW COLUMNS FROM `c_stock` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `c_stock` WHERE ( code != 0 )  [ RunTime:0.0130s ]
+
+[ 2016-11-16T23:28:33+08:00 ] 127.0.0.1 /cooler/index.php/Home/Cooler/getcooler
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0110s ]
+SQL: SHOW COLUMNS FROM `c_stock` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `c_stock` WHERE ( code != 0 )  [ RunTime:0.0080s ]
+

@@ -58,13 +58,22 @@
     text-align: left;
     border: solid 1px grey;
 }
+
+#ProvinceCurrent {
+    float:left;
+}
+
+#AllChina {
+    float:left;
+}
+
 </style>
 
 
 <div class='top-list-wrap'>
     <div class='top-list'>
         <ul  class='l-list'>
-           <li> <div id="ProviceCurrent" >  </div> </li>
+           <li> <div id="ProvinceCurrent" >  </div> <div id="AllChina" >  </div> </li>
         </ul>
     </div>
 </div>
@@ -75,37 +84,17 @@
 <script >
 
 
-        var   m_ProviceCurrent ="上海市";
+        var   m_ProvinceCurrent ="北京市";
 
 
 
 
     $(function(){
+        $('#AllChina').html("&nbsp; 全国");
+        $('#ProvinceCurrent').html(m_ProvinceCurrent);
 
-        $('#ProviceCurrent').html(m_ProviceCurrent);
-        getBoundary(m_ProviceCurrent,"black","solid",2);
+        getBoundary(m_ProvinceCurrent,"black","solid",2);
 
-
-
-  /*      var map = new BMap.Map("content");
-        map.enableScrollWheelZoom(true);
-        var myGeo = new BMap.Geocoder();
-
-        var add = "山东省青岛市崂山区松岭路1111号";
-        myGeo.getPoint(add, function(point){
-            console.log("point = " + point.lng ,point.lat);
-            if (point) {
-                var address = new BMap.Point(point.lng, point.lat);
-                var marker = new BMap.Marker(address);
-                map.addOverlay(marker);
-                marker.setLabel("aaaa");
-
-                map.centerAndZoom(new BMap.Point(point.lng,point.lat), 13);
-
-            }
-        }, "合肥市");
-        return ;
-*/
 
 
 
@@ -138,13 +127,29 @@
 
 
 
+        $('#AllChina').live('click',function() {
+
+
+
+            $.post("/cooler/index.php/Home/Cooler/getStockStatistic", {
+                cid :  1,
+            }, function (data, textStatus){
+                displayStockStatistic(data);
+            },"json");
+
+        })
+
+
+
+
         $("#nav").append(" <div id='ProvinceList'> </id>");
-        $('#ProviceCurrent').live('mouseover',function() {
+        $('#ProvinceCurrent').live('mouseover',function() {
             $('#ProvinceList').show();
         })
         $('#ProvinceList').live('mouseleave',function() {
             $('#ProvinceList').hide();
         })
+
 
         $("#ProvinceList").html(txtHtml);
         $("#ProvinceList").hide();
@@ -177,8 +182,8 @@
 
         $('#ProvinceList >ul>li> a').live('click',function() {
             getBoundary($(this).html(),"black","solid",2);
-            m_ProviceCurrent = $(this).html();
-            $('#ProviceCurrent').html(m_ProviceCurrent);
+            m_ProvinceCurrent = $(this).html();
+            $('#ProvinceCurrent').html(m_ProvinceCurrent);
             var id =$(this).attr('id');
             var txtHtml ="";
             var index=0;
@@ -213,6 +218,7 @@
 
 
         $('#CityListBottum li a').live('click',function() {
+            getBoundary($(this).html(),"blue","solid",1);
 
             $.post("/cooler/index.php/Home/Cooler/getcooler", {
                 cid :  $(this).attr('id') ,
@@ -225,7 +231,7 @@
         $('#CityListBottum li a').live('mouseover',function() {
 
             $('#CountyList').show();
-            getBoundary($(this).html(),"blue","solid",1);
+
 
             console.log("city:"+$(this).html() + ",id:"+$(this).attr('id'));
 
@@ -270,7 +276,7 @@
 
         })
 
-        $('#CountyList >ul>li> a').live('mouseover',function() {
+        $('#CountyList >ul>li> a').live('click',function() {
             console.log("city:"+$(this).html() + ",id:"+$(this).attr('id'));
             getBoundary($(this).html(),"red","solid",1);
 
@@ -328,6 +334,9 @@
         m_map.enableScrollWheelZoom();
 
         var m_markerClusterer = new BMapLib.MarkerClusterer(m_map, 0);
+
+
+
         function AddCooler(lng,lat,txthtml)
         {
             var point = new BMap.Point(lng, lat);
@@ -335,12 +344,37 @@
         }
 
         function addMarker(point,txthtml){
-            var marker = new BMap.Marker(point);
-            var label = new BMap.Label(txthtml,{offset:new BMap.Size(20,-10)});
-            marker.setLabel(label);
+           // var marker = new BMap.Marker(point);
+           // var label = new BMap.Label(txthtml,{offset:new BMap.Size(20,-10)});
+            //marker.setLabel(label);
 
-          //  m_map.addOverlay(marker);
-            m_markerClusterer.addMarker(marker);
+           // m_map.addOverlay(marker);
+          //  m_markerClusterer.addMarker(marker);
+
+
+            var myLabel = new BMap.Label(txthtml,     //为lable填写内容
+                    {offset:new BMap.Size(-20,-20),                  //label的偏移量，为了让label的中心显示在点上
+                        position:point});                                //label的位置
+
+            myLabel.setTitle("我是文本标注label");               //为label添加鼠标提示
+
+
+
+            myLabel.setStyle({                                   //给label设置样式，任意的CSS都是可以的
+                color:"black",                   //颜色
+                fontSize:"10px",               //字号
+                border:"0",                    //边
+                height:"50px",                //高度
+                width:"50px",                 //宽
+                textAlign:"center",            //文字水平居中显示
+                lineHeight:"10px",            //行高，文字垂直居中显示
+                background:"url(http://127.0.0.1/cooler/Public/Home/img/circle.png) no-repeat -1px -1px",    //背景图片，这是房产标注的关键！
+                cursor:"pointer"
+            });
+
+
+            m_map.addOverlay(myLabel);
+
         }
 
 
@@ -395,20 +429,136 @@
                 }
             }
 
+
             $.each(data,function(key,val){
 
                 var myGeo = new BMap.Geocoder();
                 myGeo.getPoint(val.address, function(point){
-                   // console.log("point = " + point.lng ,point.lat);
+                    // console.log("point = " + point.lng ,point.lat);
 
                     if (point) {
                         AddCooler(point.lng, point.lat ,val.name);
                     }else{
                         alert("get point failed:"+val.name);
                     }
-                }, "青岛市");
+                }, "");
 
             });
+
+
         }
+
+
+
+        function displayStockStatistic(data) {
+
+
+            var allOverlay = m_map.getOverlays();
+            var len = allOverlay.length;
+
+            for (var i = 0; i < len; i++) {
+                if (allOverlay[i] instanceof BMap.Marker) {
+                    m_map.removeOverlay(allOverlay[i]);
+                }
+            }
+            if(data.length <= 0){
+                return ;
+            }
+
+            if(data[0].pid == 1){
+
+                m_map.centerAndZoom(new BMap.Point(108.2775440000, 36.0919520000), 5);
+               // getBoundary(data[0],"black","solid",2);
+            }
+
+           else  {
+
+               m_map.centerAndZoom(new BMap.Point(data[0].lng, data[0].lat), 11);
+              //  getBoundary(data[0],"black","solid",2);
+            }
+
+
+            $.each(data,function(key,val){
+
+                console.log(val.pid);
+                addStockStatistic(val.lng, val.lat ,val);
+            });
+        }
+
+
+        function addStockStatistic(lng,lat,val)
+        {
+            var point = new BMap.Point(lng, lat);
+            var txthtml;
+            if(val.city == ""){
+                 txthtml =  "<br>"+ val.stockcount + "<br>"+val.province;
+            }
+           else{
+                 txthtml =  "<br>"+ val.stockcount + "<br>"+val.city;
+            }
+
+            var myLabel = new BMap.Label(txthtml,     //为lable填写内容
+                    {offset:new BMap.Size(-20,-20),                  //label的偏移量，为了让label的中心显示在点上
+                        position:point});                                //label的位置
+
+            myLabel.setTitle("我是文本标注label");               //为label添加鼠标提示
+
+            var bgpng="circle-small.png";
+            var ht=40,wd=40;
+            if(val.stockcount < 50){
+                bgpng = "circle-small.png";
+                wd = 40;
+                ht=40;
+            }else if(val.stockcount >= 50 && val.stockcount < 100){
+                bgpng = "circle.png";
+                wd = 50;
+                ht=50;
+            }else if(val.stockcount >= 100 && val.stockcount < 200){
+                bgpng = "circle-middle.png";
+                wd = 60;
+                ht=60;
+            }else if(val.stockcount >= 200 ){
+                bgpng = "circle-big.png";
+                wd = 70;
+                ht=70;
+            }
+
+            myLabel.setStyle({                                   //给label设置样式，任意的CSS都是可以的
+                color:"black",                   //颜色
+                fontSize:"10px",               //字号
+                border:"0",                    //边
+                height:ht,                //高度
+                width:wd,                 //宽
+                textAlign:"center",            //文字水平居中显示
+                lineHeight:"10px",            //行高，文字垂直居中显示
+                background:"url(http://127.0.0.1/cooler/Public/Home/img/"+bgpng+") no-repeat -1px -1px",    //背景图片，这是房产标注的关键！
+                cursor:"pointer"
+            });
+
+
+
+            myLabel.addEventListener("click", function(){
+                //map.openInfoWindow(infoWindow, point);
+                //alert(myLabel.getTitle());
+
+                $.post("/cooler/index.php/Home/Cooler/getStockStatistic", {
+                    cid :  val.id ,
+                }, function (data, textStatus){
+
+                    displayStockStatistic(data);
+
+                },"json");
+
+            });
+
+
+            m_map.addOverlay(myLabel);
+
+
+
+        }
+
+
+
 
 </script>

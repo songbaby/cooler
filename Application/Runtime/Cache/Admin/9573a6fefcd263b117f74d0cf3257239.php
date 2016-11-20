@@ -27,7 +27,7 @@
 
 </div>
 <div class="login">
-    <form action="/cooler/index.php/Admin/Manager/login" method="post" id="login">
+    <form action="/cooler/index.php/Admin/Manager/login.html" method="post" id="login">
         <div class="title">
             冷库信息平台 | 登录后台
         </div>

@@ -9,7 +9,7 @@ return array(
     'URL_CASE_INSENSITIVE'  =>  false,
 
     //数据库连接配置
-    'DB_HOST'               =>  'localhost', // 服务器地址
+    'DB_HOST'               =>  '127.0.0.1', // 服务器地址
     'DB_TYPE'               =>  'mysql',     // 数据库类型
     'DB_NAME'               =>  'cooler',          // 数据库名
     'DB_USER'               =>  'root',      // 用户名

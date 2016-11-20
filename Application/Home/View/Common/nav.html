@@ -44,13 +44,22 @@
     text-align: left;
     border: solid 1px grey;
 }
+
+#ProvinceCurrent {
+    float:left;
+}
+
+#AllChina {
+    float:left;
+}
+
 </style>
 
 
 <div class='top-list-wrap'>
     <div class='top-list'>
         <ul  class='l-list'>
-           <li> <div id="ProviceCurrent" >  </div> </li>
+           <li> <div id="ProvinceCurrent" >  </div> <div id="AllChina" >  </div> </li>
         </ul>
     </div>
 </div>
@@ -61,37 +70,17 @@
 <script >
 
 
-        var   m_ProviceCurrent ="上海市";
+        var   m_ProvinceCurrent ="北京市";
 
 
 
 
     $(function(){
+        $('#AllChina').html("&nbsp; 全国");
+        $('#ProvinceCurrent').html(m_ProvinceCurrent);
 
-        $('#ProviceCurrent').html(m_ProviceCurrent);
-        getBoundary(m_ProviceCurrent,"black","solid",2);
+        getBoundary(m_ProvinceCurrent,"black","solid",2);
 
-
-
-  /*      var map = new BMap.Map("content");
-        map.enableScrollWheelZoom(true);
-        var myGeo = new BMap.Geocoder();
-
-        var add = "山东省青岛市崂山区松岭路1111号";
-        myGeo.getPoint(add, function(point){
-            console.log("point = " + point.lng ,point.lat);
-            if (point) {
-                var address = new BMap.Point(point.lng, point.lat);
-                var marker = new BMap.Marker(address);
-                map.addOverlay(marker);
-                marker.setLabel("aaaa");
-
-                map.centerAndZoom(new BMap.Point(point.lng,point.lat), 13);
-
-            }
-        }, "合肥市");
-        return ;
-*/
 
 
 
@@ -124,13 +113,29 @@
 
 
 
+        $('#AllChina').live('click',function() {
+
+
+
+            $.post("__MODULE__/Cooler/getStockStatistic", {
+                cid :  1,
+            }, function (data, textStatus){
+                displayStockStatistic(data);
+            },"json");
+
+        })
+
+
+
+
         $("#nav").append(" <div id='ProvinceList'> </id>");
-        $('#ProviceCurrent').live('mouseover',function() {
+        $('#ProvinceCurrent').live('mouseover',function() {
             $('#ProvinceList').show();
         })
         $('#ProvinceList').live('mouseleave',function() {
             $('#ProvinceList').hide();
         })
+
 
         $("#ProvinceList").html(txtHtml);
         $("#ProvinceList").hide();
@@ -163,8 +168,8 @@
 
         $('#ProvinceList >ul>li> a').live('click',function() {
             getBoundary($(this).html(),"black","solid",2);
-            m_ProviceCurrent = $(this).html();
-            $('#ProviceCurrent').html(m_ProviceCurrent);
+            m_ProvinceCurrent = $(this).html();
+            $('#ProvinceCurrent').html(m_ProvinceCurrent);
             var id =$(this).attr('id');
             var txtHtml ="";
             var index=0;
@@ -199,6 +204,7 @@
 
 
         $('#CityListBottum li a').live('click',function() {
+            getBoundary($(this).html(),"blue","solid",1);
 
             $.post("__MODULE__/Cooler/getcooler", {
                 cid :  $(this).attr('id') ,
@@ -211,7 +217,7 @@
         $('#CityListBottum li a').live('mouseover',function() {
 
             $('#CountyList').show();
-            getBoundary($(this).html(),"blue","solid",1);
+
 
             console.log("city:"+$(this).html() + ",id:"+$(this).attr('id'));
 
@@ -256,7 +262,7 @@
 
         })
 
-        $('#CountyList >ul>li> a').live('mouseover',function() {
+        $('#CountyList >ul>li> a').live('click',function() {
             console.log("city:"+$(this).html() + ",id:"+$(this).attr('id'));
             getBoundary($(this).html(),"red","solid",1);
 

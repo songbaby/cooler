@@ -8,15 +8,18 @@ class CoolerController extends Controller {
 
 
         $this->cate = M('nation')->order('id')->select();
-        $this->cate = Category::unLimitedForLevel($this->cate);
-        $this->allstr = json_encode($this->cate);
+       // $this->cate = Category::unLimitedForLevel($this->cate);
 
+        $this->allstr = json_encode($this->cate);
+       // p($this->allstr);die;
+        // $this->allstr = $this->cate;
+        //p($this->cate);
 
     }
 
 
 
-        public function index(){
+    public function index(){
 
     }
 
@@ -24,16 +27,26 @@ class CoolerController extends Controller {
 //process ajax
     public function getcooler($cid){
 
-        $cids = Category::getChildsId_WithSelf($this->cate,$cid);
+/*        $cids = Category::getChildsId_WithSelf($this->cate,$cid);
 
         $where = array( 'cid' => array('IN',$cids));
         $cooler = M('stock')->where($where)->select();
+ $this->ajaxReturn($cooler,'json');
+       */
 
+     //  $where = where('code = 000001');
+        $cooler = M('stock')-> where('code < 100')->select();
         $this->ajaxReturn($cooler,'json');
-
     }
 
+//process ajax
+    public function getStockStatistic($cid){
 
+        $where = "pid = " . $cid;
+        $statisc = M('nation')-> where($where)->select();
+        $this->ajaxReturn($statisc,'json');
+        p($statisc);
+    }
 
 
     public function showlist(){

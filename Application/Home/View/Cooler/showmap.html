@@ -35,6 +35,9 @@
         m_map.enableScrollWheelZoom();
 
         var m_markerClusterer = new BMapLib.MarkerClusterer(m_map, 0);
+
+
+
         function AddCooler(lng,lat,txthtml)
         {
             var point = new BMap.Point(lng, lat);
@@ -42,12 +45,37 @@
         }
 
         function addMarker(point,txthtml){
-            var marker = new BMap.Marker(point);
-            var label = new BMap.Label(txthtml,{offset:new BMap.Size(20,-10)});
-            marker.setLabel(label);
+           // var marker = new BMap.Marker(point);
+           // var label = new BMap.Label(txthtml,{offset:new BMap.Size(20,-10)});
+            //marker.setLabel(label);
 
-          //  m_map.addOverlay(marker);
-            m_markerClusterer.addMarker(marker);
+           // m_map.addOverlay(marker);
+          //  m_markerClusterer.addMarker(marker);
+
+
+            var myLabel = new BMap.Label(txthtml,     //为lable填写内容
+                    {offset:new BMap.Size(-20,-20),                  //label的偏移量，为了让label的中心显示在点上
+                        position:point});                                //label的位置
+
+            myLabel.setTitle("我是文本标注label");               //为label添加鼠标提示
+
+
+
+            myLabel.setStyle({                                   //给label设置样式，任意的CSS都是可以的
+                color:"black",                   //颜色
+                fontSize:"10px",               //字号
+                border:"0",                    //边
+                height:"50px",                //高度
+                width:"50px",                 //宽
+                textAlign:"center",            //文字水平居中显示
+                lineHeight:"10px",            //行高，文字垂直居中显示
+                background:"url(http://127.0.0.1/cooler/Public/Home/img/circle.png) no-repeat -1px -1px",    //背景图片，这是房产标注的关键！
+                cursor:"pointer"
+            });
+
+
+            m_map.addOverlay(myLabel);
+
         }
 
 
@@ -102,20 +130,136 @@
                 }
             }
 
+
             $.each(data,function(key,val){
 
                 var myGeo = new BMap.Geocoder();
                 myGeo.getPoint(val.address, function(point){
-                   // console.log("point = " + point.lng ,point.lat);
+                    // console.log("point = " + point.lng ,point.lat);
 
                     if (point) {
                         AddCooler(point.lng, point.lat ,val.name);
                     }else{
                         alert("get point failed:"+val.name);
                     }
-                }, "青岛市");
+                }, "");
 
             });
+
+
         }
+
+
+
+        function displayStockStatistic(data) {
+
+
+            var allOverlay = m_map.getOverlays();
+            var len = allOverlay.length;
+
+            for (var i = 0; i < len; i++) {
+                if (allOverlay[i] instanceof BMap.Marker) {
+                    m_map.removeOverlay(allOverlay[i]);
+                }
+            }
+            if(data.length <= 0){
+                return ;
+            }
+
+            if(data[0].pid == 1){
+
+                m_map.centerAndZoom(new BMap.Point(108.2775440000, 36.0919520000), 5);
+               // getBoundary(data[0],"black","solid",2);
+            }
+
+           else  {
+
+               m_map.centerAndZoom(new BMap.Point(data[0].lng, data[0].lat), 11);
+              //  getBoundary(data[0],"black","solid",2);
+            }
+
+
+            $.each(data,function(key,val){
+
+                console.log(val.pid);
+                addStockStatistic(val.lng, val.lat ,val);
+            });
+        }
+
+
+        function addStockStatistic(lng,lat,val)
+        {
+            var point = new BMap.Point(lng, lat);
+            var txthtml;
+            if(val.city == ""){
+                 txthtml =  "<br>"+ val.stockcount + "<br>"+val.province;
+            }
+           else{
+                 txthtml =  "<br>"+ val.stockcount + "<br>"+val.city;
+            }
+
+            var myLabel = new BMap.Label(txthtml,     //为lable填写内容
+                    {offset:new BMap.Size(-20,-20),                  //label的偏移量，为了让label的中心显示在点上
+                        position:point});                                //label的位置
+
+            myLabel.setTitle("我是文本标注label");               //为label添加鼠标提示
+
+            var bgpng="circle-small.png";
+            var ht=40,wd=40;
+            if(val.stockcount < 50){
+                bgpng = "circle-small.png";
+                wd = 40;
+                ht=40;
+            }else if(val.stockcount >= 50 && val.stockcount < 100){
+                bgpng = "circle.png";
+                wd = 50;
+                ht=50;
+            }else if(val.stockcount >= 100 && val.stockcount < 200){
+                bgpng = "circle-middle.png";
+                wd = 60;
+                ht=60;
+            }else if(val.stockcount >= 200 ){
+                bgpng = "circle-big.png";
+                wd = 70;
+                ht=70;
+            }
+
+            myLabel.setStyle({                                   //给label设置样式，任意的CSS都是可以的
+                color:"black",                   //颜色
+                fontSize:"10px",               //字号
+                border:"0",                    //边
+                height:ht,                //高度
+                width:wd,                 //宽
+                textAlign:"center",            //文字水平居中显示
+                lineHeight:"10px",            //行高，文字垂直居中显示
+                background:"url(http://127.0.0.1/cooler/Public/Home/img/"+bgpng+") no-repeat -1px -1px",    //背景图片，这是房产标注的关键！
+                cursor:"pointer"
+            });
+
+
+
+            myLabel.addEventListener("click", function(){
+                //map.openInfoWindow(infoWindow, point);
+                //alert(myLabel.getTitle());
+
+                $.post("__MODULE__/Cooler/getStockStatistic", {
+                    cid :  val.id ,
+                }, function (data, textStatus){
+
+                    displayStockStatistic(data);
+
+                },"json");
+
+            });
+
+
+            m_map.addOverlay(myLabel);
+
+
+
+        }
+
+
+
 
 </script>
