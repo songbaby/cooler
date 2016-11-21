@@ -1,0 +1,12 @@
+[ 2016-11-22T07:30:11+08:00 ] 127.0.0.1 /cooler/index.php/Admin/Stock/autoupdate
+ERR: 1146:Table 'cooler.c_sotck' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `c_sotck`
+
+[ 2016-11-22T07:39:29+08:00 ] 127.0.0.1 /cooler/index.php/Admin/Stock/autoupdate
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ')' at line 1
+ [ SQL语句 ] : UPDATE `c_stock` SET `city`='1' WHERE ( id= )
+
+[ 2016-11-22T07:45:10+08:00 ] 127.0.0.1 /cooler/index.php/Admin/Stock/autoupdate
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '== ""  ) ORDER BY id' at line 1
+ [ SQL语句 ] : SELECT * FROM `c_nation` WHERE (  city == ""  ) ORDER BY id 
+

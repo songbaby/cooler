@@ -7,16 +7,6 @@ use Component\AdminController;
 class RegionController extends AdminController {
     //商品列表展示
 
-    
-    function autoupdateStockCount(){
-
-
-        $this->display();
-
-    }
-
-
-
 
     function autoupdateLatLng(){
 
@@ -264,6 +254,39 @@ class RegionController extends AdminController {
 
 
     }
+
+
+
+
+    function autoupdateStockCount(){
+
+        $where = " district = \"\" or ( district != \"\" and province = \"上海市\" ) or ( district != \"\" and province = \"北京市\" ) or ( district != \"\" and province = \"天津市\" ) or ( district != \"\" and province = \"重庆市\" ) ";
+        $cate = M('nation')->order('id')->where($where)->select();
+
+        p("updating");
+        foreach($cate as $k => $v){
+
+            $str ="";
+            if( $v['city'] == '' &&  $v['district'] == '' ){
+                $str = $v['province'] ;
+            }else{
+                $str = $v['province'] . $v['city'];
+            }
+            $where1 = "address like \"%";
+            $where1 .=$str;
+            $where1 .= "%\"";
+            $stockcount = M('stock')->where($where1)->count();
+
+            p($str.":".$stockcount);
+
+            $User = M("nation"); // 实例化User对象
+            $User->stockcount = $stockcount;
+            $User->where('id='. $v['id'])->save(); // 根据条件更新记录
+        }
+        p("finish");
+
+    }
+
 
 }
 

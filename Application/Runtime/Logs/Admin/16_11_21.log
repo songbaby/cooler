@@ -1,0 +1,4 @@
+[ 2016-11-21T22:04:43+08:00 ] 127.0.0.1 /cooler/index.php/Admin/Region/autoupdateStockCount
+ERR: 1054:Unknown column 'adrress' in 'where clause'
+ [ SQL语句 ] : SELECT * FROM `c_stock` WHERE ( adrress like "%山东省济宁市%" ) 
+

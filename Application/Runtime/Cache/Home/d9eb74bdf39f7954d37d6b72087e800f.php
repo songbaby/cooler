@@ -358,6 +358,7 @@
             myLabel.setTitle("我是文本标注label");               //为label添加鼠标提示
 
 
+/*
 
             myLabel.setStyle({                                   //给label设置样式，任意的CSS都是可以的
                 color:"black",                   //颜色
@@ -371,6 +372,7 @@
                 cursor:"pointer"
             });
 
+*/
 
             m_map.addOverlay(myLabel);
 
@@ -448,8 +450,50 @@
         }
 
 
+        //call when click city
+        function displayStock(data) {
 
-        function displayStockStatistic(data) {
+
+            console.log(data);
+            var allOverlay = m_map.getOverlays();
+            var len = allOverlay.length;
+
+            for (var i = 0; i < len; i++){
+                if(allOverlay[i] instanceof BMap.Marker){
+                    m_map.removeOverlay(allOverlay[i]);
+                }
+            }
+
+            $.each(data,function(key,val){
+
+                console.log(val.address);
+
+                var myGeo = new BMap.Geocoder();
+                myGeo.getPoint(val.address, function(point){
+                    // console.log("point = " + point.lng ,point.lat);
+
+                    if (point) {
+                        AddCooler(point.lng, point.lat ,val.name);
+                    }else{
+                        alert("get point failed:"+val.name);
+                    }
+                }, "");
+
+
+            });
+
+
+
+
+
+
+        }
+
+
+
+
+        //call when click provice or  allchina
+            function displayStockStatistic(data) {
 
 
             var allOverlay = m_map.getOverlays();
@@ -479,7 +523,7 @@
 
             $.each(data,function(key,val){
 
-                console.log(val.pid);
+               // console.log(val.pid);
                 addStockStatistic(val.lng, val.lat ,val);
             });
         }
@@ -536,19 +580,41 @@
 
 
 
+
+
             myLabel.addEventListener("click", function(){
-                //map.openInfoWindow(infoWindow, point);
-                //alert(myLabel.getTitle());
 
-                $.post("/cooler/index.php/Home/Cooler/getStockStatistic", {
-                    cid :  val.id ,
-                }, function (data, textStatus){
+                console.log("city : "+ val.city + " , district ; "+val.district);
 
-                    displayStockStatistic(data);
+                if(val.province != "" && val.city != "" && val.district == ""){
 
-                },"json");
+
+                    //alert("getStock");
+                    $.post("/cooler/index.php/Home/Cooler/getStock", {
+                        cid :  val.id ,
+                    }, function (data, textStatus){
+                        displayStock(data);
+                    },"json");
+
+                }
+                else{
+                    $.post("/cooler/index.php/Home/Cooler/getStockStatistic", {
+                        cid :  val.id ,
+                    }, function (data, textStatus){
+                        displayStockStatistic(data);
+                    },"json");
+
+
+
+
+                }
+
+
+
+
 
             });
+
 
 
             m_map.addOverlay(myLabel);

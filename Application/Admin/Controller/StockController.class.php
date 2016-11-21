@@ -8,25 +8,81 @@ class StockController extends AdminController {
     //商品列表展示
 
     
-    function autoupdate(){
+    function autoupdate()
+    {
 
-        p(1);die;
-        $cooler = D("Cooler");
-        
-        //1. 获得当前记录总条数
-        $total = $cooler -> count();
-        $per = 20;
-        //2. 实例化分页类对象
-        $page = new \Component\Page($total, $per); //autoload
-        //3. 拼装sql语句获得每页信息
-        $sql = "select * from c_cooler ".$page->limit;
-        $info = $cooler -> query($sql);
-        //4. 获得页码列表
-        $pagelist = $page -> fpage();
-        
-        $this -> assign('info', $info);
-        $this -> assign('pagelist', $pagelist);
-        $this -> display();
+        {
+
+
+            $where = " city = \"\" ";
+            $cate = M('nation')->order('id')->where($where)->select();
+
+            p("updating");
+            foreach ($cate as $k => $v) {
+
+                $str = $v['province'];
+
+                $where1 = "address like \"%";
+                $where1 .= $str;
+                $where1 .= "%\"";
+                $stock = M('stock')->where($where1)->select();
+
+                p($str . ":" . $stock);
+
+                foreach ($stock as $key => $val) {
+                    p("province " . $val['address']);
+                    p("city " . $val['city']);
+
+                    $User = M("stock"); // 实例化User对象
+                    $User->province = $v['id'];
+                    $User->where('code=' . $val['code'])->save(); // 根据条件更新记录
+                }
+
+
+            }
+        }
+
+
+        {
+
+            $where = " city != \"\" ";
+            $cate = M('nation')->order('id')->where($where)->select();
+
+            p("updating");
+            foreach ($cate as $k => $v) {
+
+                $str = "";
+                if ($v['city'] == '' && $v['district'] == '') {
+                    $str = $v['province'];
+                } else {
+                    $str = $v['province'] . $v['city'];
+                }
+                $where1 = "address like \"%";
+                $where1 .= $str;
+                $where1 .= "%\"";
+                $stock = M('stock')->where($where1)->select();
+
+                p($str . ":" . $stock);
+
+                foreach ($stock as $key => $val) {
+                    p("province " . $val['address']);
+                    p("city " . $val['city']);
+
+
+                    $User = M("stock"); // 实例化User对象
+                    // $User->provice = $stock[0]['province'];
+                    $User->city = $v['id'];
+                    // p("province ".$stock[0]['province']);
+                    //  p("city ".$stock[0]['city']);
+                    $User->where('code=' . $val['code'])->save(); // 根据条件更新记录
+                }
+            }
+         }
+
+        p("finish");
+
+
+
     }
 
 

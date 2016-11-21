@@ -49,6 +49,22 @@ class CoolerController extends Controller {
     }
 
 
+
+//process ajax
+    public function getStock($cid){
+        $where = "cid = " . $cid;
+        $cooler = M('stock')-> where($where)->select();
+        $this->ajaxReturn($cooler,'json');
+
+
+    }
+
+
+
+
+
+
+
     public function showlist(){
 
 
