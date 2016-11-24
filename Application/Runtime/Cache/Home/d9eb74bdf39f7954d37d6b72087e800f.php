@@ -339,7 +339,16 @@
         function AddCooler(lng,lat,txthtml)
         {
             var point = new BMap.Point(lng, lat);
-            addMarker(point,txthtml);
+           // addMarker(point,txthtml);
+
+            var myLabel = new BMap.Label(txthtml,     //为lable填写内容
+                    {offset:new BMap.Size(-20,-20),                  //label的偏移量，为了让label的中心显示在点上
+                        position:point});                                //label的位置
+
+            myLabel.setTitle("我是文本标注label");               //为label添加鼠标提示
+
+            m_map.addOverlay(myLabel);
+
         }
 
         function addMarker(point,txthtml){
@@ -356,23 +365,6 @@
                         position:point});                                //label的位置
 
             myLabel.setTitle("我是文本标注label");               //为label添加鼠标提示
-
-
-/*
-
-            myLabel.setStyle({                                   //给label设置样式，任意的CSS都是可以的
-                color:"black",                   //颜色
-                fontSize:"10px",               //字号
-                border:"0",                    //边
-                height:"50px",                //高度
-                width:"50px",                 //宽
-                textAlign:"center",            //文字水平居中显示
-                lineHeight:"10px",            //行高，文字垂直居中显示
-                background:"url(http://127.0.0.1/cooler/Public/Home/img/circle.png) no-repeat -1px -1px",    //背景图片，这是房产标注的关键！
-                cursor:"pointer"
-            });
-
-*/
 
             m_map.addOverlay(myLabel);
 
@@ -449,6 +441,19 @@
 
         }
 
+        function addStock(lng,lat,txthtml,address)
+        {
+
+            var point = new BMap.Point(lng, lat);
+            var myLabel = new BMap.Label(txthtml,     //为lable填写内容
+                    {offset:new BMap.Size(-20,-20),                  //label的偏移量，为了让label的中心显示在点上
+                        position:point});                                //label的位置
+            myLabel.setTitle(address);               //为label添加鼠标提
+
+            m_map.addOverlay(myLabel);
+        }
+
+
 
         //call when click city
         function displayStock(data) {
@@ -467,18 +472,7 @@
             $.each(data,function(key,val){
 
                 console.log(val.address);
-
-                var myGeo = new BMap.Geocoder();
-                myGeo.getPoint(val.address, function(point){
-                    // console.log("point = " + point.lng ,point.lat);
-
-                    if (point) {
-                        AddCooler(point.lng, point.lat ,val.name);
-                    }else{
-                        alert("get point failed:"+val.name);
-                    }
-                }, "");
-
+                addStock(val.lng, val.lat ,val.name,val.address);
 
             });
 
@@ -492,7 +486,7 @@
 
 
 
-        //call when click provice or  allchina
+        //ajax aysnc call when click provice or  allchina
             function displayStockStatistic(data) {
 
 
@@ -509,15 +503,12 @@
             }
 
             if(data[0].pid == 1){
-
                 m_map.centerAndZoom(new BMap.Point(108.2775440000, 36.0919520000), 5);
                // getBoundary(data[0],"black","solid",2);
             }
 
            else  {
-
-               m_map.centerAndZoom(new BMap.Point(data[0].lng, data[0].lat), 11);
-              //  getBoundary(data[0],"black","solid",2);
+                getBoundary(data[0].province,"black","solid",2);
             }
 
 
@@ -526,6 +517,9 @@
                // console.log(val.pid);
                 addStockStatistic(val.lng, val.lat ,val);
             });
+
+
+
         }
 
 
@@ -566,6 +560,11 @@
                 ht=70;
             }
 
+            if(val.city != ""){
+                bgpng = "circle-city.png";
+                wd = 40;
+                ht=40;
+            }
             myLabel.setStyle({                                   //给label设置样式，任意的CSS都是可以的
                 color:"black",                   //颜色
                 fontSize:"10px",               //字号
@@ -584,27 +583,27 @@
 
             myLabel.addEventListener("click", function(){
 
-                console.log("city : "+ val.city + " , district ; "+val.district);
+                console.log("val.province"+val.province+" , city : "+ val.city + " , district ; "+val.district);
 
                 if(val.province != "" && val.city != "" && val.district == ""){
 
 
                     //alert("getStock");
-                    $.post("/cooler/index.php/Home/Cooler/getStock", {
-                        cid :  val.id ,
+                    $.post("/cooler/index.php/Home/Cooler/getStockOfCity", {
+                        city :  val.id ,
                     }, function (data, textStatus){
                         displayStock(data);
                     },"json");
 
                 }
                 else{
+
+                  console.log("else");
                     $.post("/cooler/index.php/Home/Cooler/getStockStatistic", {
                         cid :  val.id ,
                     }, function (data, textStatus){
                         displayStockStatistic(data);
                     },"json");
-
-
 
 
                 }
