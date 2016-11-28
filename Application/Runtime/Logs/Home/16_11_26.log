@@ -1,0 +1,1939 @@
+[ 2016-11-26T08:19:54+08:00 ] 127.0.0.1 /cooler/index.php/Home/Cooler/getStockStatistic
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0250s ]
+SQL: SELECT * FROM `c_nation` WHERE ( pid = 1 )  [ RunTime:0.0030s ]
+
+[ 2016-11-26T08:20:00+08:00 ] 127.0.0.1 /cooler/index.php/Home/Cooler/getStockStatistic
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0190s ]
+SQL: SELECT * FROM `c_nation` WHERE ( pid = 1001 )  [ RunTime:0.0030s ]
+
+[ 2016-11-26T08:20:04+08:00 ] 127.0.0.1 /cooler/index.php/Home/Cooler/getStockOfCity
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0500s ]
+SQL: select * from c_stock  join c_nation on c_stock.city = c_nation.id where c_stock.city = 1078 [ RunTime:0.0050s ]
+
+[ 2016-11-26T08:42:22+08:00 ] 127.0.0.1 /cooler/index.php/Home/Cooler/getStockStatistic
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0240s ]
+SQL: SELECT * FROM `c_nation` WHERE ( pid = 1252 )  [ RunTime:0.0030s ]
+
+[ 2016-11-26T08:42:24+08:00 ] 127.0.0.1 /cooler/index.php/Home/Cooler/getStockOfCity
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0250s ]
+SQL: select * from c_stock  join c_nation on c_stock.city = c_nation.id where c_stock.city = 1268 [ RunTime:0.0050s ]
+
+[ 2016-11-26T08:42:31+08:00 ] 127.0.0.1 /cooler/index.php/Home/Cooler/getStockOfCity
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0190s ]
+SQL: select * from c_stock  join c_nation on c_stock.city = c_nation.id where c_stock.city = 1311 [ RunTime:0.0020s ]
+
+[ 2016-11-26T08:42:34+08:00 ] 127.0.0.1 /cooler/index.php/Home/Cooler/getStockOfCity
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0160s ]
+SQL: select * from c_stock  join c_nation on c_stock.city = c_nation.id where c_stock.city = 1336 [ RunTime:0.0020s ]
+
+[ 2016-11-26T08:42:55+08:00 ] 127.0.0.1 /cooler/index.php/Home/Cooler/getStockStatistic
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0220s ]
+SQL: SELECT * FROM `c_nation` WHERE ( pid = 2978 )  [ RunTime:0.0030s ]
+
+[ 2016-11-26T08:42:59+08:00 ] 127.0.0.1 /cooler/index.php/Home/Cooler/getStockStatistic
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0230s ]
+SQL: SELECT * FROM `c_nation` WHERE ( pid = 3391 )  [ RunTime:0.0020s ]
+
+[ 2016-11-26T08:43:02+08:00 ] 127.0.0.1 /cooler/index.php/Home/Cooler/getStockOfCity
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0220s ]
+SQL: select * from c_stock  join c_nation on c_stock.city = c_nation.id where c_stock.city = 3402 [ RunTime:0.0020s ]
+
+[ 2016-11-26T08:43:07+08:00 ] 127.0.0.1 /cooler/index.php/Home/Cooler/getStockOfCity
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0210s ]
+SQL: select * from c_stock  join c_nation on c_stock.city = c_nation.id where c_stock.city = 3439 [ RunTime:0.0020s ]
+
+[ 2016-11-26T08:43:43+08:00 ] 127.0.0.1 /cooler/index.php/Home/Cooler/getStockStatistic
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0280s ]
+SQL: SELECT * FROM `c_nation` WHERE ( pid = 1 )  [ RunTime:0.0030s ]
+
+[ 2016-11-26T08:48:15+08:00 ] 127.0.0.1 /cooler/index.php/Home/Cooler/getStockStatistic
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0250s ]
+SQL: SELECT * FROM `c_nation` WHERE ( pid = 1 )  [ RunTime:0.0020s ]
+
+[ 2016-11-26T09:41:51+08:00 ] 127.0.0.1 /cooler/index.php/Home/Cooler/getStocka?term=c
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0170s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-11-26T09:41:56+08:00 ] 127.0.0.1 /cooler/index.php/Home/Cooler/getStocka?term=j
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0200s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-11-26T09:41:59+08:00 ] 127.0.0.1 /cooler/index.php/Home/Cooler/getStocka?term=s
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0180s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-11-26T09:59:30+08:00 ] 127.0.0.1 //cooler/index.php/Home/Cooler/getStocka?m=autocomplete&prefix=c
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0170s ]
+ERR: 参数错误或者未定义:m
+
+[ 2016-11-26T10:01:31+08:00 ] 127.0.0.1 //cooler/index.php/Home/Cooler/getStocka?m=autocomplete&prefix=c
+ERR: 参数错误或者未定义:m
+
+[ 2016-11-26T10:01:37+08:00 ] 127.0.0.1 //cooler/index.php/Home/Cooler/getStocka?m=autocomplete&prefix=c
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0180s ]
+ERR: 参数错误或者未定义:m
+
+[ 2016-11-26T10:10:50+08:00 ] 127.0.0.1 //cooler/index.php/Home/Cooler/getStocka?m=autocomplete&prefix=c
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0180s ]
+ERR: 参数错误或者未定义:m
+
+[ 2016-11-26T10:13:11+08:00 ] 127.0.0.1 //cooler/index.php/Home/Cooler/getStocka?m=autocomplete&prefix=c
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0160s ]
+ERR: 参数错误或者未定义:m
+
+[ 2016-11-26T10:13:25+08:00 ] 127.0.0.1 //cooler/index.php/Home/Cooler/getStocka?m=autocomplete&prefix=c
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0170s ]
+
+[ 2016-11-26T10:13:39+08:00 ] 127.0.0.1 //cooler/index.php/Home/Cooler/getStocka?m=autocomplete&prefix=c
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0170s ]
+
+[ 2016-11-26T10:14:07+08:00 ] 127.0.0.1 //cooler/index.php/Home/Cooler/getStocka?mg=autocomplete&prefix=c
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0220s ]
+
+[ 2016-11-26T10:14:49+08:00 ] 127.0.0.1 //cooler/index.php/Home/Cooler/getStocka?mg=autocomplete&prefix=c
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0170s ]
+
+[ 2016-11-26T10:15:18+08:00 ] 127.0.0.1 //cooler/index.php/Home/Cooler/getStocka?mg=autocomplete&prefix=c
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0170s ]
+
+[ 2016-11-26T10:22:19+08:00 ] 127.0.0.1 //cooler/index.php/Home/Cooler/getStocka?mg=autocomplete&prefix=g
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0200s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '= spell like g' at line 1
+ [ SQL语句 ] : select * from c_stock  where = spell like g
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '= spell like g' at line 1
+ [ SQL语句 ] : select * from c_stock  where = spell like g
+
+[ 2016-11-26T10:23:53+08:00 ] 127.0.0.1 //cooler/index.php/Home/Cooler/getStocka?mg=autocomplete&prefix=c
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0170s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '= spell like \'%'c%\'' at line 1
+ [ SQL语句 ] : select * from c_stock  where = spell like \'%'c%\'
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '= spell like \'%'c%\'' at line 1
+ [ SQL语句 ] : select * from c_stock  where = spell like \'%'c%\'
+
+[ 2016-11-26T10:24:54+08:00 ] 127.0.0.1 //cooler/index.php/Home/Cooler/getStocka?mg=autocomplete&prefix=c
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0180s ]
+SQL: select * from c_stock  where  spell like '%c%' [ RunTime:0.0020s ]
+
+[ 2016-11-26T10:25:17+08:00 ] 127.0.0.1 //cooler/index.php/Home/Cooler/getStocka?mg=autocomplete&prefix=c
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0170s ]
+SQL: select * from c_stock  where  spell like '%c%' [ RunTime:0.0020s ]
+
+[ 2016-11-26T10:26:14+08:00 ] 127.0.0.1 //cooler/index.php/Home/Cooler/getStocka?mg=autocomplete&prefix=p
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0170s ]
+SQL: select * from c_stock  where  spell like '%p%' [ RunTime:0.0030s ]
+
+[ 2016-11-26T10:26:22+08:00 ] 127.0.0.1 //cooler/index.php/Home/Cooler/getStocka?mg=autocomplete&prefix=pa
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0270s ]
+SQL: select * from c_stock  where  spell like '%pa%' [ RunTime:0.0030s ]
+
+[ 2016-11-26T10:26:31+08:00 ] 127.0.0.1 //cooler/index.php/Home/Cooler/getStocka?mg=autocomplete&prefix=pay
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0170s ]
+SQL: select * from c_stock  where  spell like '%pay%' [ RunTime:0.0020s ]
+
+[ 2016-11-26T10:27:01+08:00 ] 127.0.0.1 //cooler/index.php/Home/Cooler/getStocka?mg=autocomplete&prefix=pa
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0190s ]
+SQL: select * from c_stock  where  spell like '%pa%' [ RunTime:0.0030s ]
+
+[ 2016-11-26T10:27:03+08:00 ] 127.0.0.1 //cooler/index.php/Home/Cooler/getStocka?mg=autocomplete&prefix=p
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0190s ]
+SQL: select * from c_stock  where  spell like '%p%' [ RunTime:0.0020s ]
+
+[ 2016-11-26T10:28:18+08:00 ] 127.0.0.1 //cooler/index.php/Home/Cooler/getStocka?mg=autocomplete&prefix=c
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0170s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-11-26T10:31:24+08:00 ] 127.0.0.1 //cooler/index.php/Home/Cooler/getStocka?mg=autocomplete&prefix=c
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0230s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-11-26T10:31:39+08:00 ] 127.0.0.1 //cooler/index.php/Home/Cooler/getStocka?mg=autocomplete&prefix=cc
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0280s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-11-26T10:31:40+08:00 ] 127.0.0.1 //cooler/index.php/Home/Cooler/getStocka?mg=autocomplete&prefix=p
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0300s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-11-26T10:31:46+08:00 ] 127.0.0.1 //cooler/index.php/Home/Cooler/getStocka?mg=autocomplete&prefix=c
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0170s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-11-26T10:32:22+08:00 ] 127.0.0.1 //cooler/index.php/Home/Cooler/getStocka?mg=autocomplete&prefix=c
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0200s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-11-26T10:34:00+08:00 ] 127.0.0.1 //cooler/index.php/Home/Cooler/getStocka?mg=autocomplete&prefix=p
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0190s ]
+SQL: select * from c_stock  where  spell like '%p%' [ RunTime:0.0030s ]
+
+[ 2016-11-26T10:41:21+08:00 ] 127.0.0.1 //cooler/index.php/Home/Cooler/getStocka?mg=autocomplete&prefix=p
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0180s ]
+SQL: select * from c_stock  where  spell like '%p%' [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-11-26T10:44:36+08:00 ] 127.0.0.1 //cooler/index.php/Home/Cooler/getStocka?mg=autocomplete&prefix=p
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0170s ]
+SQL: select * from c_stock  where  spell like '%p%' [ RunTime:0.0030s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-11-26T10:46:27+08:00 ] 127.0.0.1 //cooler/index.php/Home/Cooler/getStocka?mg=autocomplete&prefix=p
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0170s ]
+SQL: select * from c_stock  where  spell like '%p%' [ RunTime:0.0020s ]
+
+[ 2016-11-26T10:48:37+08:00 ] 127.0.0.1 //cooler/index.php/Home/Cooler/getStocka?mg=autocomplete&prefix=p
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0220s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-11-26T10:48:52+08:00 ] 127.0.0.1 //cooler/index.php/Home/Cooler/getStocka?mg=autocomplete&prefix=p
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0290s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-11-26T10:48:55+08:00 ] 127.0.0.1 //cooler/index.php/Home/Cooler/getStocka?mg=autocomplete&prefix=c
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0290s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-11-26T10:49:02+08:00 ] 127.0.0.1 //cooler/index.php/Home/Cooler/getStocka?mg=autocomplete&prefix=cc
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0190s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-11-26T10:49:04+08:00 ] 127.0.0.1 //cooler/index.php/Home/Cooler/getStocka?mg=autocomplete&prefix=c
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0200s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-11-26T10:49:04+08:00 ] 127.0.0.1 //cooler/index.php/Home/Cooler/getStocka?mg=autocomplete&prefix=cs
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0220s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-11-26T10:49:21+08:00 ] 127.0.0.1 //cooler/index.php/Home/Cooler/getStocka?mg=autocomplete&prefix=p
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0240s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-11-26T10:49:34+08:00 ] 127.0.0.1 //cooler/index.php/Home/Cooler/getStocka?mg=autocomplete&prefix=y
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0270s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-11-26T10:49:36+08:00 ] 127.0.0.1 //cooler/index.php/Home/Cooler/getStocka?mg=autocomplete&prefix=e
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0280s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-11-26T10:54:38+08:00 ] 127.0.0.1 //cooler/index.php/Home/Cooler/getStocka?mg=autocomplete&prefix=p
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0170s ]
+SQL: select * from c_stock  where  spell like '%p%' [ RunTime:0.0020s ]
+
+[ 2016-11-26T10:55:02+08:00 ] 127.0.0.1 //cooler/index.php/Home/Cooler/getStocka?mg=autocomplete&prefix=p
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0160s ]
+SQL: select * from c_stock  where  spell like '%p%' [ RunTime:0.0020s ]
+
+[ 2016-11-26T10:56:05+08:00 ] 127.0.0.1 //cooler/index.php/Home/Cooler/getStocka?mg=autocomplete&prefix=p
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0220s ]
+SQL: select * from c_stock  where  spell like '%p%' [ RunTime:0.0020s ]
+
+[ 2016-11-26T10:56:14+08:00 ] 127.0.0.1 //cooler/index.php/Home/Cooler/getStocka?mg=autocomplete&prefix=p
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0160s ]
+SQL: select * from c_stock  where  spell like '%p%' [ RunTime:0.0020s ]
+
+[ 2016-11-26T11:07:58+08:00 ] 127.0.0.1 //cooler/index.php/Home/Cooler/getStocka?mg=autocomplete&prefix=p
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0170s ]
+SQL: select * , "ziduan"  as label from c_stock  where  spell like '%p%' [ RunTime:0.0020s ]
+
+[ 2016-11-26T11:11:38+08:00 ] 127.0.0.1 //cooler/index.php/Home/Cooler/getStocka?mg=autocomplete&prefix=p
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0180s ]
+SQL: select * , code+"1"  as label from c_stock  where  spell like '%p%' [ RunTime:0.0020s ]
+
+[ 2016-11-26T11:12:21+08:00 ] 127.0.0.1 //cooler/index.php/Home/Cooler/getStocka?mg=autocomplete&prefix=p
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0270s ]
+SQL: select * , code+"1"  as label from c_stock  where  spell like '%p%' [ RunTime:0.0020s ]
+
+[ 2016-11-26T11:13:29+08:00 ] 127.0.0.1 //cooler/index.php/Home/Cooler/getStocka?mg=autocomplete&prefix=p
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0160s ]
+SQL: select address, code , name+"1"  as label from c_stock  where  spell like '%p%' [ RunTime:0.0010s ]
+
+[ 2016-11-26T11:13:49+08:00 ] 127.0.0.1 //cooler/index.php/Home/Cooler/getStocka?mg=autocomplete&prefix=p
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0210s ]
+SQL: select address, code , name  as label from c_stock  where  spell like '%p%' [ RunTime:0.0020s ]
+
+[ 2016-11-26T11:14:08+08:00 ] 127.0.0.1 //cooler/index.php/Home/Cooler/getStocka?mg=autocomplete&prefix=-
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0170s ]
+SQL: select address, code , name  as label from c_stock  where  spell like '%-%' [ RunTime:0.0010s ]
+
+[ 2016-11-26T11:14:09+08:00 ] 127.0.0.1 //cooler/index.php/Home/Cooler/getStocka?mg=autocomplete&prefix=p
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0190s ]
+SQL: select address, code , name  as label from c_stock  where  spell like '%p%' [ RunTime:0.0020s ]
+
+[ 2016-11-26T11:15:06+08:00 ] 127.0.0.1 //cooler/index.php/Home/Cooler/getStocka?mg=autocomplete&prefix=p
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0240s ]
+SQL: select address, code , name  as label from c_stock  where  spell like '%p%' [ RunTime:0.0020s ]
+
+[ 2016-11-26T11:15:45+08:00 ] 127.0.0.1 //cooler/index.php/Home/Cooler/getStocka?mg=autocomplete&prefix=[
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0180s ]
+SQL: select address, code+"code" , name  as label from c_stock  where  spell like '%[%' [ RunTime:0.0010s ]
+
+[ 2016-11-26T11:15:46+08:00 ] 127.0.0.1 //cooler/index.php/Home/Cooler/getStocka?mg=autocomplete&prefix=[p
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0190s ]
+SQL: select address, code+"code" , name  as label from c_stock  where  spell like '%[p%' [ RunTime:0.0010s ]
+
+[ 2016-11-26T11:15:49+08:00 ] 127.0.0.1 //cooler/index.php/Home/Cooler/getStocka?mg=autocomplete&prefix=p
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0200s ]
+SQL: select address, code+"code" , name  as label from c_stock  where  spell like '%p%' [ RunTime:0.0020s ]
+
+[ 2016-11-26T11:16:45+08:00 ] 127.0.0.1 //cooler/index.php/Home/Cooler/getStocka?mg=autocomplete&prefix=p
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0170s ]
+SQL: select address, code , name+"g"  as label from c_stock  where  spell like '%p%' [ RunTime:0.0010s ]
+
+[ 2016-11-26T11:20:25+08:00 ] 127.0.0.1 //cooler/index.php/Home/Cooler/getStocka?mg=autocomplete&prefix=p
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0180s ]
+SQL: select address, code , name||"g"  as label from c_stock  where  spell like '%p%' [ RunTime:0.0010s ]
+
+[ 2016-11-26T11:20:39+08:00 ] 127.0.0.1 //cooler/index.php/Home/Cooler/getStocka?mg=autocomplete&prefix=p
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0210s ]
+SQL: select address, code , name||"g"  as label from c_stock  where  spell like '%p%' [ RunTime:0.0020s ]
+
+[ 2016-11-26T11:21:26+08:00 ] 127.0.0.1 //cooler/index.php/Home/Cooler/getStocka?mg=autocomplete&prefix=p
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0200s ]
+SQL: select address, code , name||code  as label from c_stock  where  spell like '%p%' [ RunTime:0.0020s ]
+
+[ 2016-11-26T11:31:36+08:00 ] 127.0.0.1 //cooler/index.php/Home/Cooler/getStocka?mg=autocomplete&prefix=p
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0190s ]
+SQL: select address, code , address+' add'  as label from c_stock  where  spell like '%p%' [ RunTime:0.0020s ]
+
+[ 2016-11-26T11:32:01+08:00 ] 127.0.0.1 //cooler/index.php/Home/Cooler/getStocka?mg=autocomplete&prefix=p
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0160s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'as label from c_stock  where  spell like '%p%'' at line 1
+ [ SQL语句 ] : select address, code , address'add'  as label from c_stock  where  spell like '%p%'
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'as label from c_stock  where  spell like '%p%'' at line 1
+ [ SQL语句 ] : select address, code , address'add'  as label from c_stock  where  spell like '%p%'
+
+[ 2016-11-26T11:57:08+08:00 ] 127.0.0.1 //cooler/index.php/Home/Cooler/getStocka?mg=autocomplete&prefix=p
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0190s ]
+SQL:  SELECT CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  spell like '%p%' [ RunTime:0.0010s ]
+
+[ 2016-11-26T12:02:57+08:00 ] 127.0.0.1 //cooler/index.php/Home/Cooler/getStocka?mg=autocomplete&prefix=p
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0360s ]
+SQL:  SELECT CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  spell like '%p%' [ RunTime:0.0020s ]
+
+[ 2016-11-26T12:04:05+08:00 ] 127.0.0.1 //cooler/index.php/Home/Cooler/getStocka?mg=autocomplete&prefix=p
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0160s ]
+SQL:  SELECT CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  spell like '%p%' [ RunTime:0.0010s ]
+
+[ 2016-11-26T12:04:09+08:00 ] 127.0.0.1 //cooler/index.php/Home/Cooler/getStocka?mg=autocomplete&prefix=p
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0190s ]
+SQL:  SELECT CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  spell like '%p%' [ RunTime:0.0010s ]
+
+[ 2016-11-26T12:04:34+08:00 ] 127.0.0.1 //cooler/index.php/Home/Cooler/getStocka?mg=autocomplete&prefix=p
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0260s ]
+SQL:  SELECT CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  spell like '%p%' [ RunTime:0.0010s ]
+
+[ 2016-11-26T12:04:55+08:00 ] 127.0.0.1 //cooler/index.php/Home/Cooler/getStocka?mg=autocomplete&prefix=p
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0220s ]
+SQL:  SELECT CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  spell like '%p%' [ RunTime:0.0010s ]
+
+[ 2016-11-26T12:05:54+08:00 ] 127.0.0.1 //cooler/index.php/Home/Cooler/getStocka?mg=autocomplete&prefix=p
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0170s ]
+SQL:  SELECT CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  spell like '%p%' [ RunTime:0.0010s ]
+
+[ 2016-11-26T12:06:27+08:00 ] 127.0.0.1 //cooler/index.php/Home/Cooler/getStocka?mg=autocomplete&prefix=p
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0160s ]
+SQL:  SELECT CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  spell like '%p%' [ RunTime:0.0020s ]
+
+[ 2016-11-26T12:11:03+08:00 ] 127.0.0.1 //cooler/index.php/Home/Cooler/getStocka?mg=autocomplete&prefix=p
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0210s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '(NAME, ' (', CODE ,')') AS label FROM c_stock  where  spell like '%p%'' at line 1
+ [ SQL语句 ] :  SELECT lat_stock , lng_stock,address CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  spell like '%p%'
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '(NAME, ' (', CODE ,')') AS label FROM c_stock  where  spell like '%p%'' at line 1
+ [ SQL语句 ] :  SELECT lat_stock , lng_stock,address CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  spell like '%p%'
+
+[ 2016-11-26T12:11:05+08:00 ] 127.0.0.1 //cooler/index.php/Home/Cooler/getStocka?mg=autocomplete&prefix=p[
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0280s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '(NAME, ' (', CODE ,')') AS label FROM c_stock  where  spell like '%p[%'' at line 1
+ [ SQL语句 ] :  SELECT lat_stock , lng_stock,address CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  spell like '%p[%'
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '(NAME, ' (', CODE ,')') AS label FROM c_stock  where  spell like '%p[%'' at line 1
+ [ SQL语句 ] :  SELECT lat_stock , lng_stock,address CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  spell like '%p[%'
+
+[ 2016-11-26T12:11:05+08:00 ] 127.0.0.1 //cooler/index.php/Home/Cooler/getStocka?mg=autocomplete&prefix=p
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0220s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '(NAME, ' (', CODE ,')') AS label FROM c_stock  where  spell like '%p%'' at line 1
+ [ SQL语句 ] :  SELECT lat_stock , lng_stock,address CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  spell like '%p%'
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '(NAME, ' (', CODE ,')') AS label FROM c_stock  where  spell like '%p%'' at line 1
+ [ SQL语句 ] :  SELECT lat_stock , lng_stock,address CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  spell like '%p%'
+
+[ 2016-11-26T12:11:28+08:00 ] 127.0.0.1 //cooler/index.php/Home/Cooler/getStocka?mg=autocomplete&prefix=p
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0170s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '(NAME, ' (', CODE ,')') AS label FROM c_stock  where  spell like '%p%'' at line 1
+ [ SQL语句 ] :  SELECT lat_stock , lng_stock,address CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  spell like '%p%'
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '(NAME, ' (', CODE ,')') AS label FROM c_stock  where  spell like '%p%'' at line 1
+ [ SQL语句 ] :  SELECT lat_stock , lng_stock,address CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  spell like '%p%'
+
+[ 2016-11-26T12:12:13+08:00 ] 127.0.0.1 //cooler/index.php/Home/Cooler/getStocka?mg=autocomplete&prefix=p
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0290s ]
+SQL:  SELECT lat_stock , lng_stock,address ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  spell like '%p%' [ RunTime:0.0030s ]
+
+[ 2016-11-26T12:12:29+08:00 ] 127.0.0.1 //cooler/index.php/Home/Cooler/getStocka?mg=autocomplete&prefix=p
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0160s ]
+SQL:  SELECT lat_stock , lng_stock,address ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  spell like '%p%' [ RunTime:0.0020s ]
+
+[ 2016-11-26T12:13:01+08:00 ] 127.0.0.1 //cooler/index.php/Home/Cooler/getStocka?mg=autocomplete&prefix=p
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0190s ]
+SQL:  SELECT lat_stock , lng_stock,address ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  spell like '%p%' [ RunTime:0.0020s ]
+
+[ 2016-11-26T12:13:38+08:00 ] 127.0.0.1 //cooler/index.php/Home/Cooler/getStocka?mg=autocomplete&prefix=p
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0210s ]
+SQL:  SELECT lat_stock , lng_stock,address ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  spell like '%p%' [ RunTime:0.0020s ]
+
+[ 2016-11-26T12:14:05+08:00 ] 127.0.0.1 //cooler/index.php/Home/Cooler/getStocka?mg=autocomplete&prefix=p
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0200s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  spell like '%p%' [ RunTime:0.0020s ]
+
+[ 2016-11-26T12:14:14+08:00 ] 127.0.0.1 //cooler/index.php/Home/Cooler/getStocka?mg=autocomplete&prefix=p
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0210s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  spell like '%p%' [ RunTime:0.0020s ]
+
+[ 2016-11-26T12:15:19+08:00 ] 127.0.0.1 //cooler/index.php/Home/Cooler/getStocka?mg=autocomplete&prefix=g
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0200s ]
+ERR: 非法操作:getStocka
+
+[ 2016-11-26T12:15:24+08:00 ] 127.0.0.1 //cooler/index.php/Home/Cooler/getStocka?mg=autocomplete&prefix=p
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0160s ]
+ERR: 非法操作:getStocka
+
+[ 2016-11-26T12:15:26+08:00 ] 127.0.0.1 //cooler/index.php/Home/Cooler/getStocka?mg=autocomplete&prefix=p
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0350s ]
+ERR: 非法操作:getStocka
+
+[ 2016-11-26T12:15:35+08:00 ] 127.0.0.1 //cooler/index.php/Home/Cooler/getStockPos?mg=autocomplete&prefix=p
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0250s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  spell like '%p%' [ RunTime:0.0010s ]
+
+[ 2016-11-26T12:17:27+08:00 ] 127.0.0.1 //cooler/index.php/Home/Cooler/getStockPos?mg=autocomplete&prefix=p
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0170s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  spell like '%p%' [ RunTime:0.0010s ]
+
+[ 2016-11-26T12:17:33+08:00 ] 127.0.0.1 //cooler/index.php/Home/Cooler/getStockPos?mg=autocomplete&prefix=p
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0260s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  spell like '%p%' [ RunTime:0.0020s ]
+
+[ 2016-11-26T12:18:05+08:00 ] 127.0.0.1 //cooler/index.php/Home/Cooler/getStockPos?mg=autocomplete&prefix=p
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0160s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  spell like '%p%' [ RunTime:0.0010s ]
+
+[ 2016-11-26T12:18:20+08:00 ] 127.0.0.1 //cooler/index.php/Home/Cooler/getStockPos?mg=autocomplete&prefix=p
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0170s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  spell like '%p%' [ RunTime:0.0020s ]
+
+[ 2016-11-26T12:22:15+08:00 ] 127.0.0.1 //cooler/index.php/Home/Cooler/getStockPos?mg=autocomplete&prefix=00
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0200s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  spell like '%00%' [ RunTime:0.0020s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  code like '%00%' [ RunTime:0.0110s ]
+
+[ 2016-11-26T12:22:16+08:00 ] 127.0.0.1 //cooler/index.php/Home/Cooler/getStockPos?mg=autocomplete&prefix=0
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0170s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  spell like '%0%' [ RunTime:0.0010s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  code like '%0%' [ RunTime:0.0110s ]
+
+[ 2016-11-26T12:22:20+08:00 ] 127.0.0.1 //cooler/index.php/Home/Cooler/getStockPos?mg=autocomplete&prefix=300
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0230s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  spell like '%300%' [ RunTime:0.0010s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  code like '%300%' [ RunTime:0.0040s ]
+
+[ 2016-11-26T12:22:23+08:00 ] 127.0.0.1 //cooler/index.php/Home/Cooler/getStockPos?mg=autocomplete&prefix=3000
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0270s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  spell like '%3000%' [ RunTime:0.0010s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  code like '%3000%' [ RunTime:0.0020s ]
+
+[ 2016-11-26T12:22:24+08:00 ] 127.0.0.1 //cooler/index.php/Home/Cooler/getStockPos?mg=autocomplete&prefix=30000
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0290s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  spell like '%30000%' [ RunTime:0.0010s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  code like '%30000%' [ RunTime:0.0020s ]
+
+[ 2016-11-26T12:22:35+08:00 ] 127.0.0.1 //cooler/index.php/Home/Cooler/getStockPos?mg=autocomplete&prefix=3000
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0180s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  spell like '%3000%' [ RunTime:0.0030s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  code like '%3000%' [ RunTime:0.0020s ]
+
+[ 2016-11-26T12:22:56+08:00 ] 127.0.0.1 //cooler/index.php/Home/Cooler/getStockPos?mg=autocomplete&prefix=600
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0200s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  spell like '%600%' [ RunTime:0.0010s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  code like '%600%' [ RunTime:0.0060s ]
+
+[ 2016-11-26T12:22:57+08:00 ] 127.0.0.1 //cooler/index.php/Home/Cooler/getStockPos?mg=autocomplete&prefix=60000
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0240s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  spell like '%60000%' [ RunTime:0.0030s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  code like '%60000%' [ RunTime:0.0020s ]
+
+[ 2016-11-26T12:23:10+08:00 ] 127.0.0.1 //cooler/index.php/Home/Cooler/getStockPos?mg=autocomplete&prefix=600
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0240s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  spell like '%600%' [ RunTime:0.0010s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  code like '%600%' [ RunTime:0.0050s ]
+
+[ 2016-11-26T12:23:12+08:00 ] 127.0.0.1 //cooler/index.php/Home/Cooler/getStockPos?mg=autocomplete&prefix=60
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0180s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  spell like '%60%' [ RunTime:0.0010s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  code like '%60%' [ RunTime:0.0050s ]
+
+[ 2016-11-26T12:23:13+08:00 ] 127.0.0.1 //cooler/index.php/Home/Cooler/getStockPos?mg=autocomplete&prefix=6
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0170s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  spell like '%6%' [ RunTime:0.0020s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  code like '%6%' [ RunTime:0.0080s ]
+
+[ 2016-11-26T12:23:17+08:00 ] 127.0.0.1 //cooler/index.php/Home/Cooler/getStockPos?mg=autocomplete&prefix=6000
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0340s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  spell like '%6000%' [ RunTime:0.0010s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  code like '%6000%' [ RunTime:0.0020s ]
+
+[ 2016-11-26T12:23:18+08:00 ] 127.0.0.1 //cooler/index.php/Home/Cooler/getStockPos?mg=autocomplete&prefix=600
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0450s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  spell like '%600%' [ RunTime:0.0020s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  code like '%600%' [ RunTime:0.0070s ]
+
+[ 2016-11-26T12:23:19+08:00 ] 127.0.0.1 //cooler/index.php/Home/Cooler/getStockPos?mg=autocomplete&prefix=1
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0190s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  spell like '%1%' [ RunTime:0.0010s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  code like '%1%' [ RunTime:0.0060s ]
+
+[ 2016-11-26T12:23:20+08:00 ] 127.0.0.1 //cooler/index.php/Home/Cooler/getStockPos?mg=autocomplete&prefix=15
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0190s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  spell like '%15%' [ RunTime:0.0010s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  code like '%15%' [ RunTime:0.0020s ]
+
+[ 2016-11-26T12:23:20+08:00 ] 127.0.0.1 //cooler/index.php/Home/Cooler/getStockPos?mg=autocomplete&prefix=157
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0370s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  spell like '%157%' [ RunTime:0.0030s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  code like '%157%' [ RunTime:0.0010s ]
+
+[ 2016-11-26T12:23:34+08:00 ] 127.0.0.1 //cooler/index.php/Home/Cooler/getStockPos?mg=autocomplete&prefix=3
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0280s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  spell like '%3%' [ RunTime:0.0010s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  code like '%3%' [ RunTime:0.0070s ]
+
+[ 2016-11-26T12:23:39+08:00 ] 127.0.0.1 //cooler/index.php/Home/Cooler/getStockPos?mg=autocomplete&prefix=35
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0210s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  spell like '%35%' [ RunTime:0.0020s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  code like '%35%' [ RunTime:0.0020s ]
+
+[ 2016-11-26T12:23:42+08:00 ] 127.0.0.1 //cooler/index.php/Home/Cooler/getStockPos?mg=autocomplete&prefix=666
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0240s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  spell like '%666%' [ RunTime:0.0010s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  code like '%666%' [ RunTime:0.0010s ]
+
+[ 2016-11-26T12:23:53+08:00 ] 127.0.0.1 //cooler/index.php/Home/Cooler/getStockPos?mg=autocomplete&prefix=pa
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0290s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  spell like '%pa%' [ RunTime:0.0010s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  code like '%pa%' [ RunTime:0.0010s ]
+
+[ 2016-11-26T12:23:56+08:00 ] 127.0.0.1 //cooler/index.php/Home/Cooler/getStockPos?mg=autocomplete&prefix=0
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0210s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  spell like '%0%' [ RunTime:0.0020s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  code like '%0%' [ RunTime:0.0140s ]
+
+[ 2016-11-26T12:23:57+08:00 ] 127.0.0.1 //cooler/index.php/Home/Cooler/getStockPos?mg=autocomplete&prefix=1
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0190s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  spell like '%1%' [ RunTime:0.0030s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  code like '%1%' [ RunTime:0.0070s ]
+
+[ 2016-11-26T12:23:59+08:00 ] 127.0.0.1 //cooler/index.php/Home/Cooler/getStockPos?mg=autocomplete&prefix=1
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0320s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  spell like '%1%' [ RunTime:0.0010s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  code like '%1%' [ RunTime:0.0050s ]
+
+[ 2016-11-26T12:24:00+08:00 ] 127.0.0.1 //cooler/index.php/Home/Cooler/getStockPos?mg=autocomplete&prefix=2
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0170s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  spell like '%2%' [ RunTime:0.0010s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  code like '%2%' [ RunTime:0.0070s ]
+
+[ 2016-11-26T12:24:01+08:00 ] 127.0.0.1 //cooler/index.php/Home/Cooler/getStockPos?mg=autocomplete&prefix=3
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0410s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  spell like '%3%' [ RunTime:0.0020s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  code like '%3%' [ RunTime:0.0080s ]
+
+[ 2016-11-26T12:24:03+08:00 ] 127.0.0.1 //cooler/index.php/Home/Cooler/getStockPos?mg=autocomplete&prefix=2
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0210s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  spell like '%2%' [ RunTime:0.0020s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  code like '%2%' [ RunTime:0.0080s ]
+
+[ 2016-11-26T12:24:04+08:00 ] 127.0.0.1 //cooler/index.php/Home/Cooler/getStockPos?mg=autocomplete&prefix=2\
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0210s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  spell like '%2\%' [ RunTime:0.0020s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  code like '%2\%' [ RunTime:0.0020s ]
+
+[ 2016-11-26T12:24:06+08:00 ] 127.0.0.1 //cooler/index.php/Home/Cooler/getStockPos?mg=autocomplete&prefix=2
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0200s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  spell like '%2%' [ RunTime:0.0020s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  code like '%2%' [ RunTime:0.0060s ]
+
+[ 2016-11-26T12:24:18+08:00 ] 127.0.0.1 //cooler/index.php/Home/Cooler/getStockPos?mg=autocomplete&prefix=p
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0320s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  spell like '%p%' [ RunTime:0.0010s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  code like '%p%' [ RunTime:0.0020s ]
+
+[ 2016-11-26T12:24:20+08:00 ] 127.0.0.1 //cooler/index.php/Home/Cooler/getStockPos?mg=autocomplete&prefix=paa
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0360s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  spell like '%paa%' [ RunTime:0.0020s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  code like '%paa%' [ RunTime:0.0020s ]
+
+[ 2016-11-26T12:25:03+08:00 ] 127.0.0.1 //cooler/index.php/Home/Cooler/getStockPos?mg=autocomplete&prefix=ppp
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0180s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  spell like '%ppp%' [ RunTime:0.0020s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  code like '%ppp%' [ RunTime:0.0020s ]
+
+[ 2016-11-26T12:25:04+08:00 ] 127.0.0.1 //cooler/index.php/Home/Cooler/getStockPos?mg=autocomplete&prefix=pp
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0180s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  spell like '%pp%' [ RunTime:0.0010s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  code like '%pp%' [ RunTime:0.0010s ]
+
+[ 2016-11-26T12:25:04+08:00 ] 127.0.0.1 //cooler/index.php/Home/Cooler/getStockPos?mg=autocomplete&prefix=p
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0180s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  spell like '%p%' [ RunTime:0.0010s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  code like '%p%' [ RunTime:0.0020s ]
+
+[ 2016-11-26T12:25:06+08:00 ] 127.0.0.1 //cooler/index.php/Home/Cooler/getStockPos?mg=autocomplete&prefix=pa
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0180s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  spell like '%pa%' [ RunTime:0.0020s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  code like '%pa%' [ RunTime:0.0010s ]
+
+[ 2016-11-26T12:25:06+08:00 ] 127.0.0.1 //cooler/index.php/Home/Cooler/getStockPos?mg=autocomplete&prefix=pas
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0180s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  spell like '%pas%' [ RunTime:0.0020s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  code like '%pas%' [ RunTime:0.0010s ]
+
+[ 2016-11-26T12:25:08+08:00 ] 127.0.0.1 //cooler/index.php/Home/Cooler/getStockPos?mg=autocomplete&prefix=pa
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0270s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  spell like '%pa%' [ RunTime:0.0020s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  code like '%pa%' [ RunTime:0.0030s ]
+
+[ 2016-11-26T19:39:04+08:00 ] 127.0.0.1 //cooler/index.php/Home/Cooler/getStockPos?mg=autocomplete&prefix=st
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0160s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  spell like '%st%' [ RunTime:0.0050s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  code like '%st%' [ RunTime:0.0020s ]
+
+[ 2016-11-26T19:39:05+08:00 ] 127.0.0.1 //cooler/index.php/Home/Cooler/getStockPos?mg=autocomplete&prefix=stx
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0290s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  spell like '%stx%' [ RunTime:0.0030s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  code like '%stx%' [ RunTime:0.0020s ]
+
+[ 2016-11-26T19:39:05+08:00 ] 127.0.0.1 //cooler/index.php/Home/Cooler/getStockPos?mg=autocomplete&prefix=stxd
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0170s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  spell like '%stxd%' [ RunTime:0.0020s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  code like '%stxd%' [ RunTime:0.0030s ]
+
+[ 2016-11-26T19:39:08+08:00 ] 127.0.0.1 //cooler/index.php/Home/Cooler/getStockPos?mg=autocomplete&prefix=*
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0280s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  spell like '%*%' [ RunTime:0.0020s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  code like '%*%' [ RunTime:0.0010s ]
+
+[ 2016-11-26T19:39:09+08:00 ] 127.0.0.1 //cooler/index.php/Home/Cooler/getStockPos?mg=autocomplete&prefix=*s
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0160s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  spell like '%*s%' [ RunTime:0.0020s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  code like '%*s%' [ RunTime:0.0020s ]
+
+[ 2016-11-26T19:39:09+08:00 ] 127.0.0.1 //cooler/index.php/Home/Cooler/getStockPos?mg=autocomplete&prefix=*st
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0260s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  spell like '%*st%' [ RunTime:0.0030s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  code like '%*st%' [ RunTime:0.0020s ]
+
+[ 2016-11-26T19:39:10+08:00 ] 127.0.0.1 //cooler/index.php/Home/Cooler/getStockPos?mg=autocomplete&prefix=*std
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0190s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  spell like '%*std%' [ RunTime:0.0020s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  code like '%*std%' [ RunTime:0.0020s ]
+
+[ 2016-11-26T19:39:11+08:00 ] 127.0.0.1 //cooler/index.php/Home/Cooler/getStockPos?mg=autocomplete&prefix=*st
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0250s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  spell like '%*st%' [ RunTime:0.0020s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  code like '%*st%' [ RunTime:0.0020s ]
+
+[ 2016-11-26T19:39:12+08:00 ] 127.0.0.1 //cooler/index.php/Home/Cooler/getStockPos?mg=autocomplete&prefix=*stx
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0270s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  spell like '%*stx%' [ RunTime:0.0010s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  code like '%*stx%' [ RunTime:0.0020s ]
+
+[ 2016-11-26T19:39:12+08:00 ] 127.0.0.1 //cooler/index.php/Home/Cooler/getStockPos?mg=autocomplete&prefix=*stxd
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0400s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  spell like '%*stxd%' [ RunTime:0.0030s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  code like '%*stxd%' [ RunTime:0.0020s ]
+
+[ 2016-11-26T19:40:20+08:00 ] 127.0.0.1 //cooler/index.php/Home/Cooler/getStockPos?mg=autocomplete&prefix=00
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0310s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  spell like '%00%' [ RunTime:0.0020s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  code like '%00%' [ RunTime:0.0120s ]
+
+[ 2016-11-26T19:40:22+08:00 ] 127.0.0.1 //cooler/index.php/Home/Cooler/getStockPos?mg=autocomplete&prefix=000
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0180s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  spell like '%000%' [ RunTime:0.0020s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  code like '%000%' [ RunTime:0.0040s ]
+
+[ 2016-11-26T19:40:22+08:00 ] 127.0.0.1 //cooler/index.php/Home/Cooler/getStockPos?mg=autocomplete&prefix=0001
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0170s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  spell like '%0001%' [ RunTime:0.0020s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  code like '%0001%' [ RunTime:0.0020s ]
+
+[ 2016-11-26T19:40:24+08:00 ] 127.0.0.1 //cooler/index.php/Home/Cooler/getStockPos?mg=autocomplete&prefix=000
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0170s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  spell like '%000%' [ RunTime:0.0010s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  code like '%000%' [ RunTime:0.0030s ]
+
+[ 2016-11-26T19:40:25+08:00 ] 127.0.0.1 //cooler/index.php/Home/Cooler/getStockPos?mg=autocomplete&prefix=00
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0190s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  spell like '%00%' [ RunTime:0.0020s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  code like '%00%' [ RunTime:0.0120s ]
+
+[ 2016-11-26T19:40:27+08:00 ] 127.0.0.1 //cooler/index.php/Home/Cooler/getStockPos?mg=autocomplete&prefix=0
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0170s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  spell like '%0%' [ RunTime:0.0010s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  code like '%0%' [ RunTime:0.0130s ]
+
+[ 2016-11-26T19:40:29+08:00 ] 127.0.0.1 //cooler/index.php/Home/Cooler/getStockPos?mg=autocomplete&prefix=600
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0250s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  spell like '%600%' [ RunTime:0.0020s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  code like '%600%' [ RunTime:0.0050s ]
+
+[ 2016-11-26T19:40:29+08:00 ] 127.0.0.1 //cooler/index.php/Home/Cooler/getStockPos?mg=autocomplete&prefix=6006
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0210s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  spell like '%6006%' [ RunTime:0.0020s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  code like '%6006%' [ RunTime:0.0030s ]
+
+[ 2016-11-26T19:40:50+08:00 ] 127.0.0.1 //cooler/index.php/Home/Cooler/getStockPos?mg=autocomplete&prefix=fd
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0230s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  spell like '%fd%' [ RunTime:0.0020s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  code like '%fd%' [ RunTime:0.0010s ]
+
+[ 2016-11-26T19:40:50+08:00 ] 127.0.0.1 //cooler/index.php/Home/Cooler/getStockPos?mg=autocomplete&prefix=fdx
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0290s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  spell like '%fdx%' [ RunTime:0.0010s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  code like '%fdx%' [ RunTime:0.0010s ]
+
+[ 2016-11-26T19:40:51+08:00 ] 127.0.0.1 //cooler/index.php/Home/Cooler/getStockPos?mg=autocomplete&prefix=fdxh
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0160s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  spell like '%fdxh%' [ RunTime:0.0020s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  code like '%fdxh%' [ RunTime:0.0020s ]
+
+[ 2016-11-26T19:40:52+08:00 ] 127.0.0.1 //cooler/index.php/Home/Cooler/getStockPos?mg=autocomplete&prefix=fdx
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0170s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  spell like '%fdx%' [ RunTime:0.0020s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  code like '%fdx%' [ RunTime:0.0020s ]
+
+[ 2016-11-26T19:40:53+08:00 ] 127.0.0.1 //cooler/index.php/Home/Cooler/getStockPos?mg=autocomplete&prefix=fd
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0200s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  spell like '%fd%' [ RunTime:0.0030s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  code like '%fd%' [ RunTime:0.0030s ]
+
+[ 2016-11-26T19:40:59+08:00 ] 127.0.0.1 //cooler/index.php/Home/Cooler/getStockPos?mg=autocomplete&prefix=fd
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0210s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  spell like '%fd%' [ RunTime:0.0020s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  code like '%fd%' [ RunTime:0.0010s ]
+
+[ 2016-11-26T19:40:59+08:00 ] 127.0.0.1 //cooler/index.php/Home/Cooler/getStockPos?mg=autocomplete&prefix=fdx
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0250s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  spell like '%fdx%' [ RunTime:0.0020s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  code like '%fdx%' [ RunTime:0.0010s ]
+
+[ 2016-11-26T19:41:01+08:00 ] 127.0.0.1 //cooler/index.php/Home/Cooler/getStockPos?mg=autocomplete&prefix=fd
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0180s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  spell like '%fd%' [ RunTime:0.0020s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  code like '%fd%' [ RunTime:0.0020s ]
+
+[ 2016-11-26T19:41:04+08:00 ] 127.0.0.1 //cooler/index.php/Home/Cooler/getStockPos?mg=autocomplete&prefix=k
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0210s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  spell like '%k%' [ RunTime:0.0030s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  code like '%k%' [ RunTime:0.0020s ]
+
+[ 2016-11-26T19:41:05+08:00 ] 127.0.0.1 //cooler/index.php/Home/Cooler/getStockPos?mg=autocomplete&prefix=kf
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0290s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  spell like '%kf%' [ RunTime:0.0020s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  code like '%kf%' [ RunTime:0.0030s ]
+
+[ 2016-11-26T19:41:05+08:00 ] 127.0.0.1 //cooler/index.php/Home/Cooler/getStockPos?mg=autocomplete&prefix=kfd
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0260s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  spell like '%kfd%' [ RunTime:0.0030s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  code like '%kfd%' [ RunTime:0.0020s ]
+
+[ 2016-11-26T19:41:06+08:00 ] 127.0.0.1 //cooler/index.php/Home/Cooler/getStockPos?mg=autocomplete&prefix=kfdq
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0200s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  spell like '%kfdq%' [ RunTime:0.0030s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  code like '%kfdq%' [ RunTime:0.0010s ]
+
+[ 2016-11-26T19:41:07+08:00 ] 127.0.0.1 //cooler/index.php/Home/Cooler/getStockPos?mg=autocomplete&prefix=kfd
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0250s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  spell like '%kfd%' [ RunTime:0.0030s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  code like '%kfd%' [ RunTime:0.0020s ]
+
+[ 2016-11-26T19:41:07+08:00 ] 127.0.0.1 //cooler/index.php/Home/Cooler/getStockPos?mg=autocomplete&prefix=k
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0170s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  spell like '%k%' [ RunTime:0.0050s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  code like '%k%' [ RunTime:0.0010s ]
+
+[ 2016-11-26T19:41:09+08:00 ] 127.0.0.1 //cooler/index.php/Home/Cooler/getStockPos?mg=autocomplete&prefix=fd
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0170s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  spell like '%fd%' [ RunTime:0.0020s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  code like '%fd%' [ RunTime:0.0010s ]
+
+[ 2016-11-26T19:41:14+08:00 ] 127.0.0.1 //cooler/index.php/Home/Cooler/getStockPos?mg=autocomplete&prefix=fdf
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0200s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  spell like '%fdf%' [ RunTime:0.0030s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  code like '%fdf%' [ RunTime:0.0020s ]
+
+[ 2016-11-26T19:41:15+08:00 ] 127.0.0.1 //cooler/index.php/Home/Cooler/getStockPos?mg=autocomplete&prefix=fdfh
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0170s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  spell like '%fdfh%' [ RunTime:0.0020s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  code like '%fdfh%' [ RunTime:0.0030s ]
+
+[ 2016-11-26T19:41:16+08:00 ] 127.0.0.1 //cooler/index.php/Home/Cooler/getStockPos?mg=autocomplete&prefix=fdf
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0310s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  spell like '%fdf%' [ RunTime:0.0010s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  code like '%fdf%' [ RunTime:0.0010s ]
+
+[ 2016-11-26T19:41:17+08:00 ] 127.0.0.1 //cooler/index.php/Home/Cooler/getStockPos?mg=autocomplete&prefix=fdfh
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0190s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  spell like '%fdfh%' [ RunTime:0.0020s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  code like '%fdfh%' [ RunTime:0.0010s ]
+
+[ 2016-11-26T19:41:19+08:00 ] 127.0.0.1 //cooler/index.php/Home/Cooler/getStockPos?mg=autocomplete&prefix=fdf
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0170s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  spell like '%fdf%' [ RunTime:0.0020s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  code like '%fdf%' [ RunTime:0.0020s ]
+
+[ 2016-11-26T19:41:24+08:00 ] 127.0.0.1 //cooler/index.php/Home/Cooler/getStockPos?mg=autocomplete&prefix=k
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0190s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  spell like '%k%' [ RunTime:0.0040s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  code like '%k%' [ RunTime:0.0020s ]
+
+[ 2016-11-26T19:41:25+08:00 ] 127.0.0.1 //cooler/index.php/Home/Cooler/getStockPos?mg=autocomplete&prefix=kfdq
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0160s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  spell like '%kfdq%' [ RunTime:0.0020s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  code like '%kfdq%' [ RunTime:0.0010s ]
+
+[ 2016-11-26T19:41:30+08:00 ] 127.0.0.1 //cooler/index.php/Home/Cooler/getStockPos?mg=autocomplete&prefix=fd
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0280s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  spell like '%fd%' [ RunTime:0.0020s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  code like '%fd%' [ RunTime:0.0010s ]
+
+[ 2016-11-26T19:41:30+08:00 ] 127.0.0.1 //cooler/index.php/Home/Cooler/getStockPos?mg=autocomplete&prefix=fdf
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0240s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  spell like '%fdf%' [ RunTime:0.0020s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  code like '%fdf%' [ RunTime:0.0010s ]
+
+[ 2016-11-26T19:42:23+08:00 ] 127.0.0.1 //cooler/index.php/Home/Cooler/getStockPos?mg=autocomplete&prefix=fd
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0230s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  spell like '%fd%' [ RunTime:0.0030s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  code like '%fd%' [ RunTime:0.0020s ]
+
+[ 2016-11-26T19:42:23+08:00 ] 127.0.0.1 //cooler/index.php/Home/Cooler/getStockPos?mg=autocomplete&prefix=fdf
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0240s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  spell like '%fdf%' [ RunTime:0.0030s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  code like '%fdf%' [ RunTime:0.0030s ]
+
+[ 2016-11-26T19:42:24+08:00 ] 127.0.0.1 //cooler/index.php/Home/Cooler/getStockPos?mg=autocomplete&prefix=fdfi
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0290s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  spell like '%fdfi%' [ RunTime:0.0020s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  code like '%fdfi%' [ RunTime:0.0020s ]
+
+[ 2016-11-26T19:42:26+08:00 ] 127.0.0.1 //cooler/index.php/Home/Cooler/getStockPos?mg=autocomplete&prefix=fdf
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0220s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  spell like '%fdf%' [ RunTime:0.0020s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  code like '%fdf%' [ RunTime:0.0020s ]
+
+[ 2016-11-26T19:42:27+08:00 ] 127.0.0.1 //cooler/index.php/Home/Cooler/getStockPos?mg=autocomplete&prefix=fd
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0190s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  spell like '%fd%' [ RunTime:0.0020s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  code like '%fd%' [ RunTime:0.0010s ]
+
+[ 2016-11-26T19:42:34+08:00 ] 127.0.0.1 //cooler/index.php/Home/Cooler/getStockPos?mg=autocomplete&prefix=wka
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0170s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  spell like '%wka%' [ RunTime:0.0020s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  code like '%wka%' [ RunTime:0.0010s ]
+
+[ 2016-11-26T19:43:24+08:00 ] 127.0.0.1 //cooler/index.php/Home/Cooler/getStockPos?mg=autocomplete&prefix=fd
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0180s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  spell like '%fd%' [ RunTime:0.0020s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  code like '%fd%' [ RunTime:0.0020s ]
+
+[ 2016-11-26T19:43:32+08:00 ] 127.0.0.1 //cooler/index.php/Home/Cooler/getStockPos?mg=autocomplete&prefix=jl
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0280s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  spell like '%jl%' [ RunTime:0.0040s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  code like '%jl%' [ RunTime:0.0010s ]
+
+[ 2016-11-26T19:43:34+08:00 ] 127.0.0.1 //cooler/index.php/Home/Cooler/getStockPos?mg=autocomplete&prefix=jlfd
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0190s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  spell like '%jlfd%' [ RunTime:0.0020s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  code like '%jlfd%' [ RunTime:0.0020s ]
+
+[ 2016-11-26T19:43:53+08:00 ] 127.0.0.1 //cooler/index.php/Home/Cooler/getStockPos?mg=autocomplete&prefix=sd
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0240s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  spell like '%sd%' [ RunTime:0.0030s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  code like '%sd%' [ RunTime:0.0010s ]
+
+[ 2016-11-26T19:43:54+08:00 ] 127.0.0.1 //cooler/index.php/Home/Cooler/getStockPos?mg=autocomplete&prefix=sdhr
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0260s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  spell like '%sdhr%' [ RunTime:0.0020s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  code like '%sdhr%' [ RunTime:0.0020s ]
+
+[ 2016-11-26T19:43:55+08:00 ] 127.0.0.1 //cooler/index.php/Home/Cooler/getStockPos?mg=autocomplete&prefix=sdhry
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0400s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  spell like '%sdhry%' [ RunTime:0.0020s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  code like '%sdhry%' [ RunTime:0.0030s ]
+
+[ 2016-11-26T19:43:55+08:00 ] 127.0.0.1 //cooler/index.php/Home/Cooler/getStockPos?mg=autocomplete&prefix=sdh
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0360s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  spell like '%sdh%' [ RunTime:0.0030s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  code like '%sdh%' [ RunTime:0.0020s ]
+
+[ 2016-11-26T19:43:56+08:00 ] 127.0.0.1 //cooler/index.php/Home/Cooler/getStockPos?mg=autocomplete&prefix=sdhy
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0180s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  spell like '%sdhy%' [ RunTime:0.0020s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  code like '%sdhy%' [ RunTime:0.0020s ]
+
+[ 2016-11-26T19:43:57+08:00 ] 127.0.0.1 //cooler/index.php/Home/Cooler/getStockPos?mg=autocomplete&prefix=sdh
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0190s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  spell like '%sdh%' [ RunTime:0.0020s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  code like '%sdh%' [ RunTime:0.0020s ]
+
+[ 2016-11-26T19:43:58+08:00 ] 127.0.0.1 //cooler/index.php/Home/Cooler/getStockPos?mg=autocomplete&prefix=sd
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0210s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  spell like '%sd%' [ RunTime:0.0020s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  code like '%sd%' [ RunTime:0.0020s ]
+
+[ 2016-11-26T19:44:00+08:00 ] 127.0.0.1 //cooler/index.php/Home/Cooler/getStockPos?mg=autocomplete&prefix=sdi
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0200s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  spell like '%sdi%' [ RunTime:0.0010s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  code like '%sdi%' [ RunTime:0.0020s ]
+
+[ 2016-11-26T19:44:00+08:00 ] 127.0.0.1 //cooler/index.php/Home/Cooler/getStockPos?mg=autocomplete&prefix=sdiy
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0180s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  spell like '%sdiy%' [ RunTime:0.0020s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  code like '%sdiy%' [ RunTime:0.0020s ]
+
+[ 2016-11-26T19:44:01+08:00 ] 127.0.0.1 //cooler/index.php/Home/Cooler/getStockPos?mg=autocomplete&prefix=sdi
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0360s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  spell like '%sdi%' [ RunTime:0.0030s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  code like '%sdi%' [ RunTime:0.0030s ]
+
+[ 2016-11-26T19:44:11+08:00 ] 127.0.0.1 //cooler/index.php/Home/Cooler/getStockPos?mg=autocomplete&prefix=r
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0170s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  spell like '%r%' [ RunTime:0.0030s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  code like '%r%' [ RunTime:0.0010s ]
+
+[ 2016-11-26T19:44:12+08:00 ] 127.0.0.1 //cooler/index.php/Home/Cooler/getStockPos?mg=autocomplete&prefix=ry
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0320s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  spell like '%ry%' [ RunTime:0.0020s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  code like '%ry%' [ RunTime:0.0020s ]
+
+[ 2016-11-26T19:44:13+08:00 ] 127.0.0.1 //cooler/index.php/Home/Cooler/getStockPos?mg=autocomplete&prefix=ryjt
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0270s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  spell like '%ryjt%' [ RunTime:0.0020s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  code like '%ryjt%' [ RunTime:0.0010s ]
+
+[ 2016-11-26T19:44:14+08:00 ] 127.0.0.1 //cooler/index.php/Home/Cooler/getStockPos?mg=autocomplete&prefix=ry
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0240s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  spell like '%ry%' [ RunTime:0.0020s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  code like '%ry%' [ RunTime:0.0030s ]
+
+[ 2016-11-26T19:44:22+08:00 ] 127.0.0.1 //cooler/index.php/Home/Cooler/getStockPos?mg=autocomplete&prefix=%E5%A6%82%E6%84%8F
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0160s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  spell like '%如意%' [ RunTime:0.0030s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  code like '%如意%' [ RunTime:0.0030s ]
+
+[ 2016-11-26T19:45:33+08:00 ] 127.0.0.1 //cooler/index.php/Home/Cooler/getStockPos?mg=autocomplete&prefix=%E5%A6%82%E6%84%8F
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0190s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  spell like '%如意%' [ RunTime:0.0020s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  code like '%如意%' [ RunTime:0.0010s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  name like '%如意%' [ RunTime:0.0020s ]
+
+[ 2016-11-26T19:45:44+08:00 ] 127.0.0.1 //cooler/index.php/Home/Cooler/getStockPos?mg=autocomplete&prefix=%E5%A6%82
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0360s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  spell like '%如%' [ RunTime:0.0030s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  code like '%如%' [ RunTime:0.0020s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  name like '%如%' [ RunTime:0.0020s ]
+
+[ 2016-11-26T19:46:00+08:00 ] 127.0.0.1 //cooler/index.php/Home/Cooler/getStockPos?mg=autocomplete&prefix=%E8%BE%9C%E8%B4%9F
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0290s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  spell like '%辜负%' [ RunTime:0.0020s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  code like '%辜负%' [ RunTime:0.0020s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  name like '%辜负%' [ RunTime:0.0020s ]
+
+[ 2016-11-26T19:46:02+08:00 ] 127.0.0.1 //cooler/index.php/Home/Cooler/getStockPos?mg=autocomplete&prefix=%E8%82%A1
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0210s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  spell like '%股%' [ RunTime:0.0020s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  code like '%股%' [ RunTime:0.0010s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  name like '%股%' [ RunTime:0.0030s ]
+
+[ 2016-11-26T19:58:23+08:00 ] 127.0.0.1 //cooler/index.php/Home/Cooler/getStockPos?mg=autocomplete&prefix=%E8%82%A1%E7%A5%A8
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0250s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  spell like '%股票%' [ RunTime:0.0030s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  code like '%股票%' [ RunTime:0.0020s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  name like '%股票%' [ RunTime:0.0020s ]
+
+[ 2016-11-26T19:58:25+08:00 ] 127.0.0.1 //cooler/index.php/Home/Cooler/getStockPos?mg=autocomplete&prefix=%E7%A5%A8
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0300s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  spell like '%票%' [ RunTime:0.0030s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  code like '%票%' [ RunTime:0.0020s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  name like '%票%' [ RunTime:0.0030s ]
+
+[ 2016-11-26T19:58:27+08:00 ] 127.0.0.1 //cooler/index.php/Home/Cooler/getStockPos?mg=autocomplete&prefix=%E8%82%A1
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0170s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  spell like '%股%' [ RunTime:0.0020s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  code like '%股%' [ RunTime:0.0020s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  name like '%股%' [ RunTime:0.0040s ]
+
+[ 2016-11-26T20:09:26+08:00 ] 127.0.0.1 //cooler/index.php/Home/Cooler/getStockPos?mg=autocomplete&prefix=%E5%B1%B1%E4%B8%9C
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0220s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  spell like '%山东%' [ RunTime:0.0020s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  code like '%山东%' [ RunTime:0.0010s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  name like '%山东%' [ RunTime:0.0020s ]
+
+[ 2016-11-26T20:10:03+08:00 ] 127.0.0.1 //cooler/index.php/Home/Cooler/getStockPos?mg=autocomplete&prefix=%E5%B1%B1
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0170s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  spell like '%山%' [ RunTime:0.0020s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  code like '%山%' [ RunTime:0.0020s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  name like '%山%' [ RunTime:0.0020s ]
+
+[ 2016-11-26T20:10:26+08:00 ] 127.0.0.1 //cooler/index.php/Home/Cooler/getStockPos?mg=autocomplete&prefix=dong
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0180s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  spell like '%dong%' [ RunTime:0.0010s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  code like '%dong%' [ RunTime:0.0010s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  name like '%dong%' [ RunTime:0.0020s ]
+
+[ 2016-11-26T20:10:28+08:00 ] 127.0.0.1 //cooler/index.php/Home/Cooler/getStockPos?mg=autocomplete&prefix=%E4%B8%9C
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0190s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  spell like '%东%' [ RunTime:0.0020s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  code like '%东%' [ RunTime:0.0020s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  name like '%东%' [ RunTime:0.0020s ]
+
+[ 2016-11-26T20:10:32+08:00 ] 127.0.0.1 //cooler/index.php/Home/Cooler/getStockPos?mg=autocomplete&prefix=%E4%B8%9C%E5%B1%B1
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0300s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  spell like '%东山%' [ RunTime:0.0020s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  code like '%东山%' [ RunTime:0.0010s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  name like '%东山%' [ RunTime:0.0010s ]
+
+[ 2016-11-26T20:12:25+08:00 ] 127.0.0.1 //cooler/index.php/Home/Cooler/getStockPos?mg=autocomplete&prefix=sd
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0220s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  spell like '%sd%' [ RunTime:0.0030s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  code like '%sd%' [ RunTime:0.0010s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  name like '%sd%' [ RunTime:0.0010s ]
+
+[ 2016-11-26T20:12:26+08:00 ] 127.0.0.1 //cooler/index.php/Home/Cooler/getStockPos?mg=autocomplete&prefix=sdry
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0180s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  spell like '%sdry%' [ RunTime:0.0030s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  code like '%sdry%' [ RunTime:0.0020s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  name like '%sdry%' [ RunTime:0.0010s ]
+
+[ 2016-11-26T20:12:36+08:00 ] 127.0.0.1 //cooler/index.php/Home/Cooler/getStockPos?mg=autocomplete&prefix=s
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0210s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  spell like '%s%' [ RunTime:0.0040s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  code like '%s%' [ RunTime:0.0020s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  name like '%s%' [ RunTime:0.0020s ]
+
+[ 2016-11-26T20:12:37+08:00 ] 127.0.0.1 //cooler/index.php/Home/Cooler/getStockPos?mg=autocomplete&prefix=scsm
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `c_nation` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `c_nation` ORDER BY id  [ RunTime:0.0170s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  spell like '%scsm%' [ RunTime:0.0010s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  code like '%scsm%' [ RunTime:0.0010s ]
+SQL:  SELECT lat_stock , lng_stock,address ,name ,CONCAT(NAME, ' (', CODE ,')') AS label FROM c_stock  where  name like '%scsm%' [ RunTime:0.0020s ]
+

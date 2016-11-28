@@ -69,7 +69,8 @@ print aa
 info = cur.fetchmany(aa)
 for column in info:
     if column[4] == "" or ( column[4] != "" and column[4] == column[3] ):
-        district = u"办公地址 "+column[2]+column[3]
+      #  district = u"办公地址 "+column[2]+column[3]
+        district = u"举牌 "
         cnt = getStockCount(district)
         id = str(column[0])
         updateStockCount(conn,cnt,id)

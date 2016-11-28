@@ -14,6 +14,17 @@
 
 <script type="text/JavaScript" src='<?php echo (JS_URL); ?>jquery_1.6.1.js'></script>
 
+
+<!-- 引入jQuery UI的css文件 -->
+<link href="<?php echo (JS_URL); ?>jquery.ui/jquery-ui.css" />
+<!-- 引入jQuery的js文件 -->
+
+<!-- 引入jQuery UI的js文件 -->
+<script type="text/javascript" src="<?php echo (JS_URL); ?>jquery.ui/jquery-ui.js" ></script>
+
+
+
+
 <style>
 
 #ProvinceList{
@@ -67,13 +78,55 @@
     float:left;
 }
 
+#Industry {
+    float:left;
+}
+#Hot {
+    float:left;
+}
+#Exchange {
+    float:left;
+}
+#Search {
+    float:left;
+}
+#Register {
+    float:right;
+}
+#Login {
+    float:right;
+}
 </style>
 
 
 <div class='top-list-wrap'>
     <div class='top-list'>
         <ul  class='l-list'>
-           <li> <div id="ProvinceCurrent" >  </div> <div id="AllChina" >  </div> </li>
+           <li>
+               <div id="AllChina" > 全国
+              <input id="StockInput" name="Stock" type="text">
+               </div>
+
+               <div id="Industry" >  &nbsp;行业
+              <input id="IndustryInput" name="IndustryInput" type="text">
+               </div>
+
+               <div id="Hot" > &nbsp;概念
+               <input id="HotInput" name="HotInput" type="text">
+               </div>
+
+               <div id="Exchange" > &nbsp;营业部
+                   <input id="ExchangeInput" name="ExchangeInput" type="text">
+               </div>
+
+               <div id="Search" > &nbsp;检索新闻
+                   <input id="SearchInput" name="SearchInput" type="text">
+               </div>
+               <div id="Register" > &nbsp;注册
+               </div>
+               <div id="Login" > &nbsp;登录
+               </div>
+           </li>
         </ul>
     </div>
 </div>
@@ -82,17 +135,106 @@
 
 
 <script >
-
-
         var   m_ProvinceCurrent ="北京市";
 
+        $(function(){
+            $("#StockInput").autocomplete({
+                source: function(request, response){
+                    var url = 'http://127.0.0.1//cooler/index.php/Home/Cooler/getStockPos?mg=autocomplete&prefix='+ request.term ;
+                    $.ajax( {
+                        'url': url,
+                        dataType: 'json',
+                        success: function(dataObj){
+                            console.log(dataObj);
+                            response(dataObj); //将数据交给autocomplete去展示
+                        }
+                    } );
+                },
+                select: function(event, ui){
+                    // 这里的this指向当前输入框的DOM元素
+                    // event参数是事件对象
+                    // ui对象只有一个item属性，对应数据源中被选中的对象
+                    console.log(ui.item.label);
+                    $(this).value = ui.item.label;
+                    addStock(ui.item.lng_stock , ui.item.lat_stock , ui.item.name , ui.item.address);
+                    m_map.centerAndZoom(new BMap.Point(ui.item.lng_stock, ui.item.lat_stock), 9);
+                    event.preventDefault();
+                },
+                click: function( event, ui ) {
+                    alert("click");
+                    // event 是当前事件对象
+
+                    // ui对象仅有一个item属性，它表示当前选择的菜单项对应的数据源对象
+                    // 该对象具有label和value属性，以及其它自定义(如果有的话)的属性
+                    // 如果当前没有选择的菜单项，这item属性为null
+                }
+
+            });
+
+
+            $("#IndustryInput").autocomplete({
+                source: function(request, response){
+                    var url = 'http://127.0.0.1//cooler/index.php/Home/Cooler/getIndusty?mg=autocomplete&prefix='+ request.term ;
+                    $.ajax( {
+                        'url': url,
+                        dataType: 'json',
+                        success: function(dataObj){
+                            console.log(dataObj);
+                            response(dataObj); //将数据交给autocomplete去展示
+                        }
+                    } );
+                },
+                select: function(event, ui){
+                    // 这里的this指向当前输入框的DOM元素
+                    // event参数是事件对象
+                    // ui对象只有一个item属性，对应数据源中被选中的对象
+                    m_map.centerAndZoom(new BMap.Point(108.2775440000, 36.0919520000), 5);
+                    $.post("/cooler/index.php/Home/Cooler/getStockIndusty", {
+                        cate :  ui.item.id ,
+                    }, function (data, textStatus){
+                        displaymap(data);
+                    },"json");
+                    event.preventDefault();
+                },
+            });
 
 
 
-    $(function(){
-        $('#AllChina').html("&nbsp; 全国");
-        $('#ProvinceCurrent').html(m_ProvinceCurrent);
 
+            $("#HotInput").autocomplete({
+                source: function(request, response){
+                    var url = 'http://127.0.0.1//cooler/index.php/Home/Cooler/getHot?mg=autocomplete&prefix='+ request.term ;
+                    $.ajax( {
+                        'url': url,
+                        dataType: 'json',
+                        success: function(dataObj){
+                            console.log(dataObj);
+                            response(dataObj); //将数据交给autocomplete去展示
+                        }
+                    } );
+                },
+                select: function(event, ui){
+                    // 这里的this指向当前输入框的DOM元素
+                    // event参数是事件对象
+                    // ui对象只有一个item属性，对应数据源中被选中的对象
+                    m_map.centerAndZoom(new BMap.Point(108.2775440000, 36.0919520000), 5);
+                    $.post("/cooler/index.php/Home/Cooler/getStockHot", {
+                        cate :  ui.item.id ,
+                    }, function (data, textStatus){
+                        displaymap(data);
+                    },"json");
+                    event.preventDefault();
+                },
+            });
+
+
+
+
+
+
+
+
+            $('#ProvinceCurrent').html(m_ProvinceCurrent);
         getBoundary(m_ProvinceCurrent,"black","solid",2);
 
 
@@ -444,6 +586,7 @@
         function addStock(lng,lat,txthtml,address)
         {
 
+
             var point = new BMap.Point(lng, lat);
             var myLabel = new BMap.Label(txthtml,     //为lable填写内容
                     {offset:new BMap.Size(-20,-20),                  //label的偏移量，为了让label的中心显示在点上
@@ -469,16 +612,16 @@
                 }
             }
 
+
+
+            getBoundary(data[0].city,"red","solid",2);
+
             $.each(data,function(key,val){
 
                 console.log(val.address);
-                addStock(val.lng, val.lat ,val.name,val.address);
+                addStock(val.lng_stock, val.lat_stock ,val.name,val.address);
 
             });
-
-
-
-
 
 
         }

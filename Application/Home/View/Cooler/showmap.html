@@ -146,6 +146,7 @@
         function addStock(lng,lat,txthtml,address)
         {
 
+
             var point = new BMap.Point(lng, lat);
             var myLabel = new BMap.Label(txthtml,     //为lable填写内容
                     {offset:new BMap.Size(-20,-20),                  //label的偏移量，为了让label的中心显示在点上
@@ -171,16 +172,16 @@
                 }
             }
 
+
+
+            getBoundary(data[0].city,"red","solid",2);
+
             $.each(data,function(key,val){
 
                 console.log(val.address);
-                addStock(val.lng, val.lat ,val.name,val.address);
+                addStock(val.lng_stock, val.lat_stock ,val.name,val.address);
 
             });
-
-
-
-
 
 
         }
