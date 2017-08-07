@@ -13,413 +13,230 @@
 
 <style>
 
-#ProvinceList{
-    background-color: white;
-    width: auto;
-    height:auto;
-    position: absolute;
-    top: 25px;
-    left: 30px;
-    z-index: 999;
-    opacity: 0.9;
-    border: solid 1px grey;
-}
+    #ProvinceList{
+        background-color: white;
+        width: auto;
+        height:auto;
+        position: absolute;
+        top: 25px;
+        left: 30px;
+        z-index: 999;
+        opacity: 0.9;
+        border: solid 1px grey;
+    }
 
-#CityList {
-    background-color: white;
-    color: black;
-    width: 100px;
-    height:auto;
-    position: absolute;
-    top: 30px;
-    left: 10px;
-    z-index: 99;
-    opacity: 0.9;
-    border: solid 1px grey;
-}
-#CityListTopBar{
-    color: red;
-    text-align:center;
-}
+    #CityList {
+        background-color: white;
+        color: black;
+        width: 100px;
+        height:auto;
+        position: absolute;
+        top: 30px;
+        left: 10px;
+        z-index: 99;
+        opacity: 0.9;
+        border: solid 1px grey;
+    }
+    #CityListTopBar{
+        color: red;
+        text-align:center;
+    }
 
-#CountyList {
-    background-color: white;
-    color: black;
-    width: auto;
-    height:auto;
-    position: absolute;
-    top: 30px;
-    left: 110px;
-    z-index: 99;
-    opacity: 0.9;
-    text-align: left;
-    border: solid 1px grey;
-}
+    #CountyList {
+        background-color: white;
+        color: black;
+        width: auto;
+        height:auto;
+        position: absolute;
+        top: 30px;
+        left: 110px;
+        z-index: 99;
+        opacity: 0.9;
+        text-align: left;
+        border: solid 1px grey;
+    }
 
-#ProvinceCurrent {
-    float:left;
-}
+    #ProvinceCurrent {
+        float:left;
+    }
 
-#AllChina {
-    float:left;
-}
+    #AllChina {
+        float:left;
+    }
 
-#Industry {
-    float:left;
-}
-#Hot {
-    float:left;
-}
-#Exchange {
-    float:left;
-}
-#Search {
-    float:left;
-}
-#Register {
-    float:right;
-}
-#Login {
-    float:right;
-}
+    #Industry {
+        float:left;
+    }
+    #Hot {
+        float:left;
+    }
+    #Exchange {
+        float:left;
+    }
+    #Search {
+        float:left;
+    }
+    #Register {
+        float:right;
+    }
+    #Login {
+        float:right;
+    }
 </style>
 
 
 <div class='top-list-wrap'>
     <div class='top-list'>
         <ul  class='l-list'>
-           <li>
-               <div id="AllChina" > 全国
-              <input id="StockInput" name="Stock" type="text">
-               </div>
+            <li>
+                <div id="AllChina" > 全国
+                    <input id="StockInput" name="Stock" type="text">
+                </div>
 
-               <div id="Industry" >  &nbsp;行业
-              <input id="IndustryInput" name="IndustryInput" type="text">
-               </div>
+                <div id="Industry" >  &nbsp;行业
+                    <input id="IndustryInput" name="IndustryInput" type="text">
+                </div>
 
-               <div id="Hot" > &nbsp;概念
-               <input id="HotInput" name="HotInput" type="text">
-               </div>
+                <div id="Hot" > &nbsp;概念
+                    <input id="HotInput" name="HotInput" type="text">
+                </div>
 
-               <div id="Exchange" > &nbsp;营业部
-                   <input id="ExchangeInput" name="ExchangeInput" type="text">
-               </div>
+                <div id="Exchange" > &nbsp;营业部
+                    <input id="ExchangeInput" name="ExchangeInput" type="text">
+                </div>
 
-               <div id="Search" > &nbsp;检索新闻
-                   <input id="SearchInput" name="SearchInput" type="text">
-               </div>
-               <div id="Register" > &nbsp;注册
-               </div>
-               <div id="Login" > &nbsp;登录
-               </div>
-           </li>
+                <div id="Search" > &nbsp;检索新闻
+                    <input id="SearchInput" name="SearchInput" type="text">
+                </div>
+                <div id="Register" > &nbsp;注册
+                </div>
+                <div id="Login" > &nbsp;登录
+                </div>
+            </li>
         </ul>
     </div>
 </div>
 <div id="nav">
+
+    <div align="left">
+        <div id='ProvinceList' style="text-align: left">
+            test
+        </div>
+
+
+
+    </div>
+
+
 </div>
 
 
 <script >
-        var   m_ProvinceCurrent ="北京市";
+    var   m_ProvinceCurrent ="北京市";
 
-        $(function(){
-            $("#StockInput").autocomplete({
-                source: function(request, response){
-                    var url = 'http://127.0.0.1/__MODULE__/Cooler/getStockPos?mg=autocomplete&prefix='+ request.term ;
-                    $.ajax( {
-                        'url': url,
-                        dataType: 'json',
-                        success: function(dataObj){
-                            console.log(dataObj);
-                            response(dataObj); //将数据交给autocomplete去展示
-                        }
-                    } );
-                },
-                select: function(event, ui){
-                    // 这里的this指向当前输入框的DOM元素
-                    // event参数是事件对象
-                    // ui对象只有一个item属性，对应数据源中被选中的对象
-                    console.log(ui.item.label);
-                    $(this).value = ui.item.label;
-                    addStock(ui.item.lng_stock , ui.item.lat_stock , ui.item.name , ui.item.address);
-                    m_map.centerAndZoom(new BMap.Point(ui.item.lng_stock, ui.item.lat_stock), 9);
-                    event.preventDefault();
-                },
-                click: function( event, ui ) {
-                    alert("click");
-                    // event 是当前事件对象
+    $(function(){
+        $("#StockInput").autocomplete({
+            source: function(request, response){
+                var url = 'http://127.0.0.1/__MODULE__/Cooler/getStockPos?mg=autocomplete&prefix='+ request.term ;
+                $.ajax( {
+                    'url': url,
+                    dataType: 'json',
+                    success: function(dataObj){
+                        console.log(dataObj);
+                        response(dataObj); //将数据交给autocomplete去展示
+                    }
+                } );
+            },
+            select: function(event, ui){
+                // 这里的this指向当前输入框的DOM元素
+                // event参数是事件对象
+                // ui对象只有一个item属性，对应数据源中被选中的对象
+                console.log(ui.item.label);
+                $(this).value = ui.item.label;
+                addStock(ui.item.lng_stock , ui.item.lat_stock , ui.item.name , ui.item.address);
+                m_map.centerAndZoom(new BMap.Point(ui.item.lng_stock, ui.item.lat_stock), 9);
+                event.preventDefault();
+            },
+            click: function( event, ui ) {
+                alert("click");
+                // event 是当前事件对象
 
-                    // ui对象仅有一个item属性，它表示当前选择的菜单项对应的数据源对象
-                    // 该对象具有label和value属性，以及其它自定义(如果有的话)的属性
-                    // 如果当前没有选择的菜单项，这item属性为null
-                }
-
-            });
-
-
-            $("#IndustryInput").autocomplete({
-                source: function(request, response){
-                    var url = 'http://127.0.0.1/__MODULE__/Cooler/getIndusty?mg=autocomplete&prefix='+ request.term ;
-                    $.ajax( {
-                        'url': url,
-                        dataType: 'json',
-                        success: function(dataObj){
-                            console.log(dataObj);
-                            response(dataObj); //将数据交给autocomplete去展示
-                        }
-                    } );
-                },
-                select: function(event, ui){
-                    // 这里的this指向当前输入框的DOM元素
-                    // event参数是事件对象
-                    // ui对象只有一个item属性，对应数据源中被选中的对象
-                    m_map.centerAndZoom(new BMap.Point(108.2775440000, 36.0919520000), 5);
-                    $.post("__MODULE__/Cooler/getStockIndusty", {
-                        cate :  ui.item.id ,
-                    }, function (data, textStatus){
-                        displaymap(data);
-                    },"json");
-                    event.preventDefault();
-                },
-            });
-
-
-
-
-            $("#HotInput").autocomplete({
-                source: function(request, response){
-                    var url = 'http://127.0.0.1/__MODULE__/Cooler/getHot?mg=autocomplete&prefix='+ request.term ;
-                    $.ajax( {
-                        'url': url,
-                        dataType: 'json',
-                        success: function(dataObj){
-                            console.log(dataObj);
-                            response(dataObj); //将数据交给autocomplete去展示
-                        }
-                    } );
-                },
-                select: function(event, ui){
-                    // 这里的this指向当前输入框的DOM元素
-                    // event参数是事件对象
-                    // ui对象只有一个item属性，对应数据源中被选中的对象
-                    m_map.centerAndZoom(new BMap.Point(108.2775440000, 36.0919520000), 5);
-                    $.post("__MODULE__/Cooler/getStockHot", {
-                        cate :  ui.item.id ,
-                    }, function (data, textStatus){
-                        displaymap(data);
-                    },"json");
-                    event.preventDefault();
-                },
-            });
-
-
-
-
-
-
-
-
-            $('#ProvinceCurrent').html(m_ProvinceCurrent);
-        getBoundary(m_ProvinceCurrent,"black","solid",2);
-
-
-
-
-        var   allstr = '{$allstr}';
-        var allarray=eval("("+allstr+")");
-
-        var txtHtml ="";
-        var index = 0;
-        $.each(allarray,function(key,val){
-           if(val.pid == 1 ) {
-               //txtHtml += '<a href="#" id='+val.id+'>'+ " " +val.province +'</a>';
-               if(index%2 == 0){
-                   txtHtml += '<ul> ';
-               }
-               txtHtml += '<li style= display:inline>';
-
-               txtHtml += '<a href="#" id=';
-               txtHtml +=val.id+'>';
-               txtHtml += " ";
-               txtHtml +=val.province;
-               txtHtml +='</a>';
-
-               txtHtml += '</li> ';
-               index++;
-               if(index%2 == 0){
-                   txtHtml += '</ul> ';
-               }
+                // ui对象仅有一个item属性，它表示当前选择的菜单项对应的数据源对象
+                // 该对象具有label和value属性，以及其它自定义(如果有的话)的属性
+                // 如果当前没有选择的菜单项，这item属性为null
             }
+
+        });
+
+
+        $("#IndustryInput").autocomplete({
+            source: function(request, response){
+                var url = 'http://127.0.0.1/__MODULE__/Cooler/getIndusty?mg=autocomplete&prefix='+ request.term ;
+                $.ajax( {
+                    'url': url,
+                    dataType: 'json',
+                    success: function(dataObj){
+                        console.log(dataObj);
+                        response(dataObj); //将数据交给autocomplete去展示
+                    }
+                } );
+            },
+            select: function(event, ui){
+                // 这里的this指向当前输入框的DOM元素
+                // event参数是事件对象
+                // ui对象只有一个item属性，对应数据源中被选中的对象
+                m_map.centerAndZoom(new BMap.Point(108.2775440000, 36.0919520000), 5);
+                $.post("__MODULE__/Cooler/getStockIndusty", {
+                    cate :  ui.item.id ,
+                }, function (data, textStatus){
+                    displaymap(data);
+                },"json");
+                event.preventDefault();
+            },
         });
 
 
 
-        $('#AllChina').live('click',function() {
+
+        $("#HotInput").autocomplete({
+            source: function(request, response){
+                var url = 'http://127.0.0.1/__MODULE__/Cooler/getHot?mg=autocomplete&prefix='+ request.term ;
+                $.ajax( {
+                    'url': url,
+                    dataType: 'json',
+                    success: function(dataObj){
+                        console.log(dataObj);
+                        response(dataObj); //将数据交给autocomplete去展示
+                    }
+                } );
+            },
+            select: function(event, ui){
+                // 这里的this指向当前输入框的DOM元素
+                // event参数是事件对象
+                // ui对象只有一个item属性，对应数据源中被选中的对象
+                m_map.centerAndZoom(new BMap.Point(108.2775440000, 36.0919520000), 5);
+                $.post("__MODULE__/Cooler/getStockHot", {
+                    cate :  ui.item.id ,
+                }, function (data, textStatus){
+                    displaymap(data);
+                },"json");
+                event.preventDefault();
+            },
+        });
 
 
+
+
+
+        //$('#AllChina').live('click',function() {
             $.post("__MODULE__/Cooler/getStockStatistic", {
                 cid :  1,
             }, function (data, textStatus){
                 displayStockStatistic(data);
             },"json");
 
-        })
+       // })
 
-
-
-
-        $("#nav").append(" <div id='ProvinceList'> </id>");
-        $('#ProvinceCurrent').live('mouseover',function() {
-            $('#ProvinceList').show();
-        })
-        $('#ProvinceList').live('mouseleave',function() {
-            $('#ProvinceList').hide();
-        })
-
-
-        $("#ProvinceList").html(txtHtml);
-        $("#ProvinceList").hide();
-/*
-        var actionmane = "{$Think.const.ACTION_NAME}";
-        if(actionmane == "showmap" || actionmane == "showlist"){
-            $("#ProvinceList").html(txtHtml);
-        }
-*/
-
-
-        $("#nav").append(" <div id='CityList'> </id>");
-        $("#CityList").show();
-
-        $("#CityList").append(" <div id='CityListTopBar'> </id>");
-        $("#CityListTopBar").html("区域");
-
-        $("#CityList").append(" <div id='CityListBottum'> </id>");
-
-
-
-        $("#nav").append(" <div id='CountyList'> gg</id>");
-        $('#CountyList').hide();
-
-
-        $('#CountyList').live('mouseleave',function() {
-            $('#CountyList').hide();
-        })
-
-
-        $('#ProvinceList >ul>li> a').live('click',function() {
-            getBoundary($(this).html(),"black","solid",2);
-            m_ProvinceCurrent = $(this).html();
-            $('#ProvinceCurrent').html(m_ProvinceCurrent);
-            var id =$(this).attr('id');
-            var txtHtml ="";
-            var index=0;
-
-
-            $.each(allarray,function(key,val){
-
-                if(val.pid == id) {
-                    if(index%2 == 0){
-                        txtHtml += '<ul> ';
-                    }
-                    txtHtml += '<li style= display:inline >';
-
-                    txtHtml += '<a href="#" id=';
-                    txtHtml +=val.id;
-                    txtHtml +='>';
-                    txtHtml += " ";
-                    txtHtml +=val.city;
-                    txtHtml +='</a>';
-
-                    txtHtml += '</li> ';
-                    index++;
-                    if(index%2 == 0){
-                        txtHtml += '</ul> ';
-                    }
-                }
-            });
-
-            $("#CityListBottum ").html(txtHtml);
-        })
-
-
-
-        $('#CityListBottum li a').live('click',function() {
-            getBoundary($(this).html(),"blue","solid",1);
-
-            $.post("__MODULE__/Cooler/getcooler", {
-                cid :  $(this).attr('id') ,
-            }, function (data, textStatus){
-                displaymap(data);
-            },"json");
-
-        })
-
-        $('#CityListBottum li a').live('mouseover',function() {
-
-            $('#CountyList').show();
-
-
-            console.log("city:"+$(this).html() + ",id:"+$(this).attr('id'));
-
-            var txtHtml ="";
-
-            $(this).parent().parent().find('a').each(function(){
-                var index=0;
-                var id =$(this).attr('id');
-                txtHtml += '<ul><li style= "text-align:center;color: red" >';
-                txtHtml += $(this).html();
-                txtHtml += '</li></ul>';
-
-                $.each(allarray,function(key,val){
-                    if(val.pid == id) {
-                        if(index%2 == 0){
-                            txtHtml += '</ul> ';
-                            txtHtml += '<ul> ';
-                        }
-                        txtHtml += '<li style= display:inline>';
-
-                        txtHtml += '<a href="#" id=';
-                        txtHtml +=val.id+'>';
-                        txtHtml += " ";
-                        txtHtml +=val.district;
-                        txtHtml +='</a>';
-
-                        txtHtml += '</li> ';
-                        index++;
-                        if(index%2 == 0){
-                            txtHtml += '</ul> ';
-                        }
-
-                    }
-                });
-
-            });
-
-            $("#CountyList ").html(txtHtml);
-
-
-
-
-        })
-
-        $('#CountyList >ul>li> a').live('click',function() {
-            console.log("city:"+$(this).html() + ",id:"+$(this).attr('id'));
-            getBoundary($(this).html(),"red","solid",1);
-
-/*
-            $.post("__MODULE__/Cooler/getcooler", {
-                cid :  $(this).attr('id') ,
-            }, function (data, textStatus){
-                displaymap(data);
-            },"json");
-
-*/
-
-
-
-
-        })
 
 
 

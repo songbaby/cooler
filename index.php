@@ -26,8 +26,9 @@ function show_bug($msg){
 function p($array)
 {
     dump($array,1,'<pre>',0);
-
 }
+
+
 //定义css、img、js常量
 define("SITE_URL","http://127.0.0.1/cooler/");
 define("CSS_URL",SITE_URL."public/Home/css/"); //css

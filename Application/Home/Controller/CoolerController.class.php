@@ -53,17 +53,10 @@ class CoolerController extends Controller {
 //process ajax
     public function getStockOfCity($city){
 
-
-
        $sql ="select * from c_stock  join c_nation on c_stock.city = c_nation.id where c_stock.city = ".$city;
         $stock = D()->query($sql);
+        //p($stock);die;
         $this->ajaxReturn($stock,'json');
-
-
-   /*     $where = "city = " . $city;
-        $cooler = M('stock')-> where($where)->select();
-      //  p($cooler);
-       $this->ajaxReturn($cooler,'json');*/
     }
 //process ajax
     public function getStockOfProvince($city){

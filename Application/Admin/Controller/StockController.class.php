@@ -19,6 +19,7 @@ class StockController extends AdminController {
             $cate = M('nation')->order('id')->where($where)->select();
 
             p("updating");
+
             foreach ($cate as $k => $v) {
 
                 $str = $v['province'];
@@ -31,13 +32,16 @@ class StockController extends AdminController {
                 p($str . ":" . $stock);
 
                 foreach ($stock as $key => $val) {
-                    p("address " . $val['address']);
+                    p("address " . $val['address'] ." " .$val['name']." ". $val['code']." ". $v['id']);
                    // p("city " . $val['city']);
 
                     $User = M("stock"); // 实例化User对象
                     $User->province = $v['id'];
                     $User->where('code=' . $val['code'])->save(); // 根据条件更新记录
                 }
+
+
+
             }
 
         }
@@ -83,6 +87,8 @@ class StockController extends AdminController {
 
             $this->cate = M('stock')->order('code')->select();
             $this->allstr = json_encode($this->cate);
+
+          // p($this->allstr);die;
             $this->display();
         }
 
@@ -93,8 +99,9 @@ class StockController extends AdminController {
     public function autoupdateLatLngProccess($code ,$lat,$lng){
         $where = "code = ".$code;
 
-        $data['lat'] = $lat;
-        $data['lng'] = $lng;
+        $data['lat_stock'] = $lat;
+        $data['lng_stock'] = $lng;
+     //   p($data);die;
         M("stock")->where($where)->save($data); // 根据条件更新记录
 
         $this->ajaxReturn($code." success :".$lat." ".$lng, 'json');
@@ -160,7 +167,7 @@ class StockController extends AdminController {
         $stock = D()->query($sql);
 
         foreach ($stock as $key => $val) {
-            p("name " . $val['name']);
+             p("name " . $val['name']);
             $spell = $this->pinyin1($val['name']);
 
             $update = M("stock"); // 实例化User对象

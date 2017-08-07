@@ -217,7 +217,7 @@
 
             $.each(data,function(key,val){
 
-               // console.log(val.pid);
+              //  console.log(val.city);
                 addStockStatistic(val.lng, val.lat ,val);
             });
 
@@ -291,7 +291,7 @@
                 if(val.province != "" && val.city != "" && val.district == ""){
 
 
-                    //alert("getStock");
+                    console.log("getStockOfCity");
                     $.post("__MODULE__/Cooler/getStockOfCity", {
                         city :  val.id ,
                     }, function (data, textStatus){
@@ -301,7 +301,7 @@
                 }
                 else{
 
-                  console.log("else");
+                  console.log("getStockStatistic");
                     $.post("__MODULE__/Cooler/getStockStatistic", {
                         cid :  val.id ,
                     }, function (data, textStatus){

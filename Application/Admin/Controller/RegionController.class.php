@@ -10,7 +10,9 @@ class RegionController extends AdminController {
 
     function autoupdateLatLng(){
 
-        $this->cate = M('nation')->order('id')->select();
+        $where = " district = \"\" ";
+
+        $this->cate = M('nation')->order('id')->where($where)->select();
         $this->allstr = json_encode($this->cate);
        $this->display();
     }
@@ -260,7 +262,7 @@ class RegionController extends AdminController {
 
     function autoupdateStockCount(){
 
-        $where = " district = \"\" or ( district != \"\" and province = \"上海市\" ) or ( district != \"\" and province = \"北京市\" ) or ( district != \"\" and province = \"天津市\" ) or ( district != \"\" and province = \"重庆市\" ) ";
+        $where = " district = \"\" ";
         $cate = M('nation')->order('id')->where($where)->select();
 
         p("updating");
